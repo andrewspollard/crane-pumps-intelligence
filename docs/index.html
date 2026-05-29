@@ -547,7 +547,7 @@
             border-radius: var(--radius-lg); padding: 24px; margin-bottom: 36px;
             box-shadow: var(--shadow-xs); position: relative; overflow: hidden;
         }
-        .news-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--amber), rgba(245,158,11,0.2)); }
+        .news-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--green), rgba(16,185,129,0.2)); }
         .news-card-content { display: flex; flex-direction: column; gap: 10px; }
         .news-item { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: var(--bg-subtle); border-radius: var(--radius-md); border: 1px solid var(--border-light); }
         .news-item i { color: var(--text-faint); font-size: 13px; flex-shrink: 0; }
@@ -628,11 +628,11 @@
                             <div class="module-dot live" title="ZoomInfo"></div>
                             <div class="module-dot live" title="Email"></div>
                             <div class="module-dot pending" title="Usage Telemetry"></div>
-                            <div class="module-dot pending" title="Support Tickets"></div>
+                            <div class="module-dot live" title="Support Tickets"></div>
                             <div class="module-dot pending" title="Product Roadmap"></div>
-                            <div class="module-dot pending" title="Market Intel"></div>
+                            <div class="module-dot live" title="Market Intel"></div>
                         </div>
-                        <span class="module-label">4 live · 4 awaiting</span>
+                        <span class="module-label">6 live · 2 awaiting</span>
                     </div>
                 </div>
             </div>
@@ -837,7 +837,7 @@
                             </div>
                             <div class="predictive-label">Renewal Risk</div>
                             <div class="predictive-value" style="color:var(--amber)">Medium</div>
-                            <div class="predictive-detail">Engagement gap + unresolved bugs + user frustration signals</div>
+                            <div class="predictive-detail">Engagement gap + unresolved bugs + user frustration signals. Mitigant: Parent company financially healthy, no budget risk signals</div>
                         </div>
                         <div class="predictive-card">
                             <div class="gauge-container">
@@ -846,7 +846,7 @@
                             </div>
                             <div class="predictive-label">Expansion Probability</div>
                             <div class="predictive-value" style="color:var(--blue)">Moderate</div>
-                            <div class="predictive-detail">Workflow opp at 40% but stalling — 37-day gap threatens Jun 30 close</div>
+                            <div class="predictive-detail">Workflow opp at 40% but stalling — 37-day gap threatens Jun 30 close. However: customer in aggressive hiring mode (Sales, IT, Engineering, Ops), won $3.3M Navy contract, parent revenue up 25% YoY</div>
                         </div>
                         <div class="predictive-card">
                             <div class="gauge-container">
@@ -868,21 +868,82 @@
                         <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Seat swap request signals ongoing platform investment — new users being onboarded</span></div>
                         <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Candidate Experience Portal interest — potential 3rd product line</span></div>
                         <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Parent company (Crane Holdings) = enterprise path with 2,700+ employees</span></div>
+                        <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Aggressive hiring across 4 departments = increased recruiting volume = more platform usage potential</span></div>
+                        <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">New $3.3M Navy contract = business growth, potential headcount increase</span></div>
+                        <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Parent company revenue +25% YoY, new CEO, strong stock = no budget constraints</span></div>
                     </div>
                     <div class="signal-card">
                         <div class="signal-card-title"><span class="dot red"></span> Risk Signals</div>
                         <div class="signal-item"><i class="fas fa-arrow-down signal-icon down"></i><span class="signal-text">37-day engagement gap — well beyond 14-day risk threshold for SMB accounts</span></div>
-                        <div class="signal-item"><i class="fas fa-arrow-down signal-icon down"></i><span class="signal-text">Unresolved technical bug (candidate import) — 37 days without confirmed fix</span></div>
+                        <div class="signal-item"><i class="fas fa-arrow-down signal-icon down"></i><span class="signal-text">Technical bug (candidate import) — was open 37 days, now confirmed resolved (May 12 support ticket closed &lt;1hr)</span></div>
                         <div class="signal-item"><i class="fas fa-arrow-down signal-icon down"></i><span class="signal-text">Key user (Hannah) struggling with core functionality — adoption risk</span></div>
                         <div class="signal-item"><i class="fas fa-arrow-down signal-icon down"></i><span class="signal-text">Unfulfilled demo promise (Candidate Experience Portal) — 2+ months overdue</span></div>
                     </div>
                 </div>
 
                 <!-- Company News -->
+                <div class="card observe-in" style="margin-bottom:36px;">
+                    <div class="card-header">
+                        <div class="section-title" style="margin:0"><i class="fas fa-headset"></i> Support Tickets</div>
+                        <span style="display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:600;padding:3px 8px;border-radius:var(--radius-full);background:var(--green-light);color:var(--green);border:1px solid var(--green-border);letter-spacing:0.3px;text-transform:uppercase;"><span style="width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 4px rgba(16,185,129,0.4);"></span> Live</span>
+                    </div>
+                    <div class="card-body">
+                        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px;">
+                            <div style="text-align:center;padding:16px;background:var(--bg-subtle);border-radius:var(--radius-md);border:1px solid var(--border-light);">
+                                <div style="font-size:24px;font-weight:800;color:var(--green);letter-spacing:-0.8px;">0</div>
+                                <div style="font-size:11px;color:var(--text-faint);margin-top:4px;">Open Tickets</div>
+                            </div>
+                            <div style="text-align:center;padding:16px;background:var(--bg-subtle);border-radius:var(--radius-md);border:1px solid var(--border-light);">
+                                <div style="font-size:24px;font-weight:800;color:var(--text-primary);letter-spacing:-0.8px;">2</div>
+                                <div style="font-size:11px;color:var(--text-faint);margin-top:4px;">Total Cases</div>
+                            </div>
+                            <div style="text-align:center;padding:16px;background:var(--bg-subtle);border-radius:var(--radius-md);border:1px solid var(--border-light);">
+                                <div style="font-size:24px;font-weight:800;color:var(--green);letter-spacing:-0.8px;">&lt;5h</div>
+                                <div style="font-size:11px;color:var(--text-faint);margin-top:4px;">Avg Resolution</div>
+                            </div>
+                            <div style="text-align:center;padding:16px;background:var(--green-light);border-radius:var(--radius-md);border:1px solid var(--green-border);">
+                                <div style="font-size:24px;font-weight:800;color:var(--green);letter-spacing:-0.8px;">GOOD</div>
+                                <div style="font-size:11px;color:var(--text-faint);margin-top:4px;">Support Health</div>
+                            </div>
+                        </div>
+                        <div style="display:flex;flex-direction:column;gap:10px;">
+                            <div style="padding:14px 18px;background:var(--bg-subtle);border-radius:var(--radius-md);border:1px solid var(--border-light);">
+                                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+                                    <span style="font-size:13px;font-weight:600;color:var(--text-primary);">Candidate Import</span>
+                                    <span style="font-size:11px;padding:2px 8px;border-radius:var(--radius-full);background:var(--green-light);color:var(--green);font-weight:600;border:1px solid var(--green-border);">Closed</span>
+                                </div>
+                                <div style="font-size:12px;color:var(--text-muted);line-height:1.6;">Candidates not appearing in pipeline after import</div>
+                                <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:var(--text-faint);">
+                                    <span><strong>Priority:</strong> Moderate</span>
+                                    <span><strong>Created:</strong> May 12, 2026</span>
+                                    <span><strong>Resolved:</strong> May 12, 2026 (&lt;1 hour)</span>
+                                    <span><strong>Owner:</strong> Raymond Romero</span>
+                                </div>
+                            </div>
+                            <div style="padding:14px 18px;background:var(--bg-subtle);border-radius:var(--radius-md);border:1px solid var(--border-light);">
+                                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+                                    <span style="font-size:13px;font-weight:600;color:var(--text-primary);">License Swap Request</span>
+                                    <span style="font-size:11px;padding:2px 8px;border-radius:var(--radius-full);background:var(--green-light);color:var(--green);font-weight:600;border:1px solid var(--green-border);">Closed (Change Request)</span>
+                                </div>
+                                <div style="font-size:12px;color:var(--text-muted);line-height:1.6;">Swap Katy/Sam seats to Chelsea/Olivia</div>
+                                <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:var(--text-faint);">
+                                    <span><strong>Priority:</strong> Moderate</span>
+                                    <span><strong>Created:</strong> May 11, 2026</span>
+                                    <span><strong>Resolved:</strong> May 11, 2026 (~8.5 hrs)</span>
+                                    <span><strong>Owner:</strong> Edward Oropeza</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-top:14px;padding:12px 16px;background:var(--green-light);border:1px solid var(--green-border);border-radius:var(--radius-md);font-size:12px;color:var(--text-secondary);line-height:1.6;">
+                            <strong style="color:var(--green);"><i class="fas fa-check-circle"></i> Insight:</strong> Fast resolution times on both tickets. No open issues. Support experience is healthy — no friction signals from this channel.
+                        </div>
+                    </div>
+                </div>
+
                 <div class="news-card observe-in">
                     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
-                        <div class="section-title" style="margin:0"><i class="fas fa-newspaper"></i> Company Intelligence</div>
-                        <span class="pending-badge"><span class="pending-dot" style="width:6px;height:6px;"></span> Awaiting Connection</span>
+                        <div class="section-title" style="margin:0"><i class="fas fa-newspaper"></i> Market Intelligence</div>
+                        <span style="display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:600;padding:3px 8px;border-radius:var(--radius-full);background:var(--green-light);color:var(--green);border:1px solid var(--green-border);letter-spacing:0.3px;text-transform:uppercase;"><span style="width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 4px rgba(16,185,129,0.4);"></span> Live</span>
                     </div>
                     <div class="news-card-content">
                         <div class="news-item">
@@ -893,9 +954,36 @@
                             <i class="fas fa-map-marker-alt"></i>
                             <span class="news-item-text"><strong>Subsidiary:</strong> Crane Pumps & Systems · Piqua, OH · Founded 1946 · NAICS 333914</span>
                         </div>
-                        <div class="news-item" style="opacity:0.6;">
-                            <i class="fas fa-lock"></i>
-                            <span class="news-item-text" style="font-style:italic;">When connected: Quarterly earnings, executive changes, M&A activity, industry manufacturing hiring trends</span>
+                    </div>
+                    <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--border-light);">
+                        <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:12px;display:flex;align-items:center;gap:8px;"><i class="fas fa-bolt" style="color:var(--amber);font-size:11px;"></i> ZoomInfo Scoops — Crane Pumps & Systems</div>
+                        <div style="display:flex;flex-direction:column;gap:6px;">
+                            <div class="news-item"><i class="fas fa-file-contract" style="color:var(--green);"></i><span class="news-item-text"><strong>May 16, 2026:</strong> Awarded $3.3M contract by US Navy <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Project</span></span></div>
+                            <div class="news-item"><i class="fas fa-user-plus" style="color:var(--blue);"></i><span class="news-item-text"><strong>Apr 22, 2026:</strong> More open Sales roles than any time in past 12 months <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Hiring Plans</span></span></div>
+                            <div class="news-item"><i class="fas fa-calendar-check" style="color:var(--purple);"></i><span class="news-item-text"><strong>Apr 3, 2026:</strong> Steven Vantoorenburg speaking at AL-MS Water Joint Annual Conference <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Event</span></span></div>
+                            <div class="news-item"><i class="fas fa-user-plus" style="color:var(--blue);"></i><span class="news-item-text"><strong>Mar 5, 2026:</strong> More open IT roles than any time in past 12 months <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Hiring Plans</span></span></div>
+                            <div class="news-item"><i class="fas fa-briefcase" style="color:var(--amber);"></i><span class="news-item-text"><strong>Feb 12, 2026:</strong> Seeking VP Operations, Piqua OH <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Open Position</span></span></div>
+                            <div class="news-item"><i class="fas fa-user-plus" style="color:var(--blue);"></i><span class="news-item-text"><strong>Feb 8, 2026:</strong> More open Engineering & Technical roles than any time in past 12 months <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Hiring Plans</span></span></div>
+                            <div class="news-item"><i class="fas fa-briefcase" style="color:var(--amber);"></i><span class="news-item-text"><strong>Jan 14, 2026:</strong> Seeking Controller, Piqua OH <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Open Position</span></span></div>
+                            <div class="news-item"><i class="fas fa-user-plus" style="color:var(--blue);"></i><span class="news-item-text"><strong>Nov 25, 2025:</strong> More open Operations roles than any time in past 12 months <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Hiring Plans</span></span></div>
+                            <div class="news-item"><i class="fas fa-briefcase" style="color:var(--amber);"></i><span class="news-item-text"><strong>Nov 10, 2025:</strong> Seeking Product Manager, Piqua OH <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Open Position</span></span></div>
+                        </div>
+                        <div style="margin-top:14px;padding:12px 16px;background:var(--green-light);border:1px solid var(--green-border);border-radius:var(--radius-md);font-size:12px;color:var(--text-secondary);line-height:1.6;">
+                            <strong style="color:var(--green);"><i class="fas fa-lightbulb"></i> Key Insight:</strong> Crane Pumps is in aggressive hiring mode across Sales, IT, Engineering, and Operations. Combined with a $3.3M Navy contract win, this signals growth and potential increased hiring volume = more platform usage = expansion signal.
+                        </div>
+                    </div>
+                    <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--border-light);">
+                        <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:12px;display:flex;align-items:center;gap:8px;"><i class="fas fa-chart-line" style="color:var(--purple);font-size:11px;"></i> Parent Company — Crane Holdings (NYSE: CR)</div>
+                        <div style="display:flex;flex-direction:column;gap:6px;">
+                            <div class="news-item"><i class="fas fa-chart-bar" style="color:var(--text-muted);"></i><span class="news-item-text"><strong>May 22:</strong> Trading at $173.48, slight underperformance vs S&P 500</span></div>
+                            <div class="news-item"><i class="fas fa-money-bill-wave" style="color:var(--green);"></i><span class="news-item-text"><strong>Apr 28:</strong> Q1 2026 Earnings — Revenue $696.4M (+24.9% YoY), beat estimates. EPS $1.65 (14% above consensus)</span></div>
+                            <div class="news-item"><i class="fas fa-user-tie" style="color:var(--purple);"></i><span class="news-item-text"><strong>Apr 27:</strong> NEW CEO — Alex Alcala named Chief Executive Officer (succession complete)</span></div>
+                            <div class="news-item"><i class="fas fa-star" style="color:var(--amber);"></i><span class="news-item-text"><strong>Apr 25:</strong> Featured as "Market-Beating Stock with Competitive Advantages"</span></div>
+                            <div class="news-item"><i class="fas fa-hand-holding-usd" style="color:var(--text-muted);"></i><span class="news-item-text"><strong>Apr 12:</strong> Mario Gabelli continues holding large position (1.35M shares)</span></div>
+                            <div class="news-item"><i class="fas fa-thumbs-up" style="color:var(--blue);"></i><span class="news-item-text"><strong>Feb 6:</strong> Deutsche Bank maintains Buy rating, raised price target to $235</span></div>
+                        </div>
+                        <div style="margin-top:14px;padding:12px 16px;background:var(--blue-light);border:1px solid var(--blue-border);border-radius:var(--radius-md);font-size:12px;color:var(--text-secondary);line-height:1.6;">
+                            <strong style="color:var(--blue);"><i class="fas fa-lightbulb"></i> Key Insight:</strong> Parent company thriving — revenue up 25% YoY, beat earnings, new CEO appointed. Healthy parent org with growth trajectory = low risk of budget cuts, potential for enterprise expansion to other Crane divisions.
                         </div>
                     </div>
                 </div>
@@ -904,7 +992,7 @@
                 <div class="pending-section observe-in">
                     <div class="section-header">
                         <div class="section-title"><i class="fas fa-plug"></i> Pending Intelligence Modules</div>
-                        <span class="section-subtitle">Ready to receive when connected</span>
+                        <span class="section-subtitle">2 remaining — ready to receive when connected</span>
                     </div>
                     <div class="pending-grid">
                         <div class="pending-card">
@@ -919,29 +1007,11 @@
                         <div class="pending-card">
                             <div class="pending-card-header">
                                 <span class="pending-dot"></span>
-                                <span class="pending-card-title">Support Tickets</span>
-                                <span class="pending-badge">Awaiting</span>
-                            </div>
-                            <div class="pending-card-desc">Open tickets, resolution time trends, recurring issues, CSAT scores, escalation history.</div>
-                            <div class="pending-card-preview">Will show: ticket volume, avg time-to-resolution, status breakdown, outcome tracking, prediction model</div>
-                        </div>
-                        <div class="pending-card">
-                            <div class="pending-card-header">
-                                <span class="pending-dot"></span>
                                 <span class="pending-card-title">Product Roadmap</span>
                                 <span class="pending-badge">Awaiting</span>
                             </div>
                             <div class="pending-card-desc">Features relevant to this customer, enhancement timeline, beta opportunities, release notes.</div>
                             <div class="pending-card-preview">Will surface: upcoming features aligned to their use case, early-access eligibility, adoption predictions</div>
-                        </div>
-                        <div class="pending-card">
-                            <div class="pending-card-header">
-                                <span class="pending-dot"></span>
-                                <span class="pending-card-title">Market Intelligence</span>
-                                <span class="pending-badge">Awaiting</span>
-                            </div>
-                            <div class="pending-card-desc">Company news (M&A, leadership changes, earnings), industry hiring trends, competitive moves.</div>
-                            <div class="pending-card-preview">Will show: real-time news alerts, leadership changes, competitive displacement signals, hiring velocity</div>
                         </div>
                     </div>
                 </div>
