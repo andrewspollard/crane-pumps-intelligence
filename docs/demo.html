@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acme Manufacturing | Account Intelligence</title>
+    <title>Account Intelligence Platform — Demo</title>
     <script src="https://cdn.jsdelivr.net/npm/highcharts@12.1.2/highcharts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/highcharts@12.1.2/modules/accessibility.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -642,7 +642,7 @@
 </head>
 <body>
 <div style="position:fixed;top:0;left:0;right:0;background:linear-gradient(90deg,#1E2761,#408EC6);color:white;text-align:center;padding:8px 16px;font-size:13px;font-weight:500;z-index:9999;letter-spacing:0.3px;">
-    DEMO — All company names, people, financials, and identifiers have been anonymized
+    DEMO — All identifying information has been anonymized
 </div>
 <div style="height:36px;"></div>
     <div class="app-container">
@@ -650,7 +650,7 @@
         <header class="header">
             <div class="header-top">
                 <div class="header-brand">
-                    <div class="company-icon">CP</div>
+                    <div class="company-icon">AM</div>
                     <div class="company-info">
                         <h1>Acme Manufacturing</h1>
                         <div class="company-meta">
@@ -660,9 +660,7 @@
                     </div>
                 </div>
                 <div class="header-right">
-                    <a href="https://[sfdc-instance].lightning.force.com/lightning/r/Account/XXXXXXXXXXXXX/view" target="_blank" class="sfdc-link">
-                        <i class="fas fa-external-link-alt"></i> Open in Salesforce
-                    </a>
+                    <a href="#" class="sfdc-link"><i class="fas fa-external-link-alt"></i> Open in CRM</a>
                     <div class="refresh-time">
                         <i class="fas fa-sync-alt"></i> Last refreshed May 29, 2026 · 9:14 AM
                     </div>
@@ -881,7 +879,7 @@
                             </div>
                             <div class="predictive-label">Expansion Probability</div>
                             <div class="predictive-value" style="color:var(--blue)">Moderate</div>
-                            <div class="predictive-detail">Workflow opp at 40%, close pushed to Sep 30. No call since Apr 22 but email active (last: May 23). Needs a scheduled conversation to advance. However: customer in aggressive hiring mode (Sales, IT, Engineering, Ops), won $3.3M Navy contract, parent revenue up 25% YoY</div>
+                            <div class="predictive-detail">Workflow opp at 40%, close pushed to Sep 30. No call since Apr 22 but email active (last: May 23). Needs a scheduled conversation to advance. However: customer in aggressive hiring mode (Sales, IT, Engineering, Ops), won $X.XM [Federal Agency] contract, parent revenue up 25% YoY</div>
                         </div>
                         <div class="predictive-card">
                             <div class="gauge-container">
@@ -902,10 +900,10 @@
                         <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Active Workflow opportunity at $XX.XK — Katy verbally aligned on value prop (Apr 17)</span></div>
                         <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Seat swap request signals ongoing platform investment — new users being onboarded</span></div>
                         <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Candidate Experience Portal interest — potential 3rd product line</span></div>
-                        <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Parent company (Apex Holdings) = enterprise path with 2,700+ employees</span></div>
+                        <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Parent company (Apex Holdings) = enterprise path with X,XXX+ employees</span></div>
                         <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Aggressive hiring across 4 departments = increased recruiting volume = more platform usage potential</span></div>
-                        <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">New $3.3M Navy contract = business growth, potential headcount increase</span></div>
-                        <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Parent company revenue +25% YoY, new CEO, strong stock = no budget constraints</span></div>
+                        <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">New $X.XM [Federal Agency] contract = business growth, potential headcount increase</span></div>
+                        <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Parent company revenue +XX% YoY, new CEO, strong stock = no budget constraints</span></div>
                     </div>
                     <div class="signal-card">
                         <div class="signal-card-title"><span class="dot red"></span> Risk Signals</div>
@@ -952,7 +950,7 @@
                                     <span><strong>Priority:</strong> Moderate</span>
                                     <span><strong>Created:</strong> May 12, 2026</span>
                                     <span><strong>Resolved:</strong> May 12, 2026 (&lt;1 hour)</span>
-                                    <span><strong>Owner:</strong> Support Rep 2</span>
+                                    <span><strong>Owner:</strong> [Support Rep]</span>
                                 </div>
                             </div>
                             <div style="padding:14px 18px;background:var(--bg-subtle);border-radius:var(--radius-md);border:1px solid var(--border-light);">
@@ -965,7 +963,7 @@
                                     <span><strong>Priority:</strong> Moderate</span>
                                     <span><strong>Created:</strong> May 11, 2026</span>
                                     <span><strong>Resolved:</strong> May 11, 2026 (~8.5 hrs)</span>
-                                    <span><strong>Owner:</strong> Support Rep</span>
+                                    <span><strong>Owner:</strong> [Support Rep]</span>
                                 </div>
                             </div>
                         </div>
@@ -983,39 +981,39 @@
                     <div class="news-card-content">
                         <div class="news-item">
                             <i class="fas fa-building"></i>
-                            <span class="news-item-text"><strong>Parent:</strong> Apex Holdings (NYSE: XXX) · Northeast, US · 2,700+ employees</span>
+                            <span class="news-item-text"><strong>Parent:</strong> Apex Holdings (NYSE: XXX) · [City], [State] · X,XXX+ employees</span>
                         </div>
                         <div class="news-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span class="news-item-text"><strong>Subsidiary:</strong> Acme Manufacturing · Midwest, US · Founded 1946 · NAICS 333914</span>
+                            <span class="news-item-text"><strong>Subsidiary:</strong> Acme Manufacturing · [City], [State] · Founded [Year] · NAICS XXXXXX</span>
                         </div>
                     </div>
                     <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--border-light);">
                         <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:12px;display:flex;align-items:center;gap:8px;"><i class="fas fa-bolt" style="color:var(--amber);font-size:11px;"></i> ZoomInfo Scoops — Acme Manufacturing</div>
                         <div style="display:flex;flex-direction:column;gap:6px;">
-                            <div class="news-item"><i class="fas fa-file-contract" style="color:var(--green);"></i><span class="news-item-text"><strong>May 16, 2026:</strong> Awarded $X.XM contract by Federal Agency <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Project</span></span></div>
+                            <div class="news-item"><i class="fas fa-file-contract" style="color:var(--green);"></i><span class="news-item-text"><strong>May 16, 2026:</strong> Awarded $X.XM contract by [Federal Agency] <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Project</span></span></div>
                             <div class="news-item"><i class="fas fa-user-plus" style="color:var(--blue);"></i><span class="news-item-text"><strong>Apr 22, 2026:</strong> More open Sales roles than any time in past 12 months <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Hiring Plans</span></span></div>
-                            <div class="news-item"><i class="fas fa-calendar-check" style="color:var(--purple);"></i><span class="news-item-text"><strong>Apr 3, 2026:</strong> [Executive Name] speaking at AL-MS Water Joint Annual Conference <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Event</span></span></div>
+                            <div class="news-item"><i class="fas fa-calendar-check" style="color:var(--purple);"></i><span class="news-item-text"><strong>Apr 3, 2026:</strong> [Executive] speaking at [Industry Conference] <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Event</span></span></div>
                             <div class="news-item"><i class="fas fa-user-plus" style="color:var(--blue);"></i><span class="news-item-text"><strong>Mar 5, 2026:</strong> More open IT roles than any time in past 12 months <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Hiring Plans</span></span></div>
-                            <div class="news-item"><i class="fas fa-briefcase" style="color:var(--amber);"></i><span class="news-item-text"><strong>Feb 12, 2026:</strong> Seeking VP Operations, Piqua OH <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Open Position</span></span></div>
+                            <div class="news-item"><i class="fas fa-briefcase" style="color:var(--amber);"></i><span class="news-item-text"><strong>Feb 12, 2026:</strong> Seeking [VP Role], [City], [State] <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Open Position</span></span></div>
                             <div class="news-item"><i class="fas fa-user-plus" style="color:var(--blue);"></i><span class="news-item-text"><strong>Feb 8, 2026:</strong> More open Engineering & Technical roles than any time in past 12 months <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Hiring Plans</span></span></div>
-                            <div class="news-item"><i class="fas fa-briefcase" style="color:var(--amber);"></i><span class="news-item-text"><strong>Jan 14, 2026:</strong> Seeking Controller, Piqua OH <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Open Position</span></span></div>
+                            <div class="news-item"><i class="fas fa-briefcase" style="color:var(--amber);"></i><span class="news-item-text"><strong>Jan 14, 2026:</strong> Seeking [Finance Role], [City], [State] <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Open Position</span></span></div>
                             <div class="news-item"><i class="fas fa-user-plus" style="color:var(--blue);"></i><span class="news-item-text"><strong>Nov 25, 2025:</strong> More open Operations roles than any time in past 12 months <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Hiring Plans</span></span></div>
-                            <div class="news-item"><i class="fas fa-briefcase" style="color:var(--amber);"></i><span class="news-item-text"><strong>Nov 10, 2025:</strong> Seeking Product Manager, Piqua OH <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Open Position</span></span></div>
+                            <div class="news-item"><i class="fas fa-briefcase" style="color:var(--amber);"></i><span class="news-item-text"><strong>Nov 10, 2025:</strong> Seeking [PM Role], [City], [State] <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Open Position</span></span></div>
                         </div>
                         <div style="margin-top:14px;padding:12px 16px;background:var(--green-light);border:1px solid var(--green-border);border-radius:var(--radius-md);font-size:12px;color:var(--text-secondary);line-height:1.6;">
-                            <strong style="color:var(--green);"><i class="fas fa-lightbulb"></i> Key Insight:</strong> Acme Mfg is in aggressive hiring mode across Sales, IT, Engineering, and Operations. Combined with a $3.3M Navy contract win, this signals growth and potential increased hiring volume = more platform usage = expansion signal.
+                            <strong style="color:var(--green);"><i class="fas fa-lightbulb"></i> Key Insight:</strong> Acme Mfg is in aggressive hiring mode across Sales, IT, Engineering, and Operations. Combined with a $X.XM [Federal Agency] contract win, this signals growth and potential increased hiring volume = more platform usage = expansion signal.
                         </div>
                     </div>
                     <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--border-light);">
                         <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:12px;display:flex;align-items:center;gap:8px;"><i class="fas fa-chart-line" style="color:var(--purple);font-size:11px;"></i> Parent Company — Apex Holdings (NYSE: XXX)</div>
                         <div style="display:flex;flex-direction:column;gap:6px;">
                             <div class="news-item"><i class="fas fa-chart-bar" style="color:var(--text-muted);"></i><span class="news-item-text"><strong>May 22:</strong> Trading at $173.48, slight underperformance vs S&P 500</span></div>
-                            <div class="news-item"><i class="fas fa-money-bill-wave" style="color:var(--green);"></i><span class="news-item-text"><strong>Apr 28:</strong> Q1 2026 Earnings — Revenue $XXX.XM (+24.9% YoY), beat estimates. EPS $1.65 (14% above consensus)</span></div>
+                            <div class="news-item"><i class="fas fa-money-bill-wave" style="color:var(--green);"></i><span class="news-item-text"><strong>Apr 28:</strong> Q1 2026 Earnings — Revenue $XXX.XM (+XX.X% YoY), beat estimates. EPS $X.XX (XX% above consensus)</span></div>
                             <div class="news-item"><i class="fas fa-user-tie" style="color:var(--purple);"></i><span class="news-item-text"><strong>Apr 27:</strong> NEW CEO — Thomas Garcia named Chief Executive Officer (succession complete)</span></div>
                             <div class="news-item"><i class="fas fa-star" style="color:var(--amber);"></i><span class="news-item-text"><strong>Apr 25:</strong> Featured as "Market-Beating Stock with Competitive Advantages"</span></div>
                             <div class="news-item"><i class="fas fa-hand-holding-usd" style="color:var(--text-muted);"></i><span class="news-item-text"><strong>Apr 12:</strong> Mario Gabelli continues holding large position (1.35M shares)</span></div>
-                            <div class="news-item"><i class="fas fa-thumbs-up" style="color:var(--blue);"></i><span class="news-item-text"><strong>Feb 6:</strong> [Analyst Firm] maintains Buy rating, raised price target to $XXX</span></div>
+                            <div class="news-item"><i class="fas fa-thumbs-up" style="color:var(--blue);"></i><span class="news-item-text"><strong>Feb 6:</strong> [Analyst] maintains Buy rating, raised price target to $XXX</span></div>
                         </div>
                         <div style="margin-top:14px;padding:12px 16px;background:var(--blue-light);border:1px solid var(--blue-border);border-radius:var(--radius-md);font-size:12px;color:var(--text-secondary);line-height:1.6;">
                             <strong style="color:var(--blue);"><i class="fas fa-lightbulb"></i> Key Insight:</strong> Parent company thriving — revenue up 25% YoY, beat earnings, new CEO appointed. Healthy parent org with growth trajectory = low risk of budget cuts, potential for enterprise expansion to other Apex divisions.
@@ -1054,8 +1052,8 @@
                             <div class="profile-item"><div class="profile-item-label">Employees</div><div class="profile-item-value">500–700 (est.)</div></div>
                             <div class="profile-item"><div class="profile-item-label">Revenue</div><div class="profile-item-value">$200M–$500M</div></div>
                             <div class="profile-item"><div class="profile-item-label">Parent Company</div><div class="profile-item-value">Apex Holdings (NYSE: XXX)</div></div>
-                            <div class="profile-item"><div class="profile-item-label">HQ Location</div><div class="profile-item-value">Piqua, Ohio</div></div>
-                            <div class="profile-item"><div class="profile-item-label">HR Tech Stack</div><div class="profile-item-value">Rival Recruit (Active) + ATS Unknown</div></div>
+                            <div class="profile-item"><div class="profile-item-label">HQ Location</div><div class="profile-item-value">[City], [State]</div></div>
+                            <div class="profile-item"><div class="profile-item-label">HR Tech Stack</div><div class="profile-item-value">Vendor Recruit (Active) + ATS Unknown</div></div>
                             <div class="profile-item"><div class="profile-item-label">Hiring Volume</div><div class="profile-item-value">Active — Sales, Engineering, Early-Career</div></div>
                             <div class="profile-item"><div class="profile-item-label">Contract Start</div><div class="profile-item-value">December 2025</div></div>
                         </div>
@@ -1151,7 +1149,7 @@
                 </div>
 
                 <!-- CS ALIGNMENT MODULE -->
-                <div class="section-header" style="margin-top:32px;"><div class="section-title"><i class="fas fa-handshake"></i> CS Alignment <span class="info-btn">?<span class="info-tooltip">Surfaces QBR readiness, signal taxonomy, and CSM/AE coordination needs. Framework based on CS team operating model (cadence, prep, signal detection, R&amp;R).</span></span></div><div class="section-meta">CSM: CSM Name</div></div>
+                <div class="section-header" style="margin-top:32px;"><div class="section-title"><i class="fas fa-handshake"></i> CS Alignment <span class="info-btn">?<span class="info-tooltip">Surfaces QBR readiness, signal taxonomy, and CSM/AE coordination needs. Framework based on CS team operating model (cadence, prep, signal detection, R&amp;R).</span></span></div><div class="section-meta">CSM: [CSM Name]</div></div>
 
                 <!-- Signal Detection -->
                 <div class="card" style="margin-bottom:16px;">
@@ -1166,7 +1164,7 @@
                                         <div class="signal-icon"><i class="fas fa-check-circle" style="color:var(--green)"></i></div>
                                         <div class="signal-content">
                                             <div class="signal-label">Growth / Org Changes</div>
-                                            <div class="signal-detail">4 departments at 12-month hiring highs. $3.3M Navy contract. New users onboarding (Chelsea, Olivia).</div>
+                                            <div class="signal-detail">4 departments at 12-month hiring highs. $X.XM [Federal Agency] contract. New users onboarding (Chelsea, Olivia).</div>
                                         </div>
                                     </div>
                                     <div class="signal-item expansion">
@@ -1180,7 +1178,7 @@
                                         <div class="signal-icon"><i class="fas fa-check-circle" style="color:var(--green)"></i></div>
                                         <div class="signal-content">
                                             <div class="signal-label">Executive-Level ROI Conversations</div>
-                                            <div class="signal-detail">Parent company +25% YoY revenue, new CEO (Thomas Garcia). Budget environment strong. No constraints.</div>
+                                            <div class="signal-detail">Parent company +XX% YoY revenue, new CEO (Thomas Garcia). Budget environment strong. No constraints.</div>
                                         </div>
                                     </div>
                                     <div class="signal-item expansion">
@@ -1200,7 +1198,7 @@
                                         <div class="signal-icon"><i class="fas fa-exclamation-circle" style="color:var(--red)"></i></div>
                                         <div class="signal-content">
                                             <div class="signal-label">Platform Consolidation</div>
-                                            <div class="signal-detail"><strong style="color:var(--red);">ACTIVE: Workday is primary HCM.</strong> Phase 1 live Aug 2025. Excludes hourly/production workers. [Prior Vendor] expired end 2025 (replacement unknown). Apr 22, 2026 call confirmed Workday = primary recruiting module; Rival-Workday integration labeled "Phase 2" (not scheduled). Katy discussed Oct/Nov 2025 pilot that never materialized. <em>Key question: what replaced [Prior Vendor] for onboarding?</em></div>
+                                            <div class="signal-detail"><strong style="color:var(--red);">ACTIVE: Workday is primary HCM.</strong> Phase 1 live Aug 2025. Excludes hourly/production workers. [Prior Vendor] expired end 2025 (replacement unknown). Apr 22, 2026 call confirmed Workday = primary recruiting module; Vendor-Workday integration labeled "Phase 2" (not scheduled). Katy discussed Oct/Nov 2025 pilot that never materialized. <em>Key question: what replaced [Prior Vendor] for onboarding?</em></div>
                                         </div>
                                     </div>
                                     <div class="signal-item churn-warning">
@@ -1354,34 +1352,34 @@
                         </tr></thead>
                         <tbody id="people-tbody">
                             <tr class="person-row" data-engagement="high" onclick="togglePersonDetail(this)"><td><span class="person-name">Sarah Johnson</span></td><td><span class="person-title-text">VP of Human Resources</span></td><td><span class="role-badge decision">Decision Maker</span></td><td><span class="engagement-indicator high">High</span></td><td>May 23</td></tr>
-                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Budget authority for HR Tech purchases. Verbally aligned on Workflow value prop. Requested training for Chelsea & Olivia (May 23). Next step: regroup on Workflow expansion.<br><strong>Last Interaction:</strong> Email requesting seat swap — Chelsea & Olivia to replace Katy & Sam as active users.</div><div class="contact-info-row"><a href="mailto:sjohnson@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> sjohnson@acmemfg.com</a><a href="tel:+19372149889" class="contact-link"><i class="fas fa-phone"></i> (937) 214-9889</a><a href="https://[sfdc-instance].lightning.force.com/lightning/r/Contact/003Vs00000Js2WYIAZ/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Budget authority for HR Tech purchases. Verbally aligned on Workflow value prop. Requested training for Chelsea & Olivia (May 23). Next step: regroup on Workflow expansion.<br><strong>Last Interaction:</strong> Email requesting seat swap — Chelsea & Olivia to replace Katy & Sam as active users.</div><div class="contact-info-row"><a href="mailto:sjohnson@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> sjohnson@acmemfg.com</a><a href="tel:+19372149889" class="contact-link"><i class="fas fa-phone"></i> (937) 214-9889</a><a href="https://[crm-instance].force.com/lightning/r/Contact/003Vs00000Js2WYIAZ/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
 
                             <tr class="person-row" data-engagement="high" onclick="togglePersonDetail(this)"><td><span class="person-name">Rachel Adams</span></td><td><span class="person-title-text">Manager, Human Resources</span></td><td><span class="role-badge champion">Champion</span></td><td><span class="engagement-indicator high">High</span></td><td>Apr 22</td></tr>
-                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Day-to-day platform manager and internal champion. Attends all meetings. Drives usage proactively.<br><strong>Last Interaction:</strong> Apr 22 meeting — escalated candidate import bug.</div><div class="contact-info-row"><a href="mailto:hmescher@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> hmescher@acmemfg.com</a><a href="tel:+14199535703" class="contact-link"><i class="fas fa-phone"></i> (419) 953-5703</a><a href="https://[sfdc-instance].lightning.force.com/lightning/r/Contact/003Vs00000piFSjIAM/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Day-to-day platform manager and internal champion. Attends all meetings. Drives usage proactively.<br><strong>Last Interaction:</strong> Apr 22 meeting — escalated candidate import bug.</div><div class="contact-info-row"><a href="mailto:hmescher@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> hmescher@acmemfg.com</a><a href="tel:+14199535703" class="contact-link"><i class="fas fa-phone"></i> (419) 953-5703</a><a href="https://[crm-instance].force.com/lightning/r/Contact/003Vs00000piFSjIAM/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
 
                             <tr class="person-row" data-engagement="high" onclick="togglePersonDetail(this)"><td><span class="person-name">James Williams</span></td><td><span class="person-title-text">HR Generalist</span></td><td><span class="role-badge user">Power User</span></td><td><span class="engagement-indicator high">High</span></td><td>Apr 22</td></tr>
-                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Active sourcer focused on sales roles. Being replaced by Olivia per May 23 seat swap request. Transitioning off platform.<br><strong>Last Interaction:</strong> Apr 22 meeting — active participant in sourcing discussion.</div><div class="contact-info-row"><a href="mailto:scallinan@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> scallinan@acmemfg.com</a><a href="tel:+19185102815" class="contact-link"><i class="fas fa-phone"></i> (918) 510-2815</a><a href="https://[sfdc-instance].lightning.force.com/lightning/r/Contact/003Vs00000rjjnLIAQ/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Active sourcer focused on sales roles. Being replaced by Olivia per May 23 seat swap request. Transitioning off platform.<br><strong>Last Interaction:</strong> Apr 22 meeting — active participant in sourcing discussion.</div><div class="contact-info-row"><a href="mailto:jwilliams@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> jwilliams@acmemfg.com</a><a href="tel:+19185102815" class="contact-link"><i class="fas fa-phone"></i> (918) 510-2815</a><a href="https://[crm-instance].force.com/lightning/r/Contact/003Vs00000rjjnLIAQ/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
 
                             <tr class="person-row" data-engagement="medium" onclick="togglePersonDetail(this)"><td><span class="person-name">Laura Martinez</span></td><td><span class="person-title-text">HR Generalist</span></td><td><span class="role-badge at-risk">At-Risk User</span></td><td><span class="engagement-indicator medium">Medium</span></td><td>Apr 22</td></tr>
-                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Struggling with search functionality for early-career roles. Had source button issues (Mar 10). Needs enablement session.<br><strong>Last Interaction:</strong> Apr 22 meeting — limited engagement with platform topics.</div><div class="contact-info-row"><a href="mailto:hmckee@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> hmckee@acmemfg.com</a><a href="https://[sfdc-instance].lightning.force.com/lightning/r/Contact/003Vs00000piFSkIAM/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Struggling with search functionality for early-career roles. Had source button issues (Mar 10). Needs enablement session.<br><strong>Last Interaction:</strong> Apr 22 meeting — limited engagement with platform topics.</div><div class="contact-info-row"><a href="mailto:lmartinez@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> lmartinez@acmemfg.com</a><a href="https://[crm-instance].force.com/lightning/r/Contact/003Vs00000piFSkIAM/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
 
                             <tr class="person-row" data-engagement="medium" onclick="togglePersonDetail(this)"><td><span class="person-name">Emily Chen</span></td><td><span class="person-title-text">HR</span></td><td><span class="role-badge technical">Technical Contact</span></td><td><span class="engagement-indicator medium">Medium</span></td><td>May 23</td></tr>
-                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Reported critical candidate import bug (Apr 22). Technical user who surfaces platform issues. Key for technical validation.<br><strong>Last Interaction:</strong> May 23 — included on seat swap request email.</div><div class="contact-info-row"><a href="mailto:hegbert@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> hegbert@acmemfg.com</a><a href="tel:+19054576223" class="contact-link"><i class="fas fa-phone"></i> (905) 457-6223</a><a href="https://[sfdc-instance].lightning.force.com/lightning/r/Contact/003Vs00000rzqGBIAY/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Reported critical candidate import bug (Apr 22). Technical user who surfaces platform issues. Key for technical validation.<br><strong>Last Interaction:</strong> May 23 — included on seat swap request email.</div><div class="contact-info-row"><a href="mailto:echen@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> echen@acmemfg.com</a><a href="tel:+19054576223" class="contact-link"><i class="fas fa-phone"></i> (905) 457-6223</a><a href="https://[crm-instance].force.com/lightning/r/Contact/003Vs00000rzqGBIAY/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
 
                             <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name">Patricia Wilson</span></td><td><span class="person-title-text">CHRO, Apex Holdings</span></td><td><span class="role-badge influencer">Enterprise Path</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
-                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> CHRO at parent company Apex Holdings. Enterprise expansion path — could champion broader rollout across 2,700+ employees.<br><strong>Strategy:</strong> Don't engage directly until Acme Mfg is a clear success story with measurable ROI.</div><div class="contact-info-row"><a href="mailto:tpolmanteer@apexco.com" class="contact-link"><i class="fas fa-envelope"></i> tpolmanteer@apexco.com</a><a href="tel:+12038327611" class="contact-link"><i class="fas fa-phone"></i> (203) 832-7611</a><a href="https://[sfdc-instance].lightning.force.com/lightning/r/Contact/003Vs00000YYuk9IAD/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> CHRO at parent company Apex Holdings. Enterprise expansion path — could champion broader rollout across X,XXX+ employees.<br><strong>Strategy:</strong> Don't engage directly until Acme Mfg is a clear success story with measurable ROI.</div><div class="contact-info-row"><a href="mailto:pwilson@apexinc.com" class="contact-link"><i class="fas fa-envelope"></i> pwilson@apexinc.com</a><a href="tel:+12038327611" class="contact-link"><i class="fas fa-phone"></i> (203) 832-7611</a><a href="https://[crm-instance].force.com/lightning/r/Contact/003Vs00000YYuk9IAD/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
 
                             <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name">Jennifer Lee</span></td><td><span class="person-title-text">Dir. Talent Acquisition, Apex Holdings</span></td><td><span class="role-badge influencer">Influencer</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
-                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Could drive broader adoption across Apex Holdings. Potential future champion for enterprise deal.<br><strong>Strategy:</strong> Consider a "customer story" approach once Acme Mfg shows measurable wins.</div><div class="contact-info-row"><a href="mailto:jlee@apexco.com" class="contact-link"><i class="fas fa-envelope"></i> jlee@apexco.com</a><a href="tel:+14753339892" class="contact-link"><i class="fas fa-phone"></i> (475) 333-9892</a><a href="https://[sfdc-instance].lightning.force.com/lightning/r/Contact/003Vs00000YYTs6IAH/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Could drive broader adoption across Apex Holdings. Potential future champion for enterprise deal.<br><strong>Strategy:</strong> Consider a "customer story" approach once Acme Mfg shows measurable wins.</div><div class="contact-info-row"><a href="mailto:jlee@apexinc.com" class="contact-link"><i class="fas fa-envelope"></i> jlee@apexinc.com</a><a href="tel:+14753339892" class="contact-link"><i class="fas fa-phone"></i> (475) 333-9892</a><a href="https://[crm-instance].force.com/lightning/r/Contact/003Vs00000YYTs6IAH/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
 
                             <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name">Robert Taylor</span></td><td><span class="person-title-text">CFO</span></td><td><span class="role-badge financial">Financial</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
-                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Local financial authority at Acme Manufacturing. Not engaged in sales conversations. May be needed for larger deals.<br><strong>Strategy:</strong> Not needed for $XX.XK Workflow deal. Monitor for larger enterprise conversations.</div><div class="contact-info-row"><a href="mailto:mlivingston@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> mlivingston@acmemfg.com</a><a href="tel:+19372143850" class="contact-link"><i class="fas fa-phone"></i> (937) 214-3850</a><a href="https://[sfdc-instance].lightning.force.com/lightning/r/Contact/003Vs00000csPA4IAM/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Local financial authority at Acme Manufacturing. Not engaged in sales conversations. May be needed for larger deals.<br><strong>Strategy:</strong> Not needed for $XX.XK Workflow deal. Monitor for larger enterprise conversations.</div><div class="contact-info-row"><a href="mailto:mlivingston@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> mlivingston@acmemfg.com</a><a href="tel:+19372143850" class="contact-link"><i class="fas fa-phone"></i> (937) 214-3850</a><a href="https://[crm-instance].force.com/lightning/r/Contact/003Vs00000csPA4IAM/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
 
-                            <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name">Michael Anderson</span></td><td><span class="person-title-text">CFO, Apex Co.</span></td><td><span class="role-badge financial">Financial (Parent)</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
-                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Enterprise-scale financial authority. Only relevant for very large deals at Apex Holdings level.<br><strong>Strategy:</strong> Enterprise-scale only. Not actionable at current revenue levels.</div><div class="contact-info-row"><a href="mailto:rmaue@apexco.com" class="contact-link"><i class="fas fa-envelope"></i> rmaue@apexco.com</a><a href="tel:+16313754521" class="contact-link"><i class="fas fa-phone"></i> (631) 375-4521</a><a href="https://[sfdc-instance].lightning.force.com/lightning/r/Contact/003Vs00000cTsLlIAK/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                            <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name">Michael Anderson</span></td><td><span class="person-title-text">CFO, Apex Inc.</span></td><td><span class="role-badge financial">Financial (Parent)</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Enterprise-scale financial authority. Only relevant for very large deals at Apex Holdings level.<br><strong>Strategy:</strong> Enterprise-scale only. Not actionable at current revenue levels.</div><div class="contact-info-row"><a href="mailto:rmaue@apexinc.com" class="contact-link"><i class="fas fa-envelope"></i> rmaue@apexinc.com</a><a href="tel:+16313754521" class="contact-link"><i class="fas fa-phone"></i> (631) 375-4521</a><a href="https://[crm-instance].force.com/lightning/r/Contact/003Vs00000cTsLlIAK/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
 
                             <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name">David Thompson</span></td><td><span class="person-title-text">Unknown</span></td><td><span class="role-badge unknown">Unknown</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
-                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> No context available. Appeared in contact records but no role or interaction history.<br><strong>Strategy:</strong> Low priority — research if name surfaces in future interactions.</div><div class="contact-info-row"><a href="mailto:bsweeney@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> bsweeney@acmemfg.com</a><a href="tel:+16173666294" class="contact-link"><i class="fas fa-phone"></i> (617) 366-6294</a><a href="https://[sfdc-instance].lightning.force.com/lightning/r/Contact/003Vs00000OZ4njIAD/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> No context available. Appeared in contact records but no role or interaction history.<br><strong>Strategy:</strong> Low priority — research if name surfaces in future interactions.</div><div class="contact-info-row"><a href="mailto:bsweeney@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> bsweeney@acmemfg.com</a><a href="tel:+16173666294" class="contact-link"><i class="fas fa-phone"></i> (617) 366-6294</a><a href="https://[crm-instance].force.com/lightning/r/Contact/003Vs00000OZ4njIAD/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -1498,12 +1496,12 @@
                         <div class="pipeline-card-detail-inner" style="display:block;">
                             <div class="detail-row"><span class="detail-label">Product</span><span class="detail-value">Workflow — hiring process automation</span></div>
                             <div class="detail-row"><span class="detail-label">Pain / Use Case</span><span class="detail-value">Small HR team managing hiring across multiple locations. Manual processes creating friction as hiring volume increases. Katy articulated need for automation in Apr 17 1:1.</span></div>
-                            <div class="detail-row"><span class="detail-label">Competitive Context</span><span class="detail-value" style="color:var(--red);"><strong>Workday = primary HCM (Phase 1 live Aug 2025).</strong> [Prior Vendor] expired end 2025 (replacement unclear). Rival Workflow positioned as bolt-on for hourly/production + Canadian workers Workday doesn't cover. Oct/Nov 2025 pilot discussed but never materialized. Apr 2026: team says they have "a lot going on" and limited bandwidth. Rival-Workday integration = "Phase 2" (no timeline). <em>Open question: Did Katy solve onboarding another way? Is Workflow still a live priority?</em></span></div>
+                            <div class="detail-row"><span class="detail-label">Competitive Context</span><span class="detail-value" style="color:var(--red);"><strong>Workday = primary HCM (Phase 1 live Aug 2025).</strong> [Prior Vendor] expired end 2025 (replacement unclear). Vendor Workflow positioned as bolt-on for hourly/production + Canadian workers Workday doesn't cover. Oct/Nov 2025 pilot discussed but never materialized. Apr 2026: team says they have "a lot going on" and limited bandwidth. Vendor-Workday integration = "Phase 2" (no timeline). <em>Open question: Did Katy solve onboarding another way? Is Workflow still a live priority?</em></span></div>
                             <div class="detail-row"><span class="detail-label">Current State</span><span class="detail-value" style="color:var(--red);">No call since Apr 22. Email active (last: May 23). "Regroup w/ Katy" not yet scheduled.</span></div>
-                            <div class="detail-row"><span class="detail-label">Expansion Signal</span><span class="detail-value" style="color:var(--green);">4 departments at 12-month hiring highs (Sales, IT, Engineering, Ops). $3.3M Navy contract = headcount growth. More hiring = more process pain = stronger Workflow case.</span></div>
+                            <div class="detail-row"><span class="detail-label">Expansion Signal</span><span class="detail-value" style="color:var(--green);">4 departments at 12-month hiring highs (Sales, IT, Engineering, Ops). $X.XM [Federal Agency] contract = headcount growth. More hiring = more process pain = stronger Workflow case.</span></div>
                             <div class="detail-row"><span class="detail-label">Risk</span><span class="detail-value" style="color:var(--red);">Close pushed to Sep 30 (was Jun 30). Still no meeting scheduled. Risk of indefinite stall without forcing function.</span></div>
                             <div class="detail-row"><span class="detail-label">Next Step</span><span class="detail-value" style="font-weight:600;">Schedule regroup with Katy. Frame around hiring surge: "Your team is hiring at record pace — let's talk about what Workflow does for you at this volume."</span></div>
-                            <a href="https://[sfdc-instance].lightning.force.com/lightning/r/Opportunity/XXXXXXXXXXXXX/view" target="_blank" class="opp-sfdc-link" onclick="event.stopPropagation()"><i class="fab fa-salesforce"></i> Open in SFDC</a>
+                            <a href="#" class="sfdc-link"><i class="fas fa-external-link-alt"></i> Open in CRM</a>
                         </div>
                     </div>
                 </div>
@@ -1518,8 +1516,8 @@
                             <div class="health-item"><div class="health-item-label">Champion Access</div><div class="health-item-value" style="color:var(--green)">Strong</div><div class="health-item-note">Direct relationship with Katy (VP HR, budget authority).</div></div>
                             <div class="health-item"><div class="health-item-label">Multi-Threading</div><div class="health-item-value" style="color:var(--amber)">Moderate</div><div class="health-item-note">Katy single-threaded on Workflow eval. No other stakeholders engaged.</div></div>
                             <div class="health-item"><div class="health-item-label">Technical Validation</div><div class="health-item-value" style="color:var(--green)">Resolved</div><div class="health-item-note">Import bug fixed May 12 (&lt;1hr). No open technical blockers.</div></div>
-                            <div class="health-item"><div class="health-item-label">Competition</div><div class="health-item-value" style="color:var(--red)">Workday (Primary HCM)</div><div class="health-item-note">Phase 1 live Aug 2025. Rival positioned as complement (sourcing layer). Workflow opp stalled since pilot discussion. 9/30 close date (pushed from 6/30). Needs executive re-engagement.</div></div>
-                            <div class="health-item"><div class="health-item-label">Business Case</div><div class="health-item-value" style="color:var(--green)">Strong</div><div class="health-item-note">Hiring surge (4 depts) + $3.3M Navy contract = volume growth.</div></div>
+                            <div class="health-item"><div class="health-item-label">Competition</div><div class="health-item-value" style="color:var(--red)">Workday (Primary HCM)</div><div class="health-item-note">Phase 1 live Aug 2025. Vendor positioned as complement (sourcing layer). Workflow opp stalled since pilot discussion. 9/30 close date (pushed from 6/30). Needs executive re-engagement.</div></div>
+                            <div class="health-item"><div class="health-item-label">Business Case</div><div class="health-item-value" style="color:var(--green)">Strong</div><div class="health-item-note">Hiring surge (4 depts) + $X.XM [Federal Agency] contract = volume growth.</div></div>
                             <div class="health-item"><div class="health-item-label">Close Confidence</div><div class="health-item-value" style="color:var(--amber)">Low-Medium</div><div class="health-item-note">40% prob, 124 days to close, no meeting scheduled. Will slip.</div></div>
                         </div>
                     </div>
@@ -1537,7 +1535,7 @@
                             <div class="detail-row"><span class="detail-label">Product</span><span class="detail-value">Recruit — AI sourcing (Entelo/ROSI)</span></div>
                             <div class="detail-row"><span class="detail-label">Users</span><span class="detail-value">Transitioning to Chelsea & Olivia (from Katy & Sam)</span></div>
                             <div class="detail-row"><span class="detail-label">Usage</span><span class="detail-value">Active sourcing for sales roles. Hannah struggling with early-career search.</span></div>
-                            <a href="https://[sfdc-instance].lightning.force.com/lightning/r/Opportunity/XXXXXXXXXXXXX/view" target="_blank" class="opp-sfdc-link" onclick="event.stopPropagation()"><i class="fab fa-salesforce"></i> Open in SFDC</a>
+                            <a href="#" class="sfdc-link"><i class="fas fa-external-link-alt"></i> Open in CRM</a>
                         </div></div>
                     </div>
                     <div class="pipeline-card" style="opacity:0.7;" onclick="togglePipeline(this)">
@@ -1548,8 +1546,8 @@
                         <div class="pipeline-card-detail"><div class="pipeline-card-detail-inner">
                             <div class="detail-row"><span class="detail-label">Contract</span><span class="detail-value">Multi-year (SFDC close: 2033). First renewal decision point: Jan 2027.</span></div>
                             <div class="detail-row"><span class="detail-label">Strategy</span><span class="detail-value">Focus on expansion now. Renewal health follows from adoption & value delivery.</span></div>
-                            <div class="detail-row"><span class="detail-label">Parent Health</span><span class="detail-value" style="color:var(--green)">Apex Holdings revenue +25% YoY, new CEO, no budget risk signals.</span></div>
-                            <a href="https://[sfdc-instance].lightning.force.com/lightning/r/Opportunity/XXXXXXXXXXXXX/view" target="_blank" class="opp-sfdc-link" onclick="event.stopPropagation()"><i class="fab fa-salesforce"></i> Open in SFDC</a>
+                            <div class="detail-row"><span class="detail-label">Parent Health</span><span class="detail-value" style="color:var(--green)">Apex Holdings revenue +XX% YoY, new CEO, no budget risk signals.</span></div>
+                            <a href="#" class="sfdc-link"><i class="fas fa-external-link-alt"></i> Open in CRM</a>
                         </div></div>
                     </div>
                 </div>
@@ -1565,7 +1563,7 @@
         <footer class="footer">
             <div class="footer-content">
                 <div class="footer-tech">
-                    <span class="tech-tag">Rival Recruit</span>
+                    <span class="tech-tag">Vendor Recruit</span>
                     <span class="tech-tag">Entelo</span>
                     <span class="tech-tag">ATS Unknown</span>
                     <span class="tech-tag">Workflow (Pending)</span>
