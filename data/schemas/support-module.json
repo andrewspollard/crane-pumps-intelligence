@@ -1,0 +1,1 @@
+{"module_name":"support_tickets","status":"pending","last_refreshed":null,"data":{},"notes":"Awaiting connection to support ticketing system (Zendesk/Jira). When available: open tickets, resolution time, recurring issues, CSAT scores.","required_fields":["open_tickets","resolved_tickets_last_30d","avg_resolution_time","recurring_issues","csat_score","escalation_history"]}

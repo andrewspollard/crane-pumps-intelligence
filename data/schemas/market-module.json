@@ -1,0 +1,1 @@
+{"module_name":"market_intelligence","status":"pending","last_refreshed":null,"data":{},"notes":"Awaiting automated market monitoring. When available: news about Crane Holdings, M&A activity, executive changes, industry trends affecting their hiring.","required_fields":["company_news","executive_changes","funding_ma_activity","job_postings_trend","industry_hiring_outlook"]}
