@@ -612,6 +612,26 @@
         .roadmap-title { font-size:14px; font-weight:600; color:var(--text-primary); margin-bottom:4px; }
         .roadmap-desc { font-size:12px; color:var(--text-secondary); line-height:1.5; }
 
+        
+        /* CS Alignment Module */
+        .signal-list { display:flex; flex-direction:column; gap:10px; }
+        .signal-item { display:flex; gap:10px; padding:10px 12px; border-radius:8px; background:var(--surface); border:1px solid var(--border); }
+        .signal-item.expansion { border-left:3px solid var(--green); }
+        .signal-item.partial { border-left:3px solid var(--amber); }
+        .signal-item.churn-clear { border-left:3px solid var(--green); }
+        .signal-item.churn-warning { border-left:3px solid var(--amber); }
+        .signal-icon { flex-shrink:0; padding-top:2px; }
+        .signal-content { flex:1; }
+        .signal-label { font-size:13px; font-weight:600; color:var(--text-primary); margin-bottom:2px; }
+        .signal-detail { font-size:12px; color:var(--text-secondary); line-height:1.5; }
+        .qbr-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; }
+        .qbr-item { padding:12px; border-radius:8px; border:1px solid var(--border); background:var(--surface); }
+        .qbr-status { width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; margin-bottom:8px; }
+        .qbr-status.ready { background:#dcfce7; color:#15803d; }
+        .qbr-status.gap { background:#fee2e2; color:#dc2626; }
+        .qbr-label { font-size:13px; font-weight:600; color:var(--text-primary); margin-bottom:4px; }
+        .qbr-detail { font-size:11px; color:var(--text-secondary); line-height:1.4; }
+
         </style>
 </head>
 <body>
@@ -1134,6 +1154,170 @@
                         <div style="margin-top:16px;padding:12px 16px;background:var(--blue-light);border-radius:8px;border-left:3px solid var(--blue);">
                             <div style="font-weight:600;font-size:13px;color:var(--blue);margin-bottom:4px;"><i class="fas fa-lightbulb"></i> Selling Insight</div>
                             <div style="font-size:13px;color:var(--text-secondary);">Employee Portal Redesign launches Jun 1 to 6 named clients. This is demo-ready proof that Workflow is actively evolving. Pair with Katy's pain around multi-location hiring process friction to build urgency.</div>
+                        </div>
+                    </div>
+                </div>
+
+            
+                <!-- CS ALIGNMENT MODULE -->
+                <div class="section-header" style="margin-top:32px;"><div class="section-title"><i class="fas fa-handshake"></i> CS Alignment</div><div class="section-meta">Framework: Blair Brandow's CS Operating Model | CSM: Neda Aleksievska</div></div>
+
+                <!-- Signal Detection -->
+                <div class="card" style="margin-bottom:16px;">
+                    <div class="card-header" style="border-bottom:1px solid var(--border);"><div class="section-title" style="margin:0;font-size:14px;"><i class="fas fa-satellite-dish"></i> Signal Detection (Blair's Taxonomy)</div></div>
+                    <div class="card-body">
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+                            <!-- Expansion Signals -->
+                            <div>
+                                <div style="font-size:12px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px;"><i class="fas fa-arrow-up"></i> Expansion Signals Detected</div>
+                                <div class="signal-list">
+                                    <div class="signal-item expansion">
+                                        <div class="signal-icon"><i class="fas fa-check-circle" style="color:var(--green)"></i></div>
+                                        <div class="signal-content">
+                                            <div class="signal-label">Growth / Org Changes</div>
+                                            <div class="signal-detail">4 departments at 12-month hiring highs. $3.3M Navy contract. New users onboarding (Chelsea, Olivia).</div>
+                                        </div>
+                                    </div>
+                                    <div class="signal-item expansion">
+                                        <div class="signal-icon"><i class="fas fa-check-circle" style="color:var(--green)"></i></div>
+                                        <div class="signal-content">
+                                            <div class="signal-label">Manual Work Complaints</div>
+                                            <div class="signal-detail">Katy articulated multi-location hiring friction, manual processes (Apr 17 call). Direct Workflow fit.</div>
+                                        </div>
+                                    </div>
+                                    <div class="signal-item expansion">
+                                        <div class="signal-icon"><i class="fas fa-check-circle" style="color:var(--green)"></i></div>
+                                        <div class="signal-content">
+                                            <div class="signal-label">Executive-Level ROI Conversations</div>
+                                            <div class="signal-detail">Parent company +25% YoY revenue, new CEO (Alex Alcala). Budget environment strong. No constraints.</div>
+                                        </div>
+                                    </div>
+                                    <div class="signal-item expansion partial">
+                                        <div class="signal-icon"><i class="fas fa-minus-circle" style="color:var(--amber)"></i></div>
+                                        <div class="signal-content">
+                                            <div class="signal-label">New Stakeholders Joining Calls</div>
+                                            <div class="signal-detail">Not yet. Parent CHRO (Tami Polmanteer) and Dir TA (Amy Holgerson) unengaged. Enterprise path exists but untapped.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Churn Signals -->
+                            <div>
+                                <div style="font-size:12px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px;"><i class="fas fa-arrow-down"></i> Churn Signals Monitored</div>
+                                <div class="signal-list">
+                                    <div class="signal-item churn-clear">
+                                        <div class="signal-icon"><i class="fas fa-shield-alt" style="color:var(--green)"></i></div>
+                                        <div class="signal-content">
+                                            <div class="signal-label">Platform Consolidation</div>
+                                            <div class="signal-detail">No mentions. No Workday/UKG/Oracle conversations detected in any Chorus call.</div>
+                                        </div>
+                                    </div>
+                                    <div class="signal-item churn-warning">
+                                        <div class="signal-icon"><i class="fas fa-exclamation-triangle" style="color:var(--amber)"></i></div>
+                                        <div class="signal-content">
+                                            <div class="signal-label">Reduced Engagement / Cancelled Cadence</div>
+                                            <div class="signal-detail">37-day gap since last cadence call (Apr 22). Bi-weekly rhythm broken. This is a formal CS KPI risk.</div>
+                                        </div>
+                                    </div>
+                                    <div class="signal-item churn-clear">
+                                        <div class="signal-icon"><i class="fas fa-shield-alt" style="color:var(--green)"></i></div>
+                                        <div class="signal-content">
+                                            <div class="signal-label">Loss of Executive / Champion</div>
+                                            <div class="signal-detail">Katy (VP HR) still engaged. User seat transition (Katy/Sam to Chelsea/Olivia) is planned, not attrition.</div>
+                                        </div>
+                                    </div>
+                                    <div class="signal-item churn-clear">
+                                        <div class="signal-icon"><i class="fas fa-shield-alt" style="color:var(--green)"></i></div>
+                                        <div class="signal-content">
+                                            <div class="signal-label">Support Friction</div>
+                                            <div class="signal-detail">2 tickets, both resolved same-day. No escalation pattern. Support health: good.</div>
+                                        </div>
+                                    </div>
+                                    <div class="signal-item churn-warning">
+                                        <div class="signal-icon"><i class="fas fa-exclamation-triangle" style="color:var(--amber)"></i></div>
+                                        <div class="signal-content">
+                                            <div class="signal-label">Drop in Usage / Narrow Use Cases</div>
+                                            <div class="signal-detail">Hannah struggling with early-career search (compares unfavorably to LinkedIn Recruiter). Risk of single-user-type dependency.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-top:16px;padding:10px 14px;background:var(--surface);border-radius:8px;border:1px solid var(--border);">
+                            <div style="font-size:12px;color:var(--text-muted);"><strong>Net Signal Score:</strong> <span style="color:var(--green);font-weight:700;">+3 Expansion</span> vs <span style="color:var(--amber);font-weight:600;">2 Amber Churn Warnings</span> (no red). Account is expansion-ready but cadence gap requires immediate fix.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- QBR Readiness -->
+                <div class="card" style="margin-bottom:16px;">
+                    <div class="card-header" style="border-bottom:1px solid var(--border);"><div class="section-title" style="margin:0;font-size:14px;"><i class="fas fa-clipboard-check"></i> QBR Readiness</div></div>
+                    <div class="card-body">
+                        <div class="qbr-grid">
+                            <div class="qbr-item">
+                                <div class="qbr-status ready"><i class="fas fa-check"></i></div>
+                                <div class="qbr-label">Usage Metrics</div>
+                                <div class="qbr-detail">Active sourcing, candidate imports. Need: pull actual search/import counts from platform.</div>
+                            </div>
+                            <div class="qbr-item">
+                                <div class="qbr-status ready"><i class="fas fa-check"></i></div>
+                                <div class="qbr-label">ROI Narrative</div>
+                                <div class="qbr-detail">Hiring surge + ROSI performance gains (60s to 10-17s) = time savings. Automated Import Email = process automation.</div>
+                            </div>
+                            <div class="qbr-item">
+                                <div class="qbr-status ready"><i class="fas fa-check"></i></div>
+                                <div class="qbr-label">Support Health</div>
+                                <div class="qbr-detail">2 tickets, both same-day. Clean record. Highlight in QBR.</div>
+                            </div>
+                            <div class="qbr-item">
+                                <div class="qbr-status gap"><i class="fas fa-times"></i></div>
+                                <div class="qbr-label">Customer Goals</div>
+                                <div class="qbr-detail">No documented 2026 goals/objectives on file. Need discovery in next cadence call.</div>
+                            </div>
+                            <div class="qbr-item">
+                                <div class="qbr-status ready"><i class="fas fa-check"></i></div>
+                                <div class="qbr-label">Product Roadmap</div>
+                                <div class="qbr-detail">May 2026 deck ready. Recruit + Workflow updates mapped to their pain.</div>
+                            </div>
+                            <div class="qbr-item">
+                                <div class="qbr-status gap"><i class="fas fa-times"></i></div>
+                                <div class="qbr-label">Stakeholder Map</div>
+                                <div class="qbr-detail">Need: confirm Chelsea/Olivia onboarded, validate Katy still decision-maker for expansion.</div>
+                            </div>
+                        </div>
+                        <div style="margin-top:14px;padding:10px 14px;background:#fef3c7;border-radius:8px;border-left:3px solid var(--amber);">
+                            <div style="font-size:12px;"><strong style="color:#92400e;">QBR Timing:</strong> <span style="color:var(--text-secondary);">No QBR scheduled. Last meaningful strategic conversation: Apr 17 (Katy 1:1). Per CS playbook, prep call + 2 weeks lead time needed. Recommend scheduling for mid-June post Workflow regroup.</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CSM/AE Coordination -->
+                <div class="card">
+                    <div class="card-header" style="border-bottom:1px solid var(--border);"><div class="section-title" style="margin:0;font-size:14px;"><i class="fas fa-users-cog"></i> CSM / AE Coordination</div></div>
+                    <div class="card-body">
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                            <div style="padding:14px;border-radius:10px;border:1px solid var(--border);background:var(--surface);">
+                                <div style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Neda (CSM) Needs From You</div>
+                                <ul style="margin:0;padding-left:16px;font-size:13px;color:var(--text-secondary);line-height:1.8;">
+                                    <li>Workflow expansion timeline + positioning clarity</li>
+                                    <li>Whether to include Workflow in next cadence or separate track</li>
+                                    <li>Internal prep call before QBR (per CS playbook: roles/responsibilities assigned)</li>
+                                    <li>Update on Chelsea/Olivia training completion</li>
+                                </ul>
+                            </div>
+                            <div style="padding:14px;border-radius:10px;border:1px solid var(--border);background:var(--surface);">
+                                <div style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">You (AE) Need From Neda</div>
+                                <ul style="margin:0;padding-left:16px;font-size:13px;color:var(--text-secondary);line-height:1.8;">
+                                    <li>Account health check: usage trends, adoption blockers</li>
+                                    <li>Hannah's search struggles status (resolved or ongoing?)</li>
+                                    <li>Confirmation cadence call is being rescheduled</li>
+                                    <li>Any chatter about platform consolidation or competing evals</li>
+                                    <li>Intro path to Tami Polmanteer (Parent CHRO) if relationship exists</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="margin-top:14px;padding:10px 14px;background:var(--surface);border-radius:8px;border:1px solid var(--border);">
+                            <div style="font-size:12px;color:var(--text-muted);"><strong>Per CS Playbook:</strong> "Collaboration is shared, accountability is not." CSM owns relationship + risk communication. AE owns expansion revenue. Both responsible for re-establishing cadence immediately.</div>
                         </div>
                     </div>
                 </div>
