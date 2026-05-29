@@ -597,7 +597,22 @@
         /* ═══════════════ INTERSECTION OBSERVER ANIMATIONS ═══════════════ */
         .observe-in { opacity: 0; transform: translateY(16px); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
         .observe-in.visible { opacity: 1; transform: translateY(0); }
-    </style>
+    
+        /* Product Roadmap */
+        .roadmap-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:12px; }
+        .roadmap-item { padding:14px 16px; border-radius:10px; border:1px solid var(--border); background:var(--surface); transition:all 0.2s; }
+        .roadmap-item:hover { border-color:var(--border-active); box-shadow:0 2px 8px rgba(0,0,0,0.04); }
+        .roadmap-item.shipped { border-left:3px solid var(--green); }
+        .roadmap-item.launching { border-left:3px solid var(--blue); background:var(--blue-light); }
+        .roadmap-item.coming { border-left:3px solid var(--amber); }
+        .roadmap-badge { display:inline-block; font-size:10px; font-weight:700; letter-spacing:0.5px; padding:2px 8px; border-radius:4px; margin-bottom:6px; }
+        .roadmap-badge.shipped { background:#dcfce7; color:#15803d; }
+        .roadmap-badge.launching { background:#dbeafe; color:#1d4ed8; }
+        .roadmap-badge.coming { background:#fef3c7; color:#92400e; }
+        .roadmap-title { font-size:14px; font-weight:600; color:var(--text-primary); margin-bottom:4px; }
+        .roadmap-desc { font-size:12px; color:var(--text-secondary); line-height:1.5; }
+
+        </style>
 </head>
 <body>
     <div class="app-container">
@@ -1034,6 +1049,95 @@
                         </div>
                     </div>
                 </div>
+            
+                <!-- PRODUCT ROADMAP -->
+                <div class="section-header" style="margin-top:32px;"><div class="section-title"><i class="fas fa-rocket"></i> Product Roadmap</div><div class="section-meta">Source: May 2026 Product Updates (SharePoint) | Last updated: May 27, 2026</div></div>
+
+                <div class="card" style="margin-bottom:16px;">
+                    <div class="card-header" style="border-bottom:1px solid var(--border);"><div class="section-title" style="margin:0;font-size:14px;"><i class="fas fa-search"></i> Recruit — Current Product</div></div>
+                    <div class="card-body">
+                        <div class="roadmap-grid">
+                            <div class="roadmap-item shipped">
+                                <div class="roadmap-badge shipped">SHIPPED May 26</div>
+                                <div class="roadmap-title">Automated Import Email</div>
+                                <div class="roadmap-desc">Configurable email fires when candidate is imported to pipeline. Works with ROSI Import, Chrome Extension, Manual Upload. <span style="color:var(--green);font-weight:600;">Directly addresses Crane's import workflow pain.</span></div>
+                            </div>
+                            <div class="roadmap-item shipped">
+                                <div class="roadmap-badge shipped">SHIPPED May 26</div>
+                                <div class="roadmap-title">ROSI Skills Matching</div>
+                                <div class="roadmap-desc">Transparent match scores from job descriptions + resumes. Faster screening, entire talent pool scored. Replaces legacy Hot Match. <span style="color:var(--green);font-weight:600;">Could help Hannah with early-career search struggles.</span></div>
+                            </div>
+                            <div class="roadmap-item shipped">
+                                <div class="roadmap-badge shipped">SHIPPED May 26</div>
+                                <div class="roadmap-title">ROSI Search Performance</div>
+                                <div class="roadmap-desc">Broad queries improved from ~60s to 10-17s. Major speed improvement for daily sourcing.</div>
+                            </div>
+                            <div class="roadmap-item shipped">
+                                <div class="roadmap-badge shipped">SHIPPED May 26</div>
+                                <div class="roadmap-title">Interview Scheduling UI Redesign</div>
+                                <div class="roadmap-desc">Clearer panel interview layout. Edit candidate/interviewer emails directly in flow.</div>
+                            </div>
+                            <div class="roadmap-item shipped">
+                                <div class="roadmap-badge shipped">SHIPPED May 26</div>
+                                <div class="roadmap-title">AI Outreach Analytics</div>
+                                <div class="roadmap-desc">New analytics: who drafted, who sent, unique candidates reached. Pre-built dashboard included.</div>
+                            </div>
+                            <div class="roadmap-item coming">
+                                <div class="roadmap-badge coming">COMING ~Jun 3</div>
+                                <div class="roadmap-title">Sequential Interviewing</div>
+                                <div class="roadmap-desc">Full sequential mode with messaging. Marketing launch planned.</div>
+                            </div>
+                            <div class="roadmap-item coming">
+                                <div class="roadmap-badge coming">COMING Jun</div>
+                                <div class="roadmap-title">CX Passkeys (MFA)</div>
+                                <div class="roadmap-desc">Passkey-based MFA for candidate My Account.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" style="border-bottom:1px solid var(--border);"><div class="section-title" style="margin:0;font-size:14px;"><i class="fas fa-sitemap"></i> Workflow — Expansion Opportunity</div></div>
+                    <div class="card-body">
+                        <div class="roadmap-grid">
+                            <div class="roadmap-item shipped">
+                                <div class="roadmap-badge shipped">SHIPPED May 18</div>
+                                <div class="roadmap-title">I-9 & E-Verify Compliance</div>
+                                <div class="roadmap-desc">Auto-updated to USCIS Version 13. No client action required. Demonstrates zero-maintenance compliance.</div>
+                            </div>
+                            <div class="roadmap-item shipped">
+                                <div class="roadmap-badge shipped">SHIPPED May 18</div>
+                                <div class="roadmap-title">Task Details (GA) + Bulk Actions</div>
+                                <div class="roadmap-desc">Redesigned single-page task interface. Bulk form review & approval. Self-enable in Admin settings.</div>
+                            </div>
+                            <div class="roadmap-item launching">
+                                <div class="roadmap-badge launching">LAUNCHING Jun 1</div>
+                                <div class="roadmap-title">Employee Portal Redesign</div>
+                                <div class="roadmap-desc">Modernized checklist-driven portal. Active tasks with progress bar, upcoming task preview, clean document archive. <span style="color:var(--blue);font-weight:600;">Demo-ready. Strong selling point for Katy.</span></div>
+                            </div>
+                            <div class="roadmap-item shipped">
+                                <div class="roadmap-badge shipped">SHIPPED May 25</div>
+                                <div class="roadmap-title">Smart Form Builder Enhancements</div>
+                                <div class="roadmap-desc">Text wrapping, page breaks, better layout control for document authoring.</div>
+                            </div>
+                            <div class="roadmap-item coming">
+                                <div class="roadmap-badge coming">BETA Jun 22</div>
+                                <div class="roadmap-title">ROSI Journey Builder</div>
+                                <div class="roadmap-desc">AI-powered journey orchestration. Initial skeleton, internal beta. <span style="color:var(--blue);font-weight:600;">Long-term differentiator for Workflow + AI narrative.</span></div>
+                            </div>
+                            <div class="roadmap-item coming">
+                                <div class="roadmap-badge coming">COMING Jun</div>
+                                <div class="roadmap-title">PII Anonymization (Beta)</div>
+                                <div class="roadmap-desc">Configurable auto-anonymization of pipeline candidates (30-365 days). Data privacy controls for compliance-conscious orgs.</div>
+                            </div>
+                        </div>
+                        <div style="margin-top:16px;padding:12px 16px;background:var(--blue-light);border-radius:8px;border-left:3px solid var(--blue);">
+                            <div style="font-weight:600;font-size:13px;color:var(--blue);margin-bottom:4px;"><i class="fas fa-lightbulb"></i> Selling Insight</div>
+                            <div style="font-size:13px;color:var(--text-secondary);">Employee Portal Redesign launches Jun 1 to 6 named clients. This is demo-ready proof that Workflow is actively evolving. Pair with Katy's pain around multi-location hiring process friction to build urgency.</div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- ═══════ PEOPLE TAB ═══════ -->
