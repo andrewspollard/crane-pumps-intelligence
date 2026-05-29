@@ -633,6 +633,10 @@
         .qbr-label { font-size:13px; font-weight:600; color:var(--text-primary); margin-bottom:4px; }
         .qbr-detail { font-size:11px; color:var(--text-secondary); line-height:1.4; }
 
+        
+        .module-legend { display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; justify-content:center; }
+        .module-legend-item { font-size:11px; color:var(--text-muted); display:flex; align-items:center; gap:4px; }
+
         </style>
 </head>
 <body>
@@ -668,7 +672,17 @@
                             <div class="module-dot pending" title="Product Roadmap"></div>
                             <div class="module-dot live" title="Market Intel"></div>
                         </div>
-                        <span class="module-label">7 live · 1 awaiting</span>
+                        <span class="module-label" style="cursor:help;" title="Live: SFDC CRM, Chorus Calls, ZoomInfo, Email/Calendar, Support Cases, Market Intel, Product Roadmap | Awaiting: Usage/Adoption Telemetry">7 live · 1 awaiting</span>
+                        <div class="module-legend">
+                            <span class="module-legend-item"><i class="fas fa-circle" style="color:var(--green);font-size:6px;vertical-align:middle;"></i> CRM</span>
+                            <span class="module-legend-item"><i class="fas fa-circle" style="color:var(--green);font-size:6px;vertical-align:middle;"></i> Calls</span>
+                            <span class="module-legend-item"><i class="fas fa-circle" style="color:var(--green);font-size:6px;vertical-align:middle;"></i> ZoomInfo</span>
+                            <span class="module-legend-item"><i class="fas fa-circle" style="color:var(--green);font-size:6px;vertical-align:middle;"></i> Email</span>
+                            <span class="module-legend-item"><i class="fas fa-circle" style="color:var(--green);font-size:6px;vertical-align:middle;"></i> Support</span>
+                            <span class="module-legend-item"><i class="fas fa-circle" style="color:var(--green);font-size:6px;vertical-align:middle;"></i> Market</span>
+                            <span class="module-legend-item"><i class="fas fa-circle" style="color:var(--green);font-size:6px;vertical-align:middle;"></i> Roadmap</span>
+                            <span class="module-legend-item"><i class="fas fa-circle" style="color:var(--amber);font-size:6px;vertical-align:middle;"></i> Usage</span>
+                        </div>
                     </div>
                 </div>
             </div>
