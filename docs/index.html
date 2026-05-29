@@ -1,18 +1,1343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crane Pumps &amp; Systems | Account Intelligence</title>
-<script src="https://cdn.jsdelivr.net/npm/highcharts@12.1.2/highcharts.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/highcharts@12.1.2/modules/accessibility.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crane Pumps & Systems | Account Intelligence</title>
+    <script src="https://cdn.jsdelivr.net/npm/highcharts@12.1.2/highcharts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highcharts@12.1.2/modules/accessibility.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-page: #FAFBFC;
+            --bg-white: #FFFFFF;
+            --bg-subtle: #F4F5F7;
+            --bg-hover: #ECEEF1;
+            --bg-nav: rgba(250,251,252,0.88);
+            --border-light: rgba(0,0,0,0.05);
+            --border-medium: rgba(0,0,0,0.08);
+            --border-focus: rgba(59,130,246,0.5);
+            --text-primary: #0F172A;
+            --text-secondary: #475569;
+            --text-muted: #64748B;
+            --text-faint: #94A3B8;
+            --red: #EF4444;
+            --red-light: rgba(239,68,68,0.06);
+            --red-border: rgba(239,68,68,0.15);
+            --green: #10B981;
+            --green-light: rgba(16,185,129,0.06);
+            --green-border: rgba(16,185,129,0.15);
+            --amber: #F59E0B;
+            --amber-light: rgba(245,158,11,0.06);
+            --amber-border: rgba(245,158,11,0.15);
+            --blue: #3B82F6;
+            --blue-light: rgba(59,130,246,0.06);
+            --blue-border: rgba(59,130,246,0.15);
+            --purple: #8B5CF6;
+            --purple-light: rgba(139,92,246,0.06);
+            --purple-border: rgba(139,92,246,0.15);
+            --rival-green: #D1F434;
+            --rival-purple: #9A0DF9;
+            --shadow-xs: 0 1px 2px rgba(0,0,0,0.03), 0 0 0 1px rgba(0,0,0,0.02);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.03), 0 0 0 1px rgba(0,0,0,0.02);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.03), 0 0 0 1px rgba(0,0,0,0.02);
+            --shadow-lg: 0 12px 24px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.03), 0 0 0 1px rgba(0,0,0,0.02);
+            --shadow-xl: 0 24px 48px rgba(0,0,0,0.08), 0 8px 16px rgba(0,0,0,0.04), 0 0 0 1px rgba(0,0,0,0.02);
+            --shadow-colored-blue: 0 4px 14px rgba(59,130,246,0.12), 0 0 0 1px rgba(59,130,246,0.06);
+            --shadow-colored-green: 0 4px 14px rgba(16,185,129,0.12), 0 0 0 1px rgba(16,185,129,0.06);
+            --shadow-colored-red: 0 4px 14px rgba(239,68,68,0.10), 0 0 0 1px rgba(239,68,68,0.05);
+            --shadow-colored-purple: 0 4px 14px rgba(139,92,246,0.10), 0 0 0 1px rgba(139,92,246,0.05);
+            --shadow-inner: inset 0 1px 2px rgba(0,0,0,0.04), inset 0 0 0 1px rgba(0,0,0,0.02);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 20px;
+            --radius-full: 9999px;
+            --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+            --duration-fast: 150ms;
+            --duration-normal: 250ms;
+            --duration-slow: 450ms;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            background: linear-gradient(180deg, #FAFBFC 0%, #F8F9FB 50%, #F5F6F8 100%);
+            background-attachment: fixed;
+            color: var(--text-secondary);
+            min-height: 100vh;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .app-container { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
+
+        /* ═══════════════ HEADER ═══════════════ */
+        .header { padding: 44px 0 36px; }
+        .header-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 32px; }
+        .header-brand { display: flex; align-items: center; gap: 16px; }
+
+        .company-icon {
+            width: 48px; height: 48px; border-radius: var(--radius-md);
+            background: linear-gradient(135deg, #0F172A 0%, #334155 100%);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 13px; font-weight: 700; color: #fff; letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(15,23,42,0.2), 0 0 0 1px rgba(255,255,255,0.1) inset;
+            transition: transform var(--duration-normal) var(--ease-spring), box-shadow var(--duration-normal) var(--ease-out);
+        }
+        .company-icon:hover { transform: scale(1.05); box-shadow: 0 6px 16px rgba(15,23,42,0.25); }
+
+        .company-info h1 {
+            font-size: 24px; font-weight: 800; color: var(--text-primary);
+            letter-spacing: -0.6px; line-height: 1.2;
+        }
+        .company-meta { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+
+        .badge {
+            display: inline-flex; align-items: center; gap: 5px;
+            padding: 4px 11px; border-radius: var(--radius-full);
+            font-size: 11px; font-weight: 500; letter-spacing: 0.1px;
+            transition: transform var(--duration-fast) var(--ease-spring);
+        }
+        .badge:hover { transform: scale(1.03); }
+        .badge-industry { background: var(--purple-light); color: var(--purple); border: 1px solid var(--purple-border); }
+        .badge-customer { background: var(--green-light); color: var(--green); border: 1px solid var(--green-border); }
+
+        .header-right { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+        .refresh-time { font-size: 12px; color: var(--text-faint); display: flex; align-items: center; gap: 6px; font-weight: 400; }
+        .sfdc-link {
+            display: inline-flex; align-items: center; gap: 6px; font-size: 12px;
+            color: var(--blue); font-weight: 500; text-decoration: none;
+            padding: 4px 10px; border-radius: var(--radius-full);
+            background: var(--blue-light); border: 1px solid var(--blue-border);
+            transition: all var(--duration-fast) var(--ease-spring);
+        }
+        .sfdc-link:hover { transform: translateY(-1px); box-shadow: var(--shadow-colored-blue); background: rgba(59,130,246,0.1); }
+
+        .module-row { display: flex; align-items: center; gap: 8px; }
+        .module-dots { display: flex; align-items: center; gap: 4px; }
+        .module-dot { width: 7px; height: 7px; border-radius: 50%; transition: var(--duration-fast) var(--ease-in-out); }
+        .module-dot.live { background: var(--green); box-shadow: 0 0 4px rgba(16,185,129,0.4); }
+        .module-dot.pending { background: var(--amber); opacity: 0.6; animation: pendingPulse 2.5s infinite; }
+        @keyframes pendingPulse { 0%,100% { opacity: 0.4; } 50% { opacity: 0.8; } }
+        .module-label { font-size: 11px; color: var(--text-faint); font-weight: 400; }
+
+        /* Metrics Bar */
+        .metrics-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+        .metric-card {
+            background: var(--bg-white); border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg); padding: 22px 24px;
+            transition: all var(--duration-normal) var(--ease-spring);
+            position: relative; overflow: hidden;
+            box-shadow: var(--shadow-xs);
+        }
+        .metric-card::after {
+            content: ''; position: absolute; inset: 0; border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-inner); pointer-events: none;
+        }
+        .metric-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); border-color: var(--border-medium); }
+        .metric-label { font-size: 11px; font-weight: 600; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 10px; }
+        .metric-value { font-size: 30px; font-weight: 800; letter-spacing: -1.2px; font-variant-numeric: tabular-nums; line-height: 1; }
+        .metric-value.green { color: var(--green); }
+        .metric-value.red { color: var(--red); }
+        .metric-value.blue { color: var(--blue); }
+        .metric-value.purple { color: var(--purple); }
+        .metric-subtitle { font-size: 12px; color: var(--text-faint); margin-top: 6px; font-weight: 400; line-height: 1.4; }
+
+        /* ═══════════════ NAVIGATION ═══════════════ */
+        .nav-container {
+            padding: 14px 0; position: sticky; top: 0; z-index: 100;
+            background: var(--bg-nav); backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid var(--border-light);
+            margin: 0 -40px; padding-left: 40px; padding-right: 40px;
+        }
+        .nav-tabs {
+            display: inline-flex; background: var(--bg-subtle); border-radius: var(--radius-full);
+            padding: 4px; position: relative; box-shadow: var(--shadow-inner);
+        }
+        .nav-tab {
+            padding: 9px 22px; font-size: 13px; font-weight: 500; color: var(--text-muted);
+            background: none; border: none; border-radius: var(--radius-full); cursor: pointer;
+            transition: all var(--duration-normal) var(--ease-spring);
+            display: flex; align-items: center; gap: 7px; white-space: nowrap; position: relative; z-index: 1;
+        }
+        .nav-tab:hover { color: var(--text-primary); transform: scale(1.02); }
+        .nav-tab.active {
+            background: var(--bg-white); color: var(--text-primary);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.03);
+            font-weight: 600; transform: scale(1);
+        }
+        .nav-tab i { font-size: 13px; opacity: 0.5; transition: all var(--duration-fast) var(--ease-in-out); }
+        .nav-tab.active i { opacity: 1; color: var(--blue); }
+
+        /* ═══════════════ CONTENT AREA ═══════════════ */
+        .content-area { padding: 36px 0 80px; }
+        .tab-panel { display: none; animation: panelIn 0.5s var(--ease-out); }
+        .tab-panel.active { display: block; }
+        @keyframes panelIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* ═══════════════ SECTIONS ═══════════════ */
+        .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+        .section-title {
+            font-size: 16px; font-weight: 700; color: var(--text-primary);
+            display: flex; align-items: center; gap: 10px; letter-spacing: -0.3px;
+        }
+        .section-title i { font-size: 14px; color: var(--text-faint); }
+        .section-subtitle { font-size: 12px; color: var(--text-faint); font-weight: 400; }
+
+        .card {
+            background: var(--bg-white); border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg); overflow: hidden;
+            transition: all var(--duration-normal) var(--ease-spring);
+            box-shadow: var(--shadow-xs);
+        }
+        .card:hover { box-shadow: var(--shadow-sm); }
+        .card-header {
+            padding: 20px 24px; border-bottom: 1px solid var(--border-light);
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .card-body { padding: 24px; }
+
+        /* ═══════════════ PRIORITY ACTIONS ═══════════════ */
+        .priority-section { margin-bottom: 36px; }
+        .action-list { display: flex; flex-direction: column; gap: 8px; }
+        .action-item {
+            background: var(--bg-white); border: 1px solid var(--border-light);
+            border-radius: var(--radius-md); padding: 16px 20px; cursor: pointer;
+            transition: all var(--duration-normal) var(--ease-spring);
+            position: relative; box-shadow: var(--shadow-xs);
+        }
+        .action-item::before {
+            content: ''; position: absolute; left: 0; top: 12px; bottom: 12px;
+            width: 3px; border-radius: 0 3px 3px 0;
+            transition: var(--duration-fast) var(--ease-in-out);
+        }
+        .action-item.critical::before { background: var(--red); }
+        .action-item.high::before { background: var(--amber); }
+        .action-item.medium::before { background: var(--blue); }
+        .action-item:hover { box-shadow: var(--shadow-md); border-color: var(--border-medium); transform: translateX(3px); }
+        .action-header { display: flex; align-items: center; gap: 12px; }
+        .action-rank {
+            width: 24px; height: 24px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 11px; font-weight: 700; flex-shrink: 0;
+            background: var(--bg-subtle); color: var(--text-muted); border: 1px solid var(--border-light);
+        }
+        .action-title { font-size: 14px; font-weight: 600; color: var(--text-primary); flex: 1; letter-spacing: -0.1px; }
+        .action-tag { font-size: 11px; padding: 3px 10px; border-radius: var(--radius-full); font-weight: 600; letter-spacing: 0.1px; }
+        .action-tag.revenue { background: var(--green-light); color: var(--green); border: 1px solid var(--green-border); }
+        .action-tag.risk { background: var(--red-light); color: var(--red); border: 1px solid var(--red-border); }
+        .action-tag.enablement { background: var(--blue-light); color: var(--blue); border: 1px solid var(--blue-border); }
+        .action-tag.delivery { background: var(--purple-light); color: var(--purple); border: 1px solid var(--purple-border); }
+        .action-expand-icon { color: var(--text-faint); font-size: 11px; transition: transform var(--duration-normal) var(--ease-spring); }
+        .action-item.expanded .action-expand-icon { transform: rotate(180deg); color: var(--blue); }
+        .action-detail { max-height: 0; overflow: hidden; transition: max-height var(--duration-slow) var(--ease-out), padding var(--duration-normal) var(--ease-in-out); padding: 0 36px; }
+        .action-item.expanded .action-detail { max-height: 200px; padding: 14px 36px 4px; }
+        .action-detail p { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+
+        /* ═══════════════ ENGAGEMENT METRICS ═══════════════ */
+        .engagement-section { margin-bottom: 36px; }
+        .engagement-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .engagement-chart-card {
+            background: var(--bg-white); border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-xs);
+            transition: all var(--duration-normal) var(--ease-spring);
+        }
+        .engagement-chart-card:hover { box-shadow: var(--shadow-md); }
+        .eng-stats-row { display: flex; gap: 24px; margin-bottom: 16px; }
+        .eng-stat { text-align: center; }
+        .eng-stat-value { font-size: 24px; font-weight: 800; letter-spacing: -0.8px; line-height: 1; }
+        .eng-stat-label { font-size: 11px; color: var(--text-faint); margin-top: 4px; font-weight: 500; }
+        .eng-trend-badge {
+            display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600;
+            padding: 4px 10px; border-radius: var(--radius-full);
+        }
+        .eng-trend-badge.declining { background: var(--red-light); color: var(--red); border: 1px solid var(--red-border); }
+
+        /* ═══════════════ PREDICTIVE SIGNALS ═══════════════ */
+        .predictive-section { margin-bottom: 36px; }
+        .predictive-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+        .predictive-card {
+            background: var(--bg-white); border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg); padding: 22px; box-shadow: var(--shadow-xs);
+            transition: all var(--duration-normal) var(--ease-spring); text-align: center;
+        }
+        .predictive-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+        .gauge-container { position: relative; width: 100px; height: 56px; margin: 0 auto 12px; overflow: hidden; }
+        .gauge-bg {
+            width: 100px; height: 100px; border-radius: 50%;
+            border: 8px solid var(--bg-subtle); border-bottom-color: transparent;
+            border-left-color: transparent; transform: rotate(-45deg);
+            position: absolute; top: 0; left: 0; box-sizing: border-box;
+        }
+        .gauge-fill {
+            width: 100px; height: 100px; border-radius: 50%;
+            border: 8px solid transparent; position: absolute; top: 0; left: 0;
+            transform: rotate(-45deg); box-sizing: border-box;
+            transition: all 1s var(--ease-out);
+        }
+        .gauge-fill.medium { border-top-color: var(--amber); border-right-color: var(--amber); }
+        .gauge-fill.low { border-top-color: var(--green); }
+        .gauge-fill.high { border-top-color: var(--red); border-right-color: var(--red); border-bottom-color: var(--red); }
+        .predictive-label { font-size: 11px; font-weight: 600; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+        .predictive-value { font-size: 18px; font-weight: 800; letter-spacing: -0.5px; }
+        .predictive-detail { font-size: 11px; color: var(--text-muted); margin-top: 6px; line-height: 1.5; }
+
+        /* ═══════════════ SIGNALS GRID ═══════════════ */
+        .signals-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 36px; }
+        .signal-card {
+            background: var(--bg-white); border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg); padding: 24px;
+            transition: all var(--duration-normal) var(--ease-spring); box-shadow: var(--shadow-xs);
+        }
+        .signal-card:hover { box-shadow: var(--shadow-sm); }
+        .signal-card-title { font-size: 13px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; color: var(--text-primary); }
+        .signal-card-title .dot { width: 8px; height: 8px; border-radius: 50%; }
+        .signal-card-title .dot.green { background: var(--green); box-shadow: 0 0 6px rgba(16,185,129,0.4); }
+        .signal-card-title .dot.red { background: var(--red); box-shadow: 0 0 6px rgba(239,68,68,0.4); }
+        .signal-item { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border-light); }
+        .signal-item:last-child { border-bottom: none; }
+        .signal-icon { font-size: 11px; margin-top: 3px; flex-shrink: 0; }
+        .signal-icon.up { color: var(--green); }
+        .signal-icon.down { color: var(--red); }
+        .signal-text { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+
+        /* ═══════════════ PENDING MODULES ═══════════════ */
+        .pending-section { margin-bottom: 36px; }
+        .pending-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+        .pending-card {
+            background: var(--bg-white); border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg); padding: 22px;
+            transition: all var(--duration-normal) var(--ease-spring); box-shadow: var(--shadow-xs);
+            position: relative; overflow: hidden;
+        }
+        .pending-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, var(--amber), rgba(245,158,11,0.3));
+            opacity: 0.8;
+        }
+        .pending-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+        .pending-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+        .pending-dot {
+            width: 8px; height: 8px; border-radius: 50%; background: var(--amber);
+            animation: amberPulse 2s infinite; flex-shrink: 0;
+        }
+        @keyframes amberPulse { 0%,100% { box-shadow: 0 0 0 0 rgba(245,158,11,0.4); } 50% { box-shadow: 0 0 0 4px rgba(245,158,11,0); } }
+        .pending-card-title { font-size: 14px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.2px; }
+        .pending-badge {
+            display: inline-flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 600;
+            padding: 3px 8px; border-radius: var(--radius-full);
+            background: var(--amber-light); color: var(--amber); border: 1px solid var(--amber-border);
+            letter-spacing: 0.3px; text-transform: uppercase; margin-left: auto;
+        }
+        .pending-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+        .pending-card-preview { font-size: 11px; color: var(--text-faint); margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border-light); line-height: 1.5; font-style: italic; }
+
+        /* ═══════════════ COMPANY PROFILE ═══════════════ */
+        .profile-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4px 24px; }
+        .profile-item { padding: 14px 0; border-bottom: 1px solid var(--border-light); }
+        .profile-item-label { font-size: 11px; font-weight: 600; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+        .profile-item-value { font-size: 14px; color: var(--text-primary); font-weight: 500; }
+
+        /* ═══════════════ PEOPLE TAB ═══════════════ */
+        .stakeholder-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 28px; }
+        .summary-stat {
+            text-align: center; padding: 20px; background: var(--bg-white);
+            border: 1px solid var(--border-light); border-radius: var(--radius-lg);
+            transition: all var(--duration-normal) var(--ease-spring); box-shadow: var(--shadow-xs);
+        }
+        .summary-stat:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+        .summary-stat-value { font-size: 28px; font-weight: 800; margin-bottom: 4px; letter-spacing: -0.8px; }
+        .summary-stat-label { font-size: 12px; color: var(--text-faint); font-weight: 400; }
+
+        .buying-committee {
+            background: var(--bg-white); border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg); padding: 24px; margin-bottom: 24px;
+            box-shadow: var(--shadow-xs);
+        }
+        .committee-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 16px; }
+        .committee-role {
+            padding: 14px 16px; background: var(--bg-subtle); border: 1px solid var(--border-light);
+            border-radius: var(--radius-md); transition: all var(--duration-fast) var(--ease-spring);
+        }
+        .committee-role:hover { background: var(--bg-hover); border-color: var(--border-medium); transform: translateY(-1px); }
+        .committee-role-title { font-size: 10px; font-weight: 700; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+        .committee-role-person { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+        .committee-role-status { font-size: 11px; margin-top: 4px; font-weight: 500; }
+        .committee-role-status.engaged { color: var(--green); }
+        .committee-role-status.warning { color: var(--red); }
+        .committee-role-status.inactive { color: var(--text-faint); }
+
+        .filter-bar { display: flex; align-items: center; gap: 6px; margin-bottom: 16px; }
+        .filter-label { font-size: 12px; color: var(--text-faint); margin-right: 4px; font-weight: 500; }
+        .filter-btn {
+            padding: 5px 14px; font-size: 12px; font-weight: 500; border-radius: var(--radius-full);
+            border: 1px solid var(--border-light); background: transparent; color: var(--text-muted);
+            cursor: pointer; transition: all var(--duration-fast) var(--ease-spring);
+        }
+        .filter-btn:hover { background: var(--bg-subtle); border-color: var(--border-medium); color: var(--text-primary); transform: scale(1.03); }
+        .filter-btn.active { background: var(--text-primary); border-color: var(--text-primary); color: #fff; }
+
+        .people-table { width: 100%; border-collapse: separate; border-spacing: 0; }
+        .people-table thead th {
+            font-size: 11px; font-weight: 600; color: var(--text-faint); text-transform: uppercase;
+            letter-spacing: 0.4px; padding: 12px 16px; text-align: left;
+            border-bottom: 1px solid var(--border-light); cursor: pointer;
+            transition: color var(--duration-fast) var(--ease-in-out); user-select: none;
+        }
+        .people-table thead th:hover { color: var(--text-primary); }
+        .people-table tbody tr { cursor: pointer; transition: all var(--duration-fast) var(--ease-in-out); }
+        .people-table tbody tr.person-row:hover { background: var(--bg-subtle); }
+        .people-table tbody td { padding: 14px 16px; font-size: 13px; border-bottom: 1px solid var(--border-light); vertical-align: middle; }
+        .person-name { font-weight: 600; color: var(--text-primary); }
+        .person-title-text { font-size: 12px; color: var(--text-muted); }
+
+        .engagement-indicator { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; }
+        .engagement-indicator::before { content: ''; width: 7px; height: 7px; border-radius: 50%; }
+        .engagement-indicator.high::before { background: var(--green); box-shadow: 0 0 4px rgba(16,185,129,0.4); }
+        .engagement-indicator.high { color: var(--green); }
+        .engagement-indicator.medium::before { background: var(--amber); box-shadow: 0 0 4px rgba(245,158,11,0.4); }
+        .engagement-indicator.medium { color: var(--amber); }
+        .engagement-indicator.none::before { background: var(--text-faint); opacity: 0.5; }
+        .engagement-indicator.none { color: var(--text-faint); }
+
+        .role-badge { font-size: 11px; padding: 3px 10px; border-radius: var(--radius-full); font-weight: 600; white-space: nowrap; }
+        .role-badge.decision { background: var(--purple-light); color: var(--purple); }
+        .role-badge.champion { background: var(--green-light); color: var(--green); }
+        .role-badge.user { background: var(--blue-light); color: var(--blue); }
+        .role-badge.technical { background: var(--amber-light); color: var(--amber); }
+        .role-badge.financial { background: var(--purple-light); color: var(--purple); }
+        .role-badge.influencer { background: rgba(236,72,153,0.06); color: #EC4899; }
+        .role-badge.at-risk { background: var(--red-light); color: var(--red); }
+        .role-badge.unknown { background: var(--bg-subtle); color: var(--text-faint); }
+
+        .person-detail-row { display: none; }
+        .person-detail-row.visible { display: table-row; }
+        .person-detail-row td { padding: 16px 20px 20px 52px !important; background: var(--bg-subtle); border-bottom: 1px solid var(--border-light); }
+        .person-notes { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+        .person-notes strong { color: var(--text-primary); font-weight: 600; }
+        .contact-info-row { display: flex; align-items: center; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+        .contact-link {
+            display: inline-flex; align-items: center; gap: 5px; font-size: 12px;
+            color: var(--blue); text-decoration: none; font-weight: 500;
+            padding: 4px 10px; border-radius: var(--radius-full); background: var(--blue-light);
+            border: 1px solid var(--blue-border); transition: all var(--duration-fast) var(--ease-spring);
+        }
+        .contact-link:hover { transform: scale(1.03); box-shadow: var(--shadow-colored-blue); }
+        .contact-link.sfdc { color: #0176D3; background: rgba(1,118,211,0.06); border-color: rgba(1,118,211,0.15); }
+        .contact-link.sfdc:hover { box-shadow: 0 4px 14px rgba(1,118,211,0.12); }
+
+        /* ═══════════════ TIMELINE TAB ═══════════════ */
+        .timeline-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 28px; }
+        .timeline-container { position: relative; padding-left: 36px; }
+        .timeline-container::before {
+            content: ''; position: absolute; left: 11px; top: 8px; bottom: 8px; width: 2px;
+            background: linear-gradient(to bottom, var(--blue), var(--purple), var(--border-light)); border-radius: 2px;
+        }
+        .timeline-event {
+            position: relative; margin-bottom: 12px; padding: 16px 20px;
+            background: var(--bg-white); border: 1px solid var(--border-light);
+            border-radius: var(--radius-md); cursor: pointer;
+            transition: all var(--duration-normal) var(--ease-spring); box-shadow: var(--shadow-xs);
+        }
+        .timeline-event:hover { box-shadow: var(--shadow-md); border-color: var(--border-medium); transform: translateX(4px); }
+        .timeline-event::before {
+            content: ''; position: absolute; left: -31px; top: 20px; width: 10px; height: 10px;
+            border-radius: 50%; background: var(--bg-white); border: 2px solid var(--blue);
+            transition: all var(--duration-fast) var(--ease-in-out);
+        }
+        .timeline-event:hover::before { background: var(--blue); box-shadow: 0 0 0 4px var(--blue-light); }
+        .timeline-event-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+        .timeline-date { font-size: 12px; font-weight: 500; color: var(--text-faint); font-variant-numeric: tabular-nums; }
+        .timeline-type { font-size: 11px; padding: 2px 10px; border-radius: var(--radius-full); font-weight: 600; }
+        .timeline-type.email { background: var(--purple-light); color: var(--purple); }
+        .timeline-type.meeting { background: var(--blue-light); color: var(--blue); }
+        .timeline-title { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; letter-spacing: -0.1px; }
+        .timeline-summary { font-size: 13px; color: var(--text-muted); }
+        .timeline-detail { max-height: 0; overflow: hidden; transition: max-height var(--duration-slow) var(--ease-out), padding var(--duration-normal) var(--ease-in-out), opacity var(--duration-normal) var(--ease-in-out); opacity: 0; }
+        .timeline-event.expanded .timeline-detail { max-height: 320px; padding-top: 14px; opacity: 1; }
+        .timeline-detail-content { padding-top: 14px; border-top: 1px solid var(--border-light); }
+        .detail-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 8px; font-size: 13px; }
+        .detail-label { font-weight: 600; color: var(--text-faint); min-width: 80px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.3px; padding-top: 1px; }
+        .detail-value { color: var(--text-secondary); }
+        .sentiment-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; padding: 3px 10px; border-radius: var(--radius-full); font-weight: 500; }
+        .sentiment-badge.positive { background: var(--green-light); color: var(--green); }
+        .sentiment-badge.neutral { background: var(--bg-subtle); color: var(--text-muted); }
+        .sentiment-badge.negative { background: var(--red-light); color: var(--red); }
+
+        /* ═══════════════ PIPELINE TAB ═══════════════ */
+        .pipeline-summary {
+            display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 24px; align-items: center;
+            margin-bottom: 36px; padding: 28px 32px; background: var(--bg-white);
+            border: 1px solid var(--border-light); border-radius: var(--radius-lg); box-shadow: var(--shadow-xs);
+        }
+        .pipeline-summary-item { text-align: center; }
+        .pipeline-summary-item .value { font-size: 30px; font-weight: 800; letter-spacing: -1.2px; }
+        .pipeline-summary-item .label { font-size: 12px; color: var(--text-faint); margin-top: 4px; font-weight: 400; }
+        .pipeline-plus { font-size: 20px; color: var(--text-faint); font-weight: 300; }
+        .pipeline-equals { width: 1px; height: 40px; background: var(--border-light); }
+
+        .pipeline-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 36px; }
+        .pipeline-card {
+            background: var(--bg-white); border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg); padding: 24px; cursor: pointer;
+            transition: all var(--duration-normal) var(--ease-spring); position: relative; box-shadow: var(--shadow-xs);
+        }
+        .pipeline-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--border-medium); }
+        .pipeline-card.active-deal { border-color: var(--blue-border); }
+        .pipeline-card.active-deal::after {
+            content: 'ACTIVE'; position: absolute; top: 16px; right: 16px;
+            font-size: 10px; font-weight: 700; letter-spacing: 0.5px; padding: 3px 8px;
+            border-radius: var(--radius-full); background: var(--blue-light); color: var(--blue); border: 1px solid var(--blue-border);
+        }
+        .pipeline-card-status { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+        .status-indicator { width: 8px; height: 8px; border-radius: 50%; }
+        .status-indicator.won { background: var(--green); box-shadow: 0 0 4px rgba(16,185,129,0.4); }
+        .status-indicator.active { background: var(--blue); animation: pulse 2s infinite; }
+        .status-indicator.future { background: var(--text-faint); opacity: 0.5; }
+        @keyframes pulse { 0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(59,130,246,0.4); } 50% { opacity: 0.6; box-shadow: 0 0 0 4px rgba(59,130,246,0); } }
+        .status-text { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; }
+        .status-text.won { color: var(--green); }
+        .status-text.active { color: var(--blue); }
+        .status-text.future { color: var(--text-faint); }
+        .pipeline-card-name { font-size: 16px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; letter-spacing: -0.2px; }
+        .pipeline-card-amount { font-size: 26px; font-weight: 800; letter-spacing: -0.8px; margin: 12px 0; }
+        .pipeline-card-meta { font-size: 12px; color: var(--text-muted); display: flex; flex-direction: column; gap: 6px; }
+        .pipeline-card-meta i { width: 14px; opacity: 0.5; }
+        .pipeline-card-detail { max-height: 0; overflow: hidden; transition: max-height var(--duration-slow) var(--ease-out), padding var(--duration-normal) var(--ease-in-out), opacity var(--duration-normal) var(--ease-in-out); opacity: 0; }
+        .pipeline-card.expanded .pipeline-card-detail { max-height: 300px; padding-top: 16px; opacity: 1; }
+        .pipeline-card-detail-inner { padding-top: 16px; border-top: 1px solid var(--border-light); }
+        .opp-sfdc-link {
+            display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600;
+            color: #0176D3; text-decoration: none; margin-top: 10px;
+            padding: 4px 10px; border-radius: var(--radius-full);
+            background: rgba(1,118,211,0.06); border: 1px solid rgba(1,118,211,0.12);
+            transition: all var(--duration-fast) var(--ease-spring);
+        }
+        .opp-sfdc-link:hover { transform: scale(1.03); box-shadow: 0 2px 8px rgba(1,118,211,0.15); }
+
+        .stage-bar { display: flex; gap: 3px; margin: 12px 0; }
+        .stage-segment { height: 5px; flex: 1; border-radius: 3px; background: var(--bg-subtle); transition: var(--duration-fast) var(--ease-in-out); }
+        .stage-segment.filled { background: linear-gradient(90deg, var(--blue), #60A5FA); }
+        .stage-segment.filled.won { background: linear-gradient(90deg, var(--green), #34D399); }
+        .stage-segment.filled.muted { background: var(--text-faint); opacity: 0.3; }
+
+        .chart-container {
+            background: var(--bg-white); border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg); padding: 24px; margin-top: 24px; box-shadow: var(--shadow-xs);
+        }
+
+        .health-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px 32px; }
+        .health-item { padding: 16px 0; border-bottom: 1px solid var(--border-light); }
+        .health-item-label { font-size: 11px; font-weight: 600; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 6px; }
+        .health-item-value { font-size: 15px; font-weight: 700; }
+        .health-item-note { font-size: 12px; color: var(--text-faint); margin-top: 3px; font-weight: 400; }
+
+        /* ═══════════════ COMPANY NEWS ═══════════════ */
+        .news-card {
+            background: var(--bg-white); border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg); padding: 24px; margin-bottom: 36px;
+            box-shadow: var(--shadow-xs); position: relative; overflow: hidden;
+        }
+        .news-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--amber), rgba(245,158,11,0.2)); }
+        .news-card-content { display: flex; flex-direction: column; gap: 10px; }
+        .news-item { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: var(--bg-subtle); border-radius: var(--radius-md); border: 1px solid var(--border-light); }
+        .news-item i { color: var(--text-faint); font-size: 13px; flex-shrink: 0; }
+        .news-item-text { font-size: 13px; color: var(--text-secondary); }
+
+        /* ═══════════════ FOOTER ═══════════════ */
+        .footer { padding: 32px 0; border-top: 1px solid var(--border-light); margin-top: 40px; }
+        .footer-content { display: flex; align-items: center; justify-content: space-between; }
+        .footer-tech { display: flex; gap: 8px; flex-wrap: wrap; }
+        .tech-tag { font-size: 11px; padding: 4px 12px; border-radius: var(--radius-full); background: var(--bg-subtle); border: 1px solid var(--border-light); color: var(--text-muted); font-weight: 500; }
+        .footer-brand { font-size: 12px; color: var(--text-faint); display: flex; align-items: center; gap: 6px; font-weight: 500; }
+        .footer-brand .brand-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--rival-green); }
+
+        /* ═══════════════ RESPONSIVE ═══════════════ */
+        @media (max-width: 1024px) {
+            .app-container { padding: 0 24px; }
+            .nav-container { margin: 0 -24px; padding-left: 24px; padding-right: 24px; }
+            .metrics-bar { grid-template-columns: repeat(2, 1fr); }
+            .signals-grid { grid-template-columns: 1fr; }
+            .pipeline-cards { grid-template-columns: 1fr; }
+            .stakeholder-summary { grid-template-columns: repeat(2, 1fr); }
+            .health-grid { grid-template-columns: repeat(2, 1fr); }
+            .pipeline-summary { grid-template-columns: 1fr; gap: 12px; }
+            .pipeline-plus, .pipeline-equals { display: none; }
+            .engagement-grid { grid-template-columns: 1fr; }
+            .predictive-grid { grid-template-columns: 1fr; }
+            .pending-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .header-top { flex-direction: column; gap: 16px; }
+            .header-right { align-items: flex-start; }
+            .metrics-bar { grid-template-columns: 1fr; }
+            .nav-tabs { width: 100%; overflow-x: auto; }
+            .people-table thead th, .people-table tbody td { padding: 10px 8px; }
+            .health-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ═══════════════ SCROLLBAR ═══════════════ */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.1); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,0.18); }
+
+        /* ═══════════════ FOCUS ═══════════════ */
+        *:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-radius: var(--radius-sm); }
+
+        /* ═══════════════ INTERSECTION OBSERVER ANIMATIONS ═══════════════ */
+        .observe-in { opacity: 0; transform: translateY(16px); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+        .observe-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
 </head>
 <body>
-<h1>Loading dashboard...</h1>
-<p>If this page does not load, the full file may need to be pushed via Git CLI due to size constraints.</p>
+    <div class="app-container">
+        <!-- ═══════════════ HEADER ═══════════════ -->
+        <header class="header">
+            <div class="header-top">
+                <div class="header-brand">
+                    <div class="company-icon">CP</div>
+                    <div class="company-info">
+                        <h1>Crane Pumps & Systems</h1>
+                        <div class="company-meta">
+                            <span class="badge badge-industry"><i class="fas fa-industry"></i> Industrial Manufacturing</span>
+                            <span class="badge badge-customer"><i class="fas fa-check-circle"></i> Active Customer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <a href="https://silkroad.lightning.force.com/lightning/r/Account/001Vs00000KL4ghIAD/view" target="_blank" class="sfdc-link">
+                        <i class="fas fa-external-link-alt"></i> Open in Salesforce
+                    </a>
+                    <div class="refresh-time">
+                        <i class="fas fa-sync-alt"></i> Last refreshed May 29, 2026 · 9:14 AM
+                    </div>
+                    <div class="module-row">
+                        <div class="module-dots">
+                            <div class="module-dot live" title="Salesforce"></div>
+                            <div class="module-dot live" title="Chorus"></div>
+                            <div class="module-dot live" title="ZoomInfo"></div>
+                            <div class="module-dot live" title="Email"></div>
+                            <div class="module-dot pending" title="Usage Telemetry"></div>
+                            <div class="module-dot pending" title="Support Tickets"></div>
+                            <div class="module-dot pending" title="Product Roadmap"></div>
+                            <div class="module-dot pending" title="Market Intel"></div>
+                        </div>
+                        <span class="module-label">4 live · 4 awaiting</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="metrics-bar">
+                <div class="metric-card">
+                    <div class="metric-label">Current ARR</div>
+                    <div class="metric-value" style="color: var(--text-primary);">$18,500</div>
+                    <div class="metric-subtitle">Recruit Add-On · Closed Dec 2025</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Expansion Pipeline</div>
+                    <div class="metric-value green">$18,500</div>
+                    <div class="metric-subtitle">Workflow · Stage 3 Align · 40% prob</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Days Silent</div>
+                    <div class="metric-value red">37</div>
+                    <div class="metric-subtitle">Last meeting: Apr 22 · Risk threshold: 14d</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Health Score</div>
+                    <div class="metric-value purple">62<span style="font-size:14px;font-weight:400;color:var(--text-faint)">/100</span></div>
+                    <div class="metric-subtitle">↓ from 78 last month · Engagement gap</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ═══════════════ NAVIGATION ═══════════════ -->
+        <nav class="nav-container">
+            <div class="nav-tabs" role="tablist">
+                <button class="nav-tab active" role="tab" data-tab="overview" aria-selected="true">
+                    <i class="fas fa-th-large"></i> Overview
+                </button>
+                <button class="nav-tab" role="tab" data-tab="people" aria-selected="false">
+                    <i class="fas fa-users"></i> People
+                </button>
+                <button class="nav-tab" role="tab" data-tab="timeline" aria-selected="false">
+                    <i class="fas fa-stream"></i> Timeline
+                </button>
+                <button class="nav-tab" role="tab" data-tab="pipeline" aria-selected="false">
+                    <i class="fas fa-chart-line"></i> Pipeline
+                </button>
+            </div>
+        </nav>
+
+        <!-- ═══════════════ CONTENT ═══════════════ -->
+        <main class="content-area">
+
+            <!-- ═══════ OVERVIEW TAB ═══════ -->
+            <div class="tab-panel active" id="tab-overview" role="tabpanel">
+                
+                <!-- Priority Actions -->
+                <div class="priority-section observe-in">
+                    <div class="section-header">
+                        <div class="section-title"><i class="fas fa-bolt"></i> Priority Actions</div>
+                        <span class="section-subtitle">Ranked by revenue impact & urgency</span>
+                    </div>
+                    <div class="action-list">
+                        <div class="action-item critical" onclick="toggleAction(this)">
+                            <div class="action-header">
+                                <span class="action-rank">1</span>
+                                <span class="action-title">Re-engage Katy Zimpfer — 37-day silence gap</span>
+                                <span class="action-tag revenue">Revenue</span>
+                                <i class="fas fa-chevron-down action-expand-icon"></i>
+                            </div>
+                            <div class="action-detail">
+                                <p>Last meaningful contact was May 23 (email re: seat swap). No meeting since Apr 22. The $18.5K Workflow expansion is at Stage 3 Align with a Jun 30 close date — but the deal is stalling. Katy holds budget authority and specifically mentioned wanting to "regroup" on Workflow. Reach out with a concrete next step: propose a 30-min session to map Workflow to their hiring process and offer the training she requested.</p>
+                            </div>
+                        </div>
+                        <div class="action-item critical" onclick="toggleAction(this)">
+                            <div class="action-header">
+                                <span class="action-rank">2</span>
+                                <span class="action-title">Resolve candidate import bug — open since Apr 22</span>
+                                <span class="action-tag risk">Risk</span>
+                                <i class="fas fa-chevron-down action-expand-icon"></i>
+                            </div>
+                            <div class="action-detail">
+                                <p>Hailey Egbert reported a critical candidate import bug during the Apr 22 meeting. A tech ticket was created but status is unknown — 37 days with no confirmed resolution. Unresolved bugs erode champion confidence and give detractors ammunition. Check ticket status with Product/Support, confirm resolution, and communicate back to Hailey and Katy with a resolution summary.</p>
+                            </div>
+                        </div>
+                        <div class="action-item high" onclick="toggleAction(this)">
+                            <div class="action-header">
+                                <span class="action-rank">3</span>
+                                <span class="action-title">Schedule Hannah McKee enablement session</span>
+                                <span class="action-tag enablement">Enablement</span>
+                                <i class="fas fa-chevron-down action-expand-icon"></i>
+                            </div>
+                            <div class="action-detail">
+                                <p>Hannah is struggling with sourcing — specifically the search functionality for early-career roles. She's an at-risk user who could churn off the platform without intervention. A 30-min enablement session focused on early-career search strategies and source button usage would stabilize her engagement and protect seat utilization metrics for the renewal conversation.</p>
+                            </div>
+                        </div>
+                        <div class="action-item high" onclick="toggleAction(this)">
+                            <div class="action-header">
+                                <span class="action-rank">4</span>
+                                <span class="action-title">Training for Chelsea & Olivia — Katy requested May 23</span>
+                                <span class="action-tag enablement">Enablement</span>
+                                <i class="fas fa-chevron-down action-expand-icon"></i>
+                            </div>
+                            <div class="action-detail">
+                                <p>Katy's May 23 email requested a seat swap: Chelsea & Olivia replacing Katy & Sam as active users. These new users need onboarding/training to become productive. Fast response here shows responsiveness and keeps the champion relationship warm. Schedule initial training within 1 week, ideally combining with the Katy regroup meeting.</p>
+                            </div>
+                        </div>
+                        <div class="action-item medium" onclick="toggleAction(this)">
+                            <div class="action-header">
+                                <span class="action-rank">5</span>
+                                <span class="action-title">Candidate Experience Portal demo — promised March</span>
+                                <span class="action-tag delivery">Delivery</span>
+                                <i class="fas fa-chevron-down action-expand-icon"></i>
+                            </div>
+                            <div class="action-detail">
+                                <p>During the Mar 23 meeting, the team expressed interest in the Candidate Experience Portal and a demo was promised. It's now 2+ months later with no follow-up. Broken promises damage trust. Either deliver the demo as part of the Katy regroup session, or proactively communicate a timeline. This could also become an additional expansion vector beyond Workflow.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engagement Metrics -->
+                <div class="engagement-section observe-in">
+                    <div class="section-header">
+                        <div class="section-title"><i class="fas fa-chart-area"></i> Engagement Metrics</div>
+                        <span class="eng-trend-badge declining"><i class="fas fa-arrow-down" style="font-size:10px"></i> Declining — cadence broken after Apr 22</span>
+                    </div>
+                    <div class="engagement-grid">
+                        <div class="engagement-chart-card">
+                            <div class="eng-stats-row">
+                                <div class="eng-stat">
+                                    <div class="eng-stat-value" style="color:var(--purple)">93</div>
+                                    <div class="eng-stat-label">Emails (6 mo)</div>
+                                </div>
+                                <div class="eng-stat">
+                                    <div class="eng-stat-value" style="color:var(--blue)">7</div>
+                                    <div class="eng-stat-label">Chorus Calls</div>
+                                </div>
+                                <div class="eng-stat">
+                                    <div class="eng-stat-value" style="color:var(--red)">37d</div>
+                                    <div class="eng-stat-label">Gap</div>
+                                </div>
+                            </div>
+                            <div id="engagement-overview-chart" style="height:180px;"></div>
+                        </div>
+                        <div class="engagement-chart-card">
+                            <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px;display:flex;align-items:center;gap:8px;">
+                                <i class="fas fa-calendar-alt" style="color:var(--text-faint);font-size:13px;"></i> Monthly Breakdown
+                            </div>
+                            <div style="display:flex;flex-direction:column;gap:10px;">
+                                <div style="display:flex;align-items:center;gap:10px;">
+                                    <span style="font-size:12px;color:var(--text-faint);width:32px;font-weight:500;">Jan</span>
+                                    <div style="flex:1;height:6px;background:var(--bg-subtle);border-radius:3px;overflow:hidden;">
+                                        <div style="width:50%;height:100%;background:linear-gradient(90deg,var(--purple),#A78BFA);border-radius:3px;"></div>
+                                    </div>
+                                    <span style="font-size:11px;color:var(--text-muted);width:72px;text-align:right;">12 📧 · 1 📞</span>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:10px;">
+                                    <span style="font-size:12px;color:var(--text-faint);width:32px;font-weight:500;">Feb</span>
+                                    <div style="flex:1;height:6px;background:var(--bg-subtle);border-radius:3px;overflow:hidden;">
+                                        <div style="width:63%;height:100%;background:linear-gradient(90deg,var(--purple),#A78BFA);border-radius:3px;"></div>
+                                    </div>
+                                    <span style="font-size:11px;color:var(--text-muted);width:72px;text-align:right;">18 📧 · 1 📞</span>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:10px;">
+                                    <span style="font-size:12px;color:var(--text-faint);width:32px;font-weight:500;">Mar</span>
+                                    <div style="flex:1;height:6px;background:var(--bg-subtle);border-radius:3px;overflow:hidden;">
+                                        <div style="width:80%;height:100%;background:linear-gradient(90deg,var(--purple),#A78BFA);border-radius:3px;"></div>
+                                    </div>
+                                    <span style="font-size:11px;color:var(--text-muted);width:72px;text-align:right;">22 📧 · 2 📞</span>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:10px;">
+                                    <span style="font-size:12px;color:var(--text-faint);width:32px;font-weight:500;">Apr</span>
+                                    <div style="flex:1;height:6px;background:var(--bg-subtle);border-radius:3px;overflow:hidden;">
+                                        <div style="width:87%;height:100%;background:linear-gradient(90deg,var(--green),#34D399);border-radius:3px;"></div>
+                                    </div>
+                                    <span style="font-size:11px;color:var(--text-muted);width:72px;text-align:right;">24 📧 · 2 📞</span>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:10px;">
+                                    <span style="font-size:12px;color:var(--red);width:32px;font-weight:600;">May</span>
+                                    <div style="flex:1;height:6px;background:var(--bg-subtle);border-radius:3px;overflow:hidden;">
+                                        <div style="width:57%;height:100%;background:linear-gradient(90deg,var(--red),#F87171);border-radius:3px;"></div>
+                                    </div>
+                                    <span style="font-size:11px;color:var(--red);width:72px;text-align:right;font-weight:600;">17 📧 · 0 📞</span>
+                                </div>
+                            </div>
+                            <div style="margin-top:16px;padding-top:12px;border-top:1px solid var(--border-light);font-size:11px;color:var(--text-faint);">
+                                <i class="fas fa-exclamation-triangle" style="color:var(--amber);margin-right:4px;"></i>
+                                Bi-weekly meeting cadence broken. Last Chorus call: Apr 22 (37 days ago).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Predictive Signals -->
+                <div class="predictive-section observe-in">
+                    <div class="section-header">
+                        <div class="section-title"><i class="fas fa-brain"></i> Predictive Signals</div>
+                        <span class="section-subtitle">AI-derived from engagement patterns</span>
+                    </div>
+                    <div class="predictive-grid">
+                        <div class="predictive-card">
+                            <div class="gauge-container">
+                                <div class="gauge-bg"></div>
+                                <div class="gauge-fill medium"></div>
+                            </div>
+                            <div class="predictive-label">Renewal Risk</div>
+                            <div class="predictive-value" style="color:var(--amber)">Medium</div>
+                            <div class="predictive-detail">Engagement gap + unresolved bugs + user frustration signals</div>
+                        </div>
+                        <div class="predictive-card">
+                            <div class="gauge-container">
+                                <div class="gauge-bg"></div>
+                                <div class="gauge-fill medium"></div>
+                            </div>
+                            <div class="predictive-label">Expansion Probability</div>
+                            <div class="predictive-value" style="color:var(--blue)">Moderate</div>
+                            <div class="predictive-detail">Workflow opp at 40% but stalling — 37-day gap threatens Jun 30 close</div>
+                        </div>
+                        <div class="predictive-card">
+                            <div class="gauge-container">
+                                <div class="gauge-bg"></div>
+                                <div class="gauge-fill medium"></div>
+                            </div>
+                            <div class="predictive-label">Churn Indicators</div>
+                            <div class="predictive-value" style="color:var(--red)">2 of 5</div>
+                            <div class="predictive-detail">Active users with friction · Meeting cadence broken since Apr 22</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Signals Grid -->
+                <div class="signals-grid observe-in">
+                    <div class="signal-card">
+                        <div class="signal-card-title"><span class="dot green"></span> Expansion Signals</div>
+                        <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Active Workflow opportunity at $18.5K — Katy verbally aligned on value prop (Apr 17)</span></div>
+                        <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Seat swap request signals ongoing platform investment — new users being onboarded</span></div>
+                        <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Candidate Experience Portal interest — potential 3rd product line</span></div>
+                        <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Parent company (Crane Holdings) = enterprise path with 2,700+ employees</span></div>
+                    </div>
+                    <div class="signal-card">
+                        <div class="signal-card-title"><span class="dot red"></span> Risk Signals</div>
+                        <div class="signal-item"><i class="fas fa-arrow-down signal-icon down"></i><span class="signal-text">37-day engagement gap — well beyond 14-day risk threshold for SMB accounts</span></div>
+                        <div class="signal-item"><i class="fas fa-arrow-down signal-icon down"></i><span class="signal-text">Unresolved technical bug (candidate import) — 37 days without confirmed fix</span></div>
+                        <div class="signal-item"><i class="fas fa-arrow-down signal-icon down"></i><span class="signal-text">Key user (Hannah) struggling with core functionality — adoption risk</span></div>
+                        <div class="signal-item"><i class="fas fa-arrow-down signal-icon down"></i><span class="signal-text">Unfulfilled demo promise (Candidate Experience Portal) — 2+ months overdue</span></div>
+                    </div>
+                </div>
+
+                <!-- Company News -->
+                <div class="news-card observe-in">
+                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+                        <div class="section-title" style="margin:0"><i class="fas fa-newspaper"></i> Company Intelligence</div>
+                        <span class="pending-badge"><span class="pending-dot" style="width:6px;height:6px;"></span> Awaiting Connection</span>
+                    </div>
+                    <div class="news-card-content">
+                        <div class="news-item">
+                            <i class="fas fa-building"></i>
+                            <span class="news-item-text"><strong>Parent:</strong> Crane Holdings (NYSE: CR) · Stamford, CT · 2,700+ employees</span>
+                        </div>
+                        <div class="news-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="news-item-text"><strong>Subsidiary:</strong> Crane Pumps & Systems · Piqua, OH · Founded 1946 · NAICS 333914</span>
+                        </div>
+                        <div class="news-item" style="opacity:0.6;">
+                            <i class="fas fa-lock"></i>
+                            <span class="news-item-text" style="font-style:italic;">When connected: Quarterly earnings, executive changes, M&A activity, industry manufacturing hiring trends</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pending Modules -->
+                <div class="pending-section observe-in">
+                    <div class="section-header">
+                        <div class="section-title"><i class="fas fa-plug"></i> Pending Intelligence Modules</div>
+                        <span class="section-subtitle">Ready to receive when connected</span>
+                    </div>
+                    <div class="pending-grid">
+                        <div class="pending-card">
+                            <div class="pending-card-header">
+                                <span class="pending-dot"></span>
+                                <span class="pending-card-title">Usage & Adoption Telemetry</span>
+                                <span class="pending-badge">Awaiting</span>
+                            </div>
+                            <div class="pending-card-desc">Login frequency by user, feature usage heatmap, search volume & effectiveness, candidate pipeline activity, time-in-platform metrics.</div>
+                            <div class="pending-card-preview">Will surface: daily active users, feature adoption %, search-to-hire ratio, and per-user engagement scores</div>
+                        </div>
+                        <div class="pending-card">
+                            <div class="pending-card-header">
+                                <span class="pending-dot"></span>
+                                <span class="pending-card-title">Support Tickets</span>
+                                <span class="pending-badge">Awaiting</span>
+                            </div>
+                            <div class="pending-card-desc">Open tickets, resolution time trends, recurring issues, CSAT scores, escalation history.</div>
+                            <div class="pending-card-preview">Will show: ticket volume, avg time-to-resolution, status breakdown, outcome tracking, prediction model</div>
+                        </div>
+                        <div class="pending-card">
+                            <div class="pending-card-header">
+                                <span class="pending-dot"></span>
+                                <span class="pending-card-title">Product Roadmap</span>
+                                <span class="pending-badge">Awaiting</span>
+                            </div>
+                            <div class="pending-card-desc">Features relevant to this customer, enhancement timeline, beta opportunities, release notes.</div>
+                            <div class="pending-card-preview">Will surface: upcoming features aligned to their use case, early-access eligibility, adoption predictions</div>
+                        </div>
+                        <div class="pending-card">
+                            <div class="pending-card-header">
+                                <span class="pending-dot"></span>
+                                <span class="pending-card-title">Market Intelligence</span>
+                                <span class="pending-badge">Awaiting</span>
+                            </div>
+                            <div class="pending-card-desc">Company news (M&A, leadership changes, earnings), industry hiring trends, competitive moves.</div>
+                            <div class="pending-card-preview">Will show: real-time news alerts, leadership changes, competitive displacement signals, hiring velocity</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Profile -->
+                <div class="card observe-in">
+                    <div class="card-header">
+                        <div class="section-title" style="margin:0"><i class="fas fa-building"></i> Company Profile</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="profile-grid">
+                            <div class="profile-item"><div class="profile-item-label">Industry</div><div class="profile-item-value">Industrial Pumps & Systems Manufacturing</div></div>
+                            <div class="profile-item"><div class="profile-item-label">Employees</div><div class="profile-item-value">500–700 (est.)</div></div>
+                            <div class="profile-item"><div class="profile-item-label">Revenue</div><div class="profile-item-value">$200M–$500M</div></div>
+                            <div class="profile-item"><div class="profile-item-label">Parent Company</div><div class="profile-item-value">Crane Holdings (NYSE: CR)</div></div>
+                            <div class="profile-item"><div class="profile-item-label">HQ Location</div><div class="profile-item-value">Piqua, Ohio</div></div>
+                            <div class="profile-item"><div class="profile-item-label">HR Tech Stack</div><div class="profile-item-value">Rival Recruit (Active) + ATS Unknown</div></div>
+                            <div class="profile-item"><div class="profile-item-label">Hiring Volume</div><div class="profile-item-value">Active — Sales, Engineering, Early-Career</div></div>
+                            <div class="profile-item"><div class="profile-item-label">Contract Start</div><div class="profile-item-value">December 2025</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══════ PEOPLE TAB ═══════ -->
+            <div class="tab-panel" id="tab-people" role="tabpanel">
+                <div class="stakeholder-summary">
+                    <div class="summary-stat"><div class="summary-stat-value" style="color:var(--text-primary)">10</div><div class="summary-stat-label">Total Contacts</div></div>
+                    <div class="summary-stat"><div class="summary-stat-value" style="color:var(--green)">3</div><div class="summary-stat-label">High Engagement</div></div>
+                    <div class="summary-stat"><div class="summary-stat-value" style="color:var(--amber)">2</div><div class="summary-stat-label">Medium Engagement</div></div>
+                    <div class="summary-stat"><div class="summary-stat-value" style="color:var(--text-faint)">5</div><div class="summary-stat-label">Unengaged</div></div>
+                </div>
+
+                <div class="buying-committee">
+                    <div class="section-title" style="margin-bottom:0"><i class="fas fa-sitemap"></i> Buying Committee</div>
+                    <div class="committee-grid">
+                        <div class="committee-role"><div class="committee-role-title">Economic Buyer</div><div class="committee-role-person">Katy Zimpfer</div><div class="committee-role-status engaged">✓ Engaged</div></div>
+                        <div class="committee-role"><div class="committee-role-title">Champion</div><div class="committee-role-person">Hailey Mescher</div><div class="committee-role-status engaged">✓ Engaged</div></div>
+                        <div class="committee-role"><div class="committee-role-title">Technical Evaluator</div><div class="committee-role-person">Hailey Egbert</div><div class="committee-role-status warning">⚠ Bug reported</div></div>
+                        <div class="committee-role"><div class="committee-role-title">Financial Authority</div><div class="committee-role-person">Matt Livingston</div><div class="committee-role-status inactive">○ Not engaged</div></div>
+                        <div class="committee-role"><div class="committee-role-title">Enterprise Sponsor</div><div class="committee-role-person">Tami Polmanteer</div><div class="committee-role-status inactive">○ Not engaged</div></div>
+                    </div>
+                </div>
+
+                <div class="filter-bar">
+                    <span class="filter-label">Filter:</span>
+                    <button class="filter-btn active" onclick="filterPeople('all')">All</button>
+                    <button class="filter-btn" onclick="filterPeople('high')">High</button>
+                    <button class="filter-btn" onclick="filterPeople('medium')">Medium</button>
+                    <button class="filter-btn" onclick="filterPeople('none')">Unengaged</button>
+                </div>
+
+                <div class="card" style="overflow-x:auto">
+                    <table class="people-table">
+                        <thead><tr>
+                            <th onclick="sortTable(0)">Name <i class="fas fa-sort" style="font-size:9px;margin-left:4px;opacity:0.4"></i></th>
+                            <th onclick="sortTable(1)">Title <i class="fas fa-sort" style="font-size:9px;margin-left:4px;opacity:0.4"></i></th>
+                            <th>Role</th>
+                            <th onclick="sortTable(3)">Engagement <i class="fas fa-sort" style="font-size:9px;margin-left:4px;opacity:0.4"></i></th>
+                            <th>Last Contact</th>
+                        </tr></thead>
+                        <tbody id="people-tbody">
+                            <tr class="person-row" data-engagement="high" onclick="togglePersonDetail(this)"><td><span class="person-name">Katy Zimpfer</span></td><td><span class="person-title-text">VP of Human Resources</span></td><td><span class="role-badge decision">Decision Maker</span></td><td><span class="engagement-indicator high">High</span></td><td>May 23</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Budget authority for HR Tech purchases. Verbally aligned on Workflow value prop. Requested training for Chelsea & Olivia (May 23). Next step: regroup on Workflow expansion.<br><strong>Last Interaction:</strong> Email requesting seat swap — Chelsea & Olivia to replace Katy & Sam as active users.</div><div class="contact-info-row"><a href="mailto:kzimpfer@cranepumps.com" class="contact-link"><i class="fas fa-envelope"></i> kzimpfer@cranepumps.com</a><a href="tel:+19372149889" class="contact-link"><i class="fas fa-phone"></i> (937) 214-9889</a><a href="https://silkroad.lightning.force.com/lightning/r/Contact/003Vs00000Js2WYIAZ/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+
+                            <tr class="person-row" data-engagement="high" onclick="togglePersonDetail(this)"><td><span class="person-name">Hailey Mescher</span></td><td><span class="person-title-text">Manager, Human Resources</span></td><td><span class="role-badge champion">Champion</span></td><td><span class="engagement-indicator high">High</span></td><td>Apr 22</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Day-to-day platform manager and internal champion. Attends all meetings. Drives usage proactively.<br><strong>Last Interaction:</strong> Apr 22 meeting — escalated candidate import bug.</div><div class="contact-info-row"><a href="mailto:hmescher@cranepumps.com" class="contact-link"><i class="fas fa-envelope"></i> hmescher@cranepumps.com</a><a href="tel:+14199535703" class="contact-link"><i class="fas fa-phone"></i> (419) 953-5703</a><a href="https://silkroad.lightning.force.com/lightning/r/Contact/003Vs00000piFSjIAM/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+
+                            <tr class="person-row" data-engagement="high" onclick="togglePersonDetail(this)"><td><span class="person-name">Samuel Callinan</span></td><td><span class="person-title-text">HR Generalist</span></td><td><span class="role-badge user">Power User</span></td><td><span class="engagement-indicator high">High</span></td><td>Apr 22</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Active sourcer focused on sales roles. Being replaced by Olivia per May 23 seat swap request. Transitioning off platform.<br><strong>Last Interaction:</strong> Apr 22 meeting — active participant in sourcing discussion.</div><div class="contact-info-row"><a href="mailto:scallinan@cranepumps.com" class="contact-link"><i class="fas fa-envelope"></i> scallinan@cranepumps.com</a><a href="tel:+19185102815" class="contact-link"><i class="fas fa-phone"></i> (918) 510-2815</a><a href="https://silkroad.lightning.force.com/lightning/r/Contact/003Vs00000rjjnLIAQ/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+
+                            <tr class="person-row" data-engagement="medium" onclick="togglePersonDetail(this)"><td><span class="person-name">Hannah McKee</span></td><td><span class="person-title-text">HR Generalist</span></td><td><span class="role-badge at-risk">At-Risk User</span></td><td><span class="engagement-indicator medium">Medium</span></td><td>Apr 22</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Struggling with search functionality for early-career roles. Had source button issues (Mar 10). Needs enablement session.<br><strong>Last Interaction:</strong> Apr 22 meeting — limited engagement with platform topics.</div><div class="contact-info-row"><a href="mailto:hmckee@cranepumps.com" class="contact-link"><i class="fas fa-envelope"></i> hmckee@cranepumps.com</a><a href="https://silkroad.lightning.force.com/lightning/r/Contact/003Vs00000piFSkIAM/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+
+                            <tr class="person-row" data-engagement="medium" onclick="togglePersonDetail(this)"><td><span class="person-name">Hailey Egbert</span></td><td><span class="person-title-text">HR</span></td><td><span class="role-badge technical">Technical Contact</span></td><td><span class="engagement-indicator medium">Medium</span></td><td>May 23</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Reported critical candidate import bug (Apr 22). Technical user who surfaces platform issues. Key for technical validation.<br><strong>Last Interaction:</strong> May 23 — included on seat swap request email.</div><div class="contact-info-row"><a href="mailto:hegbert@cranepumps.com" class="contact-link"><i class="fas fa-envelope"></i> hegbert@cranepumps.com</a><a href="tel:+19054576223" class="contact-link"><i class="fas fa-phone"></i> (905) 457-6223</a><a href="https://silkroad.lightning.force.com/lightning/r/Contact/003Vs00000rzqGBIAY/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+
+                            <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name">Tami Polmanteer</span></td><td><span class="person-title-text">CHRO, Crane Holdings</span></td><td><span class="role-badge influencer">Enterprise Path</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> CHRO at parent company Crane Holdings. Enterprise expansion path — could champion broader rollout across 2,700+ employees.<br><strong>Strategy:</strong> Don't engage directly until Crane Pumps is a clear success story with measurable ROI.</div><div class="contact-info-row"><a href="mailto:tpolmanteer@craneco.com" class="contact-link"><i class="fas fa-envelope"></i> tpolmanteer@craneco.com</a><a href="tel:+12038327611" class="contact-link"><i class="fas fa-phone"></i> (203) 832-7611</a><a href="https://silkroad.lightning.force.com/lightning/r/Contact/003Vs00000YYuk9IAD/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+
+                            <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name">Amy Holgerson</span></td><td><span class="person-title-text">Dir. Talent Acquisition, Crane Holdings</span></td><td><span class="role-badge influencer">Influencer</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Could drive broader adoption across Crane Holdings. Potential future champion for enterprise deal.<br><strong>Strategy:</strong> Consider a "customer story" approach once Crane Pumps shows measurable wins.</div><div class="contact-info-row"><a href="mailto:aholgerson@craneco.com" class="contact-link"><i class="fas fa-envelope"></i> aholgerson@craneco.com</a><a href="tel:+14753339892" class="contact-link"><i class="fas fa-phone"></i> (475) 333-9892</a><a href="https://silkroad.lightning.force.com/lightning/r/Contact/003Vs00000YYTs6IAH/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+
+                            <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name">Matt Livingston</span></td><td><span class="person-title-text">CFO</span></td><td><span class="role-badge financial">Financial</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Local financial authority at Crane Pumps & Systems. Not engaged in sales conversations. May be needed for larger deals.<br><strong>Strategy:</strong> Not needed for $18.5K Workflow deal. Monitor for larger enterprise conversations.</div><div class="contact-info-row"><a href="mailto:mlivingston@cranepumps.com" class="contact-link"><i class="fas fa-envelope"></i> mlivingston@cranepumps.com</a><a href="tel:+19372143850" class="contact-link"><i class="fas fa-phone"></i> (937) 214-3850</a><a href="https://silkroad.lightning.force.com/lightning/r/Contact/003Vs00000csPA4IAM/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+
+                            <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name">Richard Maue</span></td><td><span class="person-title-text">CFO, Crane Co.</span></td><td><span class="role-badge financial">Financial (Parent)</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Enterprise-scale financial authority. Only relevant for very large deals at Crane Holdings level.<br><strong>Strategy:</strong> Enterprise-scale only. Not actionable at current revenue levels.</div><div class="contact-info-row"><a href="mailto:rmaue@craneco.com" class="contact-link"><i class="fas fa-envelope"></i> rmaue@craneco.com</a><a href="tel:+16313754521" class="contact-link"><i class="fas fa-phone"></i> (631) 375-4521</a><a href="https://silkroad.lightning.force.com/lightning/r/Contact/003Vs00000cTsLlIAK/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+
+                            <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name">Brian Sweeney</span></td><td><span class="person-title-text">Unknown</span></td><td><span class="role-badge unknown">Unknown</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> No context available. Appeared in contact records but no role or interaction history.<br><strong>Strategy:</strong> Low priority — research if name surfaces in future interactions.</div><div class="contact-info-row"><a href="mailto:bsweeney@cranepumps.com" class="contact-link"><i class="fas fa-envelope"></i> bsweeney@cranepumps.com</a><a href="tel:+16173666294" class="contact-link"><i class="fas fa-phone"></i> (617) 366-6294</a><a href="https://silkroad.lightning.force.com/lightning/r/Contact/003Vs00000OZ4njIAD/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ═══════ TIMELINE TAB ═══════ -->
+            <div class="tab-panel" id="tab-timeline" role="tabpanel">
+                <div class="timeline-stats">
+                    <div class="summary-stat"><div class="summary-stat-value" style="color:var(--purple)">93</div><div class="summary-stat-label">Emails (6 months)</div></div>
+                    <div class="summary-stat"><div class="summary-stat-value" style="color:var(--blue)">7</div><div class="summary-stat-label">Meetings</div></div>
+                    <div class="summary-stat"><div class="summary-stat-value" style="color:var(--red)">Broken</div><div class="summary-stat-label">Bi-weekly cadence</div></div>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-event" onclick="toggleTimeline(this)">
+                        <div class="timeline-event-header"><span class="timeline-date">May 23, 2026</span><span class="timeline-type email">Email</span></div>
+                        <div class="timeline-title">Seat Swap Request — Chelsea & Olivia Onboarding</div>
+                        <div class="timeline-summary">Katy requesting seat swap: Chelsea & Olivia replacing Katy & Sam as active users. Training requested.</div>
+                        <div class="timeline-detail"><div class="timeline-detail-content">
+                            <div class="detail-row"><span class="detail-label">From</span><span class="detail-value">Katy Zimpfer</span></div>
+                            <div class="detail-row"><span class="detail-label">CC</span><span class="detail-value">Hailey Egbert, Hailey Mescher</span></div>
+                            <div class="detail-row"><span class="detail-label">Sentiment</span><span class="sentiment-badge neutral"><i class="fas fa-minus-circle"></i> Neutral</span></div>
+                            <div class="detail-row"><span class="detail-label">Action</span><span class="detail-value">Schedule training for Chelsea & Olivia; process seat swap</span></div>
+                            <div class="detail-row"><span class="detail-label">Signal</span><span class="detail-value">Continued investment — adding new users indicates commitment</span></div>
+                        </div></div>
+                    </div>
+
+                    <div class="timeline-event" onclick="toggleTimeline(this)">
+                        <div class="timeline-event-header"><span class="timeline-date">Apr 22, 2026</span><div style="display:flex;align-items:center;gap:6px;"><span class="timeline-type meeting">Meeting</span><a href="#" onclick="event.stopPropagation()" style="font-size:10px;color:var(--blue);text-decoration:none;padding:2px 6px;background:var(--blue-light);border-radius:var(--radius-full);border:1px solid var(--blue-border);font-weight:600;"><i class="fas fa-video" style="margin-right:2px;"></i> Chorus</a></div></div>
+                        <div class="timeline-title">Bi-Weekly Check-in — Bug Escalation & Office Hours</div>
+                        <div class="timeline-summary">Candidate import bug escalated. Tech ticket created. Office hours offered.</div>
+                        <div class="timeline-detail"><div class="timeline-detail-content">
+                            <div class="detail-row"><span class="detail-label">Attendees</span><span class="detail-value">Katy Zimpfer, Hailey Mescher, Samuel Callinan, Hannah McKee, Hailey Egbert</span></div>
+                            <div class="detail-row"><span class="detail-label">Duration</span><span class="detail-value">30 minutes</span></div>
+                            <div class="detail-row"><span class="detail-label">Sentiment</span><span class="sentiment-badge negative"><i class="fas fa-exclamation-circle"></i> Frustrated</span></div>
+                            <div class="detail-row"><span class="detail-label">Topics</span><span class="detail-value">Candidate import failure, bulk upload issues, office hours scheduling</span></div>
+                            <div class="detail-row"><span class="detail-label">Action</span><span class="detail-value">1) Create tech ticket 2) Offer office hours 3) Follow up on resolution</span></div>
+                        </div></div>
+                    </div>
+
+                    <div class="timeline-event" onclick="toggleTimeline(this)">
+                        <div class="timeline-event-header"><span class="timeline-date">Apr 17, 2026</span><div style="display:flex;align-items:center;gap:6px;"><span class="timeline-type meeting">Meeting</span><a href="#" onclick="event.stopPropagation()" style="font-size:10px;color:var(--blue);text-decoration:none;padding:2px 6px;background:var(--blue-light);border-radius:var(--radius-full);border:1px solid var(--blue-border);font-weight:600;"><i class="fas fa-video" style="margin-right:2px;"></i> Chorus</a></div></div>
+                        <div class="timeline-title">1:1 with Katy — Workflow Expansion Discussion</div>
+                        <div class="timeline-summary">Positive conversation about Workflow value. Katy aligned on use case. Expansion solidified.</div>
+                        <div class="timeline-detail"><div class="timeline-detail-content">
+                            <div class="detail-row"><span class="detail-label">Attendees</span><span class="detail-value">Katy Zimpfer (1:1)</span></div>
+                            <div class="detail-row"><span class="detail-label">Duration</span><span class="detail-value">25 minutes</span></div>
+                            <div class="detail-row"><span class="detail-label">Sentiment</span><span class="sentiment-badge positive"><i class="fas fa-check-circle"></i> Positive</span></div>
+                            <div class="detail-row"><span class="detail-label">Topics</span><span class="detail-value">Workflow product fit, hiring process mapping, budget timing</span></div>
+                            <div class="detail-row"><span class="detail-label">Signal</span><span class="detail-value">Strong buying signal — "when we add this" vs. "if"</span></div>
+                        </div></div>
+                    </div>
+
+                    <div class="timeline-event" onclick="toggleTimeline(this)">
+                        <div class="timeline-event-header"><span class="timeline-date">Mar 23, 2026</span><div style="display:flex;align-items:center;gap:6px;"><span class="timeline-type meeting">Meeting</span><a href="#" onclick="event.stopPropagation()" style="font-size:10px;color:var(--blue);text-decoration:none;padding:2px 6px;background:var(--blue-light);border-radius:var(--radius-full);border:1px solid var(--blue-border);font-weight:600;"><i class="fas fa-video" style="margin-right:2px;"></i> Chorus</a></div></div>
+                        <div class="timeline-title">Candidate Experience Portal Interest</div>
+                        <div class="timeline-summary">Team expressed interest in Candidate Experience Portal. Demo promised.</div>
+                        <div class="timeline-detail"><div class="timeline-detail-content">
+                            <div class="detail-row"><span class="detail-label">Attendees</span><span class="detail-value">Katy Zimpfer, Hailey Mescher, Samuel Callinan, Hannah McKee</span></div>
+                            <div class="detail-row"><span class="detail-label">Sentiment</span><span class="sentiment-badge positive"><i class="fas fa-check-circle"></i> Positive</span></div>
+                            <div class="detail-row"><span class="detail-label">Action</span><span class="detail-value">Schedule Candidate Experience Portal demo — UNFULFILLED (2+ months)</span></div>
+                        </div></div>
+                    </div>
+
+                    <div class="timeline-event" onclick="toggleTimeline(this)">
+                        <div class="timeline-event-header"><span class="timeline-date">Mar 10, 2026</span><div style="display:flex;align-items:center;gap:6px;"><span class="timeline-type meeting">Meeting</span><a href="#" onclick="event.stopPropagation()" style="font-size:10px;color:var(--blue);text-decoration:none;padding:2px 6px;background:var(--blue-light);border-radius:var(--radius-full);border:1px solid var(--blue-border);font-weight:600;"><i class="fas fa-video" style="margin-right:2px;"></i> Chorus</a></div></div>
+                        <div class="timeline-title">Platform Enablement — Source Button & Job Posting</div>
+                        <div class="timeline-summary">Hannah having source button errors. Portal setup discussed.</div>
+                        <div class="timeline-detail"><div class="timeline-detail-content">
+                            <div class="detail-row"><span class="detail-label">Attendees</span><span class="detail-value">Hailey Mescher, Hannah McKee, Samuel Callinan</span></div>
+                            <div class="detail-row"><span class="detail-label">Sentiment</span><span class="sentiment-badge neutral"><i class="fas fa-minus-circle"></i> Mixed</span></div>
+                            <div class="detail-row"><span class="detail-label">Action</span><span class="detail-value">Troubleshoot Hannah's source button; set up portal</span></div>
+                        </div></div>
+                    </div>
+
+                    <div class="timeline-event" onclick="toggleTimeline(this)">
+                        <div class="timeline-event-header"><span class="timeline-date">Feb 27, 2026</span><div style="display:flex;align-items:center;gap:6px;"><span class="timeline-type meeting">Meeting</span><a href="#" onclick="event.stopPropagation()" style="font-size:10px;color:var(--blue);text-decoration:none;padding:2px 6px;background:var(--blue-light);border-radius:var(--radius-full);border:1px solid var(--blue-border);font-weight:600;"><i class="fas fa-video" style="margin-right:2px;"></i> Chorus</a></div></div>
+                        <div class="timeline-title">Platform Enablement — General Training</div>
+                        <div class="timeline-summary">Standard bi-weekly check-in. General enablement. Neutral sentiment.</div>
+                        <div class="timeline-detail"><div class="timeline-detail-content">
+                            <div class="detail-row"><span class="detail-label">Attendees</span><span class="detail-value">Hailey Mescher, Samuel Callinan, Hannah McKee</span></div>
+                            <div class="detail-row"><span class="detail-label">Sentiment</span><span class="sentiment-badge neutral"><i class="fas fa-minus-circle"></i> Neutral</span></div>
+                            <div class="detail-row"><span class="detail-label">Action</span><span class="detail-value">Continue bi-weekly cadence; monitor usage metrics</span></div>
+                        </div></div>
+                    </div>
+                </div>
+
+                <div class="chart-container" style="margin-top:32px;">
+                    <div class="section-title" style="margin-bottom:16px;"><i class="fas fa-chart-area"></i> Engagement Cadence</div>
+                    <div id="engagement-chart" style="height:280px;"></div>
+                </div>
+            </div>
+
+            <!-- ═══════ PIPELINE TAB ═══════ -->
+            <div class="tab-panel" id="tab-pipeline" role="tabpanel">
+                <div class="pipeline-summary">
+                    <div class="pipeline-summary-item"><div class="value" style="color:var(--text-primary)">$18,500</div><div class="label">Current ARR</div></div>
+                    <div class="pipeline-plus">+</div>
+                    <div class="pipeline-summary-item"><div class="value" style="color:var(--green)">$18,500</div><div class="label">Expansion Pipeline</div></div>
+                    <div class="pipeline-equals"></div>
+                    <div class="pipeline-summary-item"><div class="value" style="color:var(--text-primary)">$37,000</div><div class="label">Potential ARR</div></div>
+                </div>
+
+                <div class="section-header"><div class="section-title"><i class="fas fa-layer-group"></i> Opportunities</div></div>
+                <div class="pipeline-cards">
+                    <div class="pipeline-card" onclick="togglePipeline(this)">
+                        <div class="pipeline-card-status"><span class="status-indicator won"></span><span class="status-text won">Closed Won</span></div>
+                        <div class="pipeline-card-name">Recruit Add-On</div>
+                        <div class="stage-bar"><div class="stage-segment filled won"></div><div class="stage-segment filled won"></div><div class="stage-segment filled won"></div><div class="stage-segment filled won"></div><div class="stage-segment filled won"></div><div class="stage-segment filled won"></div></div>
+                        <div class="pipeline-card-amount" style="color:var(--green)">$18,500</div>
+                        <div class="pipeline-card-meta"><span><i class="fas fa-calendar"></i> Closed Dec 2025</span><span><i class="fas fa-box"></i> Search / Entelo</span></div>
+                        <div class="pipeline-card-detail"><div class="pipeline-card-detail-inner">
+                            <div class="detail-row"><span class="detail-label">Product</span><span class="detail-value">Recruit — Search & Entelo sourcing</span></div>
+                            <div class="detail-row"><span class="detail-label">Contract</span><span class="detail-value">Annual, renews May 2033</span></div>
+                            <div class="detail-row"><span class="detail-label">Users</span><span class="detail-value">4 seats (transitioning to Chelsea, Olivia, Hailey M, Hannah)</span></div>
+                            <a href="https://silkroad.lightning.force.com/lightning/r/Opportunity/006Vs00000PrNbBIAV/view" target="_blank" class="opp-sfdc-link" onclick="event.stopPropagation()"><i class="fab fa-salesforce"></i> Open in SFDC</a>
+                        </div></div>
+                    </div>
+
+                    <div class="pipeline-card active-deal" onclick="togglePipeline(this)">
+                        <div class="pipeline-card-status"><span class="status-indicator active"></span><span class="status-text active">Stage 3 — Align</span></div>
+                        <div class="pipeline-card-name">Workflow Expansion</div>
+                        <div class="stage-bar"><div class="stage-segment filled"></div><div class="stage-segment filled"></div><div class="stage-segment filled"></div><div class="stage-segment"></div><div class="stage-segment"></div><div class="stage-segment"></div></div>
+                        <div class="pipeline-card-amount" style="color:var(--blue)">$18,500</div>
+                        <div class="pipeline-card-meta"><span><i class="fas fa-bullseye"></i> Close: Jun 30, 2026</span><span><i class="fas fa-percentage"></i> 40% probability</span><span><i class="fas fa-arrow-right"></i> Next: Regroup w/ Katy</span></div>
+                        <div class="pipeline-card-detail"><div class="pipeline-card-detail-inner">
+                            <div class="detail-row"><span class="detail-label">Product</span><span class="detail-value">Workflow — hiring process automation</span></div>
+                            <div class="detail-row"><span class="detail-label">Stage</span><span class="detail-value">3 - Align (of 6). Need to advance to Validate.</span></div>
+                            <div class="detail-row"><span class="detail-label">Blockers</span><span class="detail-value">37-day silence, unresolved bug, no regroup scheduled</span></div>
+                            <div class="detail-row"><span class="detail-label">Risk</span><span class="detail-value" style="color:var(--red)">Medium-High — will slip past Jun 30 without action</span></div>
+                            <a href="https://silkroad.lightning.force.com/lightning/r/Opportunity/006Vs00000DV6EXIA1/view" target="_blank" class="opp-sfdc-link" onclick="event.stopPropagation()"><i class="fab fa-salesforce"></i> Open in SFDC</a>
+                        </div></div>
+                    </div>
+
+                    <div class="pipeline-card" onclick="togglePipeline(this)">
+                        <div class="pipeline-card-status"><span class="status-indicator future"></span><span class="status-text future">Stage 5 — Renewal</span></div>
+                        <div class="pipeline-card-name">Annual Renewal</div>
+                        <div class="stage-bar"><div class="stage-segment filled muted"></div><div class="stage-segment filled muted"></div><div class="stage-segment filled muted"></div><div class="stage-segment filled muted"></div><div class="stage-segment filled muted"></div><div class="stage-segment"></div></div>
+                        <div class="pipeline-card-amount" style="color:var(--text-muted)">$18,500</div>
+                        <div class="pipeline-card-meta"><span><i class="fas fa-calendar"></i> Renewal: May 2033</span><span><i class="fas fa-shield-alt"></i> Low risk (distant)</span></div>
+                        <div class="pipeline-card-detail"><div class="pipeline-card-detail-inner">
+                            <div class="detail-row"><span class="detail-label">Product</span><span class="detail-value">Recruit — Search & Entelo</span></div>
+                            <div class="detail-row"><span class="detail-label">Renewal</span><span class="detail-value">May 2033 — multi-year contract</span></div>
+                            <div class="detail-row"><span class="detail-label">Strategy</span><span class="detail-value">Focus on expansion now; renewal health follows from usage</span></div>
+                            <a href="https://silkroad.lightning.force.com/lightning/r/Opportunity/006Vs00000RwXQgIAN/view" target="_blank" class="opp-sfdc-link" onclick="event.stopPropagation()"><i class="fab fa-salesforce"></i> Open in SFDC</a>
+                        </div></div>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="section-title" style="margin-bottom:16px;"><i class="fas fa-chart-bar"></i> Revenue Waterfall</div>
+                    <div id="waterfall-chart" style="height:280px;"></div>
+                </div>
+
+                <div class="card" style="margin-top:24px;">
+                    <div class="card-header"><div class="section-title" style="margin:0"><i class="fas fa-heartbeat"></i> Pipeline Health Indicators</div></div>
+                    <div class="card-body">
+                        <div class="health-grid">
+                            <div class="health-item"><div class="health-item-label">Deal Velocity</div><div class="health-item-value" style="color:var(--red)">Stalling</div><div class="health-item-note">42 days in Stage 3 (avg: 21d)</div></div>
+                            <div class="health-item"><div class="health-item-label">Champion Access</div><div class="health-item-value" style="color:var(--green)">Strong</div><div class="health-item-note">Direct line to decision maker</div></div>
+                            <div class="health-item"><div class="health-item-label">Multi-Threading</div><div class="health-item-value" style="color:var(--amber)">Moderate</div><div class="health-item-note">3 of 5 committee engaged</div></div>
+                            <div class="health-item"><div class="health-item-label">Technical Validation</div><div class="health-item-value" style="color:var(--red)">At Risk</div><div class="health-item-note">Open bug undermines confidence</div></div>
+                            <div class="health-item"><div class="health-item-label">Competition</div><div class="health-item-value" style="color:var(--green)">None Detected</div><div class="health-item-note">No competitor mentions in calls</div></div>
+                            <div class="health-item"><div class="health-item-label">Close Confidence</div><div class="health-item-value" style="color:var(--amber)">40%</div><div class="health-item-note">Needs reactivation to hit Jun 30</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- ═══════════════ FOOTER ═══════════════ -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-tech">
+                    <span class="tech-tag">Rival Recruit</span>
+                    <span class="tech-tag">Entelo</span>
+                    <span class="tech-tag">ATS Unknown</span>
+                    <span class="tech-tag">Workflow (Pending)</span>
+                </div>
+                <div class="footer-brand">
+                    <span class="brand-dot"></span> Powered by Amazon Quick
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // ═══════════════ TAB NAVIGATION ═══════════════
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.nav-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+                this.classList.add('active');
+                this.setAttribute('aria-selected', 'true');
+                document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+                document.getElementById('tab-' + this.dataset.tab).classList.add('active');
+                observeElements();
+                if (this.dataset.tab === 'timeline' && !window.engagementChartRendered) setTimeout(renderEngagementChart, 150);
+                if (this.dataset.tab === 'pipeline' && !window.waterfallChartRendered) setTimeout(renderWaterfallChart, 150);
+            });
+        });
+
+        function toggleAction(el) { el.classList.toggle('expanded'); }
+        function toggleTimeline(el) { el.classList.toggle('expanded'); }
+        function togglePipeline(el) { el.classList.toggle('expanded'); }
+
+        function filterPeople(level) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            const rows = document.querySelectorAll('.person-row');
+            const detailRows = document.querySelectorAll('.person-detail-row');
+            rows.forEach((row, idx) => {
+                const eng = row.dataset.engagement;
+                const dr = detailRows[idx];
+                if (level === 'all' || eng === level) { row.style.display = ''; if (dr) dr.style.display = ''; }
+                else { row.style.display = 'none'; if (dr) { dr.style.display = 'none'; dr.classList.remove('visible'); } }
+            });
+        }
+
+        function togglePersonDetail(row) {
+            const dr = row.nextElementSibling;
+            if (dr && dr.classList.contains('person-detail-row')) dr.classList.toggle('visible');
+        }
+
+        let sortDirection = {};
+        function sortTable(colIdx) {
+            const tbody = document.getElementById('people-tbody');
+            const rows = Array.from(tbody.querySelectorAll('.person-row'));
+            sortDirection[colIdx] = !sortDirection[colIdx];
+            const dir = sortDirection[colIdx] ? 1 : -1;
+            rows.sort((a, b) => a.children[colIdx].textContent.trim().localeCompare(b.children[colIdx].textContent.trim()) * dir);
+            rows.forEach(row => { const d = row.nextElementSibling; tbody.appendChild(row); if (d && d.classList.contains('person-detail-row')) tbody.appendChild(d); });
+        }
+
+        function observeElements() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) { setTimeout(() => entry.target.classList.add('visible'), i * 100); observer.unobserve(entry.target); }
+                });
+            }, { threshold: 0.08 });
+            document.querySelectorAll('.observe-in:not(.visible)').forEach(el => observer.observe(el));
+        }
+
+        function renderOverviewEngagementChart() {
+            if (typeof Highcharts === 'undefined') return;
+            Highcharts.chart('engagement-overview-chart', {
+                chart: { type: 'column', backgroundColor: 'transparent', style: { fontFamily: 'Inter, system-ui, sans-serif' }, spacing: [10, 0, 10, 0], height: 180 },
+                title: { text: null },
+                xAxis: { categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May'], labels: { style: { color: '#94A3B8', fontSize: '11px', fontWeight: '500' } }, lineColor: 'rgba(0,0,0,0.04)', tickColor: 'transparent' },
+                yAxis: { title: { text: null }, labels: { style: { color: '#94A3B8', fontSize: '10px' } }, gridLineColor: 'rgba(0,0,0,0.03)', max: 28 },
+                legend: { enabled: true, itemStyle: { color: '#64748B', fontSize: '11px', fontWeight: '500' }, symbolRadius: 3, align: 'right', verticalAlign: 'top', floating: true, y: -5 },
+                plotOptions: { column: { borderRadius: 4, borderWidth: 0, groupPadding: 0.2, pointPadding: 0.05 } },
+                series: [{ name: 'Emails', data: [12, 18, 22, 24, 17], color: { linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 }, stops: [[0, '#8B5CF6'], [1, '#A78BFA']] } }, { name: 'Meetings', data: [1, 1, 2, 2, 0], color: { linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 }, stops: [[0, '#3B82F6'], [1, '#60A5FA']] } }],
+                tooltip: { backgroundColor: '#FFF', borderColor: 'rgba(0,0,0,0.06)', style: { color: '#0F172A', fontSize: '12px' }, borderRadius: 10, shadow: { color: 'rgba(0,0,0,0.06)', offsetX: 0, offsetY: 4, width: 12 } },
+                credits: { enabled: false }, accessibility: { enabled: true }
+            });
+        }
+
+        function renderEngagementChart() {
+            if (typeof Highcharts === 'undefined') return;
+            Highcharts.chart('engagement-chart', {
+                chart: { type: 'areaspline', backgroundColor: 'transparent', style: { fontFamily: 'Inter, system-ui, sans-serif' }, spacing: [20, 20, 20, 20] },
+                title: { text: null },
+                xAxis: { categories: ['Dec', 'Jan', 'Feb', 'Mar (early)', 'Mar (late)', 'Apr (early)', 'Apr (late)', 'May'], labels: { style: { color: '#94A3B8', fontSize: '11px' } }, lineColor: 'rgba(0,0,0,0.04)', tickColor: 'rgba(0,0,0,0.04)' },
+                yAxis: { title: { text: null }, labels: { style: { color: '#94A3B8', fontSize: '11px' } }, gridLineColor: 'rgba(0,0,0,0.03)', min: 0, max: 10 },
+                legend: { itemStyle: { color: '#475569', fontSize: '12px', fontWeight: '500' }, symbolRadius: 3 },
+                plotOptions: { areaspline: { fillOpacity: 0.06, marker: { radius: 4, symbol: 'circle' }, lineWidth: 2.5 } },
+                series: [{ name: 'Meetings', data: [0, 0, 1, 1, 1, 1, 1, 0], color: '#3B82F6', fillColor: { linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 }, stops: [[0, 'rgba(59,130,246,0.10)'], [1, 'rgba(59,130,246,0)']] } }, { name: 'Emails', data: [5, 8, 6, 9, 7, 8, 4, 2], color: '#8B5CF6', fillColor: { linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 }, stops: [[0, 'rgba(139,92,246,0.08)'], [1, 'rgba(139,92,246,0)']] } }],
+                tooltip: { backgroundColor: '#FFF', borderColor: 'rgba(0,0,0,0.06)', style: { color: '#0F172A', fontSize: '12px' }, borderRadius: 10 },
+                credits: { enabled: false }, accessibility: { enabled: true }
+            });
+            window.engagementChartRendered = true;
+        }
+
+        function renderWaterfallChart() {
+            if (typeof Highcharts === 'undefined') return;
+            Highcharts.chart('waterfall-chart', {
+                chart: { type: 'column', backgroundColor: 'transparent', style: { fontFamily: 'Inter, system-ui, sans-serif' }, spacing: [20, 20, 20, 20] },
+                title: { text: null },
+                xAxis: { categories: ['Current ARR', 'Workflow (40%)', 'Potential ARR'], labels: { style: { color: '#475569', fontSize: '12px', fontWeight: '500' } }, lineColor: 'rgba(0,0,0,0.04)' },
+                yAxis: { title: { text: null }, labels: { style: { color: '#94A3B8', fontSize: '11px' }, formatter: function() { return '$' + (this.value / 1000) + 'K'; } }, gridLineColor: 'rgba(0,0,0,0.03)', max: 40000 },
+                legend: { enabled: false },
+                plotOptions: { column: { borderRadius: 8, borderWidth: 0, groupPadding: 0.3 } },
+                series: [{ name: 'ARR', data: [{ y: 18500, color: { linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 }, stops: [[0, '#3B82F6'], [1, '#60A5FA']] } }, { y: 18500, color: { linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 }, stops: [[0, 'rgba(16,185,129,0.8)'], [1, 'rgba(52,211,153,0.6)']] } }, { y: 37000, color: { linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 }, stops: [[0, '#10B981'], [1, '#34D399']] } }], dataLabels: { enabled: true, formatter: function() { return '$' + (this.y / 1000).toFixed(1) + 'K'; }, style: { color: '#0F172A', fontSize: '13px', fontWeight: '700', textOutline: 'none' } } }],
+                tooltip: { backgroundColor: '#FFF', borderColor: 'rgba(0,0,0,0.06)', style: { color: '#0F172A', fontSize: '12px' }, borderRadius: 10, formatter: function() { return this.x + ': <b>$' + this.y.toLocaleString() + '</b>'; } },
+                credits: { enabled: false }, accessibility: { enabled: true }
+            });
+            window.waterfallChartRendered = true;
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+                const tabs = Array.from(document.querySelectorAll('.nav-tab'));
+                const idx = tabs.findIndex(t => t.classList.contains('active'));
+                const nIdx = e.key === 'ArrowRight' ? (idx + 1) % tabs.length : (idx - 1 + tabs.length) % tabs.length;
+                tabs[nIdx].click(); tabs[nIdx].focus();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const first = document.querySelector('.action-item');
+            if (first) first.classList.add('expanded');
+            observeElements();
+            setTimeout(renderOverviewEngagementChart, 300);
+        });
+    </script>
 </body>
 </html>
