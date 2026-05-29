@@ -620,6 +620,7 @@
         .signal-item.partial { border-left:3px solid var(--amber); }
         .signal-item.churn-clear { border-left:3px solid var(--green); }
         .signal-item.churn-warning { border-left:3px solid var(--amber); }
+        .signal-item.churn-critical { border-left:3px solid var(--red); background:#fef2f2; }
         .signal-icon { flex-shrink:0; padding-top:2px; }
         .signal-content { flex:1; }
         .signal-label { font-size:13px; font-weight:600; color:var(--text-primary); margin-bottom:2px; }
@@ -1184,11 +1185,11 @@
                                             <div class="signal-detail">Parent company +25% YoY revenue, new CEO (Alex Alcala). Budget environment strong. No constraints.</div>
                                         </div>
                                     </div>
-                                    <div class="signal-item expansion partial">
-                                        <div class="signal-icon"><i class="fas fa-minus-circle" style="color:var(--amber)"></i></div>
+                                    <div class="signal-item expansion">
+                                        <div class="signal-icon"><i class="fas fa-check-circle" style="color:var(--green)"></i></div>
                                         <div class="signal-content">
                                             <div class="signal-label">New Stakeholders Joining Calls</div>
-                                            <div class="signal-detail">Not yet. Parent CHRO (Tami Polmanteer) and Dir TA (Amy Holgerson) unengaged. Enterprise path exists but untapped.</div>
+                                            <div class="signal-detail">Amy Holgerson (Dir TA, Parent Co) attended May 29, 2025 Workflow demo with Katy. Asked about recruiting platform demo next. Tami Polmanteer (CHRO) still unengaged.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -1197,11 +1198,11 @@
                             <div>
                                 <div style="font-size:12px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px;"><i class="fas fa-arrow-down"></i> Churn Signals Monitored</div>
                                 <div class="signal-list">
-                                    <div class="signal-item churn-clear">
-                                        <div class="signal-icon"><i class="fas fa-shield-alt" style="color:var(--green)"></i></div>
+                                    <div class="signal-item churn-critical">
+                                        <div class="signal-icon"><i class="fas fa-exclamation-circle" style="color:var(--red)"></i></div>
                                         <div class="signal-content">
                                             <div class="signal-label">Platform Consolidation</div>
-                                            <div class="signal-detail">No mentions. No Workday/UKG/Oracle conversations detected in any Chorus call.</div>
+                                            <div class="signal-detail"><strong style="color:var(--red);">ACTIVE: Workday implementation in progress.</strong> Phase 1 launched Aug 15, 2025. Excludes hourly/production workers from Workday access. ClickBoarding (current onboarding tool) contract expired end of 2025. Rival Workflow positioned as complementary bolt-on for populations Workday doesn't cover. <em>This is the competitive context for the Workflow expansion opp.</em></div>
                                         </div>
                                     </div>
                                     <div class="signal-item churn-warning">
@@ -1236,7 +1237,7 @@
                             </div>
                         </div>
                         <div style="margin-top:16px;padding:10px 14px;background:var(--surface);border-radius:8px;border:1px solid var(--border);">
-                            <div style="font-size:12px;color:var(--text-muted);"><strong>Net Signal Score:</strong> <span style="color:var(--green);font-weight:700;">+3 Expansion</span> vs <span style="color:var(--amber);font-weight:600;">2 Amber Churn Warnings</span> (no red). Account is expansion-ready but cadence gap requires immediate fix.</div>
+                            <div style="font-size:12px;color:var(--text-muted);"><strong>Net Signal Score:</strong> <span style="color:var(--green);font-weight:700;">+4 Expansion</span> vs <span style="color:var(--red);font-weight:700;">1 Red (Workday)</span> + <span style="color:var(--amber);font-weight:600;">2 Amber</span>. Expansion viable but Workflow opp must be positioned as Workday complement (not competitor). Cadence gap + Workday context = urgent regroup needed.</div>
                         </div>
                     </div>
                 </div>
@@ -1499,6 +1500,7 @@
                         <div class="pipeline-card-detail-inner" style="display:block;">
                             <div class="detail-row"><span class="detail-label">Product</span><span class="detail-value">Workflow — hiring process automation</span></div>
                             <div class="detail-row"><span class="detail-label">Pain / Use Case</span><span class="detail-value">Small HR team managing hiring across multiple locations. Manual processes creating friction as hiring volume increases. Katy articulated need for automation in Apr 17 1:1.</span></div>
+                            <div class="detail-row"><span class="detail-label">Competitive Context</span><span class="detail-value" style="color:var(--red);"><strong>Workday implementation active (Phase 1: Aug 2025).</strong> Excludes hourly/production workers. ClickBoarding expired end 2025. Rival positioned as complementary bolt-on for populations Workday doesn't cover. Katy wants unified onboarding for ALL employees regardless of Workday access. Oct/Nov 2025 pilot discussed but timeline slipped.</span></div>
                             <div class="detail-row"><span class="detail-label">Current State</span><span class="detail-value" style="color:var(--red);">37 days of silence. Next step "Regroup w/ Katy" unscheduled.</span></div>
                             <div class="detail-row"><span class="detail-label">Expansion Signal</span><span class="detail-value" style="color:var(--green);">4 departments at 12-month hiring highs (Sales, IT, Engineering, Ops). $3.3M Navy contract = headcount growth. More hiring = more process pain = stronger Workflow case.</span></div>
                             <div class="detail-row"><span class="detail-label">Risk</span><span class="detail-value" style="color:var(--red);">Will slip past Jun 30 without immediate re-engagement. No meeting on calendar.</span></div>
@@ -1518,7 +1520,7 @@
                             <div class="health-item"><div class="health-item-label">Champion Access</div><div class="health-item-value" style="color:var(--green)">Strong</div><div class="health-item-note">Direct relationship with Katy (VP HR, budget authority).</div></div>
                             <div class="health-item"><div class="health-item-label">Multi-Threading</div><div class="health-item-value" style="color:var(--amber)">Moderate</div><div class="health-item-note">Katy single-threaded on Workflow eval. No other stakeholders engaged.</div></div>
                             <div class="health-item"><div class="health-item-label">Technical Validation</div><div class="health-item-value" style="color:var(--green)">Resolved</div><div class="health-item-note">Import bug fixed May 12 (&lt;1hr). No open technical blockers.</div></div>
-                            <div class="health-item"><div class="health-item-label">Competition</div><div class="health-item-value" style="color:var(--green)">None Detected</div><div class="health-item-note">No competitor mentions in any Chorus calls.</div></div>
+                            <div class="health-item"><div class="health-item-label">Competition</div><div class="health-item-value" style="color:var(--red)">Workday (Active)</div><div class="health-item-note">Workday Phase 1 live Aug 2025. Rival must position as complement, not competitor. Gap: hourly/production workers + Canadian workforce.</div></div>
                             <div class="health-item"><div class="health-item-label">Business Case</div><div class="health-item-value" style="color:var(--green)">Strong</div><div class="health-item-note">Hiring surge (4 depts) + $3.3M Navy contract = volume growth.</div></div>
                             <div class="health-item"><div class="health-item-label">Close Confidence</div><div class="health-item-value" style="color:var(--amber)">Low-Medium</div><div class="health-item-note">40% prob, 32 days to close, no meeting scheduled. Will slip.</div></div>
                         </div>
