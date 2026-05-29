@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><span style="filter:blur(4px);user-select:none;">Crane Pumps & Systems</span> | Account Intelligence</title>
+    <title>Acme Manufacturing | Account Intelligence</title>
     <script src="https://cdn.jsdelivr.net/npm/highcharts@12.1.2/highcharts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/highcharts@12.1.2/modules/accessibility.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -632,8 +632,8 @@
 
         
         /* Info tooltips */
-        .info-btn { display:inline-flex; align-items:center; justify-content:center; width:15px; height:15px; border-radius:50%; border:1.5px solid var(--text-faint); color:var(--text-faint); font-size:9px; font-weight:600; cursor:pointer; margin-left:5px; transition:all 0.2s; position:relative; vertical-align:middle; line-height:1; }
-        .info-btn:hover { border-color:var(--blue); color:var(--blue); }
+        .info-btn { display:inline-flex; align-items:center; justify-content:center; width:16px; height:16px; border-radius:50%; border:1.5px solid #adb5bd; color:#868e96; font-size:10px; font-weight:600; cursor:pointer; margin-left:3px; transition:all 0.15s; position:relative; vertical-align:text-bottom; line-height:1; font-family:-apple-system,BlinkMacSystemFont,sans-serif; }
+        .info-btn:hover { border-color:#228be6; color:#228be6; background:rgba(34,139,230,0.05); }
         .info-tooltip { display:none; position:absolute; top:24px; left:50%; transform:translateX(-50%); background:var(--text-primary); color:white; padding:10px 14px; border-radius:8px; font-size:12px; font-weight:400; line-height:1.5; width:280px; z-index:100; box-shadow:0 4px 12px rgba(0,0,0,0.15); pointer-events:none; }
         .info-btn:hover .info-tooltip { display:block; }
         .info-tooltip::before { content:""; position:absolute; top:-6px; left:50%; transform:translateX(-50%); border-left:6px solid transparent; border-right:6px solid transparent; border-bottom:6px solid var(--text-primary); }
@@ -642,7 +642,7 @@
 </head>
 <body>
 <div style="position:fixed;top:0;left:0;right:0;background:linear-gradient(90deg,#1E2761,#408EC6);color:white;text-align:center;padding:8px 16px;font-size:13px;font-weight:500;z-index:9999;letter-spacing:0.3px;">
-    DEMO MODE — Company and contact names are obscured for confidentiality
+    DEMO — All company names, people, financials, and identifiers have been anonymized
 </div>
 <div style="height:36px;"></div>
     <div class="app-container">
@@ -652,7 +652,7 @@
                 <div class="header-brand">
                     <div class="company-icon">CP</div>
                     <div class="company-info">
-                        <h1><span style="filter:blur(4px);user-select:none;">Crane Pumps & Systems</span></h1>
+                        <h1>Acme Manufacturing</h1>
                         <div class="company-meta">
                             <span class="badge badge-industry"><i class="fas fa-industry"></i> Industrial Manufacturing</span>
                             <span class="badge badge-customer"><i class="fas fa-check-circle"></i> Active Customer</span>
@@ -660,7 +660,7 @@
                     </div>
                 </div>
                 <div class="header-right">
-                    <a href="https://<span style="filter:blur(4px);user-select:none;">silkroad.lightning.force.com</span>/lightning/r/Account/001Vs00000KL4ghIAD/view" target="_blank" class="sfdc-link">
+                    <a href="https://[sfdc-instance].lightning.force.com/lightning/r/Account/XXXXXXXXXXXXX/view" target="_blank" class="sfdc-link">
                         <i class="fas fa-external-link-alt"></i> Open in Salesforce
                     </a>
                     <div class="refresh-time">
@@ -675,12 +675,12 @@
             <div class="metrics-bar">
                 <div class="metric-card">
                     <div class="metric-label">Current ARR</div>
-                    <div class="metric-value" style="color: var(--text-primary);">$18,500</div>
+                    <div class="metric-value" style="color: var(--text-primary);">$XX,XXX</div>
                     <div class="metric-subtitle">Recruit Add-On · Closed Dec 2025</div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-label">Expansion Pipeline</div>
-                    <div class="metric-value green">$18,500</div>
+                    <div class="metric-value green">$XX,XXX</div>
                     <div class="metric-subtitle">Workflow · Stage 3 Align · 40% prob</div>
                 </div>
                 <div class="metric-card">
@@ -730,12 +730,12 @@
                         <div class="action-item critical" onclick="toggleAction(this)">
                             <div class="action-header">
                                 <span class="action-rank">1</span>
-                                <span class="action-title">Re-establish call cadence with <span style="filter:blur(4px);user-select:none;"><span style="filter:blur(4px);user-select:none;">Katy</span> Zimpfer</span></span>
+                                <span class="action-title">Re-establish call cadence with Sarah Johnson</span>
                                 <span class="action-tag revenue">Revenue</span>
                                 <i class="fas fa-chevron-down action-expand-icon"></i>
                             </div>
                             <div class="action-detail">
-                                <p>Last meaningful contact was May 23 (email re: seat swap). No meeting since Apr 22. The $18.5K Workflow expansion is at Stage 3 Align (close pushed to Sep 30) — but the deal is stalling. <span style="filter:blur(4px);user-select:none;">Katy</span> holds budget authority and specifically mentioned wanting to "regroup" on Workflow. Reach out with a concrete next step: propose a 30-min session to map Workflow to their hiring process and offer the training she requested.</p>
+                                <p>Last meaningful contact was May 23 (email re: seat swap). No meeting since Apr 22. The $XX.XK Workflow expansion is at Stage 3 Align (close pushed to Sep 30) — but the deal is stalling. Katy holds budget authority and specifically mentioned wanting to "regroup" on Workflow. Reach out with a concrete next step: propose a 30-min session to map Workflow to their hiring process and offer the training she requested.</p>
                             </div>
                         </div>
                         <div class="action-item critical" onclick="toggleAction(this)">
@@ -746,29 +746,29 @@
                                 <i class="fas fa-chevron-down action-expand-icon"></i>
                             </div>
                             <div class="action-detail">
-                                <p><span style="filter:blur(4px);user-select:none;">Hailey Egbert</span> reported a critical candidate import bug during the Apr 22 meeting. A tech ticket was created but status is unknown — 37 days with no confirmed resolution. Unresolved bugs erode champion confidence and give detractors ammunition. Check ticket status with Product/Support, confirm resolution, and communicate back to Hailey and <span style="filter:blur(4px);user-select:none;">Katy</span> with a resolution summary.</p>
+                                <p>Emily Chen reported a critical candidate import bug during the Apr 22 meeting. A tech ticket was created but status is unknown — 37 days with no confirmed resolution. Unresolved bugs erode champion confidence and give detractors ammunition. Check ticket status with Product/Support, confirm resolution, and communicate back to Hailey and Katy with a resolution summary.</p>
                             </div>
                         </div>
                         <div class="action-item high" onclick="toggleAction(this)">
                             <div class="action-header">
                                 <span class="action-rank">3</span>
-                                <span class="action-title">Schedule <span style="filter:blur(4px);user-select:none;"><span style="filter:blur(4px);user-select:none;">Hannah</span> McKee</span> enablement session</span>
+                                <span class="action-title">Schedule Laura Martinez enablement session</span>
                                 <span class="action-tag enablement">Enablement</span>
                                 <i class="fas fa-chevron-down action-expand-icon"></i>
                             </div>
                             <div class="action-detail">
-                                <p><span style="filter:blur(4px);user-select:none;">Hannah</span> is struggling with sourcing — specifically the search functionality for early-career roles. She's an at-risk user who could churn off the platform without intervention. A 30-min enablement session focused on early-career search strategies and source button usage would stabilize her engagement and protect seat utilization metrics for the renewal conversation.</p>
+                                <p>Hannah is struggling with sourcing — specifically the search functionality for early-career roles. She's an at-risk user who could churn off the platform without intervention. A 30-min enablement session focused on early-career search strategies and source button usage would stabilize her engagement and protect seat utilization metrics for the renewal conversation.</p>
                             </div>
                         </div>
                         <div class="action-item high" onclick="toggleAction(this)">
                             <div class="action-header">
                                 <span class="action-rank">4</span>
-                                <span class="action-title">Training for Chelsea & Olivia — <span style="filter:blur(4px);user-select:none;">Katy</span> requested May 23</span>
+                                <span class="action-title">Training for Chelsea & Olivia — Katy requested May 23</span>
                                 <span class="action-tag enablement">Enablement</span>
                                 <i class="fas fa-chevron-down action-expand-icon"></i>
                             </div>
                             <div class="action-detail">
-                                <p><span style="filter:blur(4px);user-select:none;">Katy</span>'s May 23 email requested a seat swap: Chelsea & Olivia replacing <span style="filter:blur(4px);user-select:none;">Katy</span> & Sam as active users. These new users need onboarding/training to become productive. Fast response here shows responsiveness and keeps the champion relationship warm. Schedule initial training within 1 week, ideally combining with the <span style="filter:blur(4px);user-select:none;">Katy</span> regroup meeting.</p>
+                                <p>Katy's May 23 email requested a seat swap: Chelsea & Olivia replacing Katy & Sam as active users. These new users need onboarding/training to become productive. Fast response here shows responsiveness and keeps the champion relationship warm. Schedule initial training within 1 week, ideally combining with the Katy regroup meeting.</p>
                             </div>
                         </div>
                         <div class="action-item medium" onclick="toggleAction(this)">
@@ -779,7 +779,7 @@
                                 <i class="fas fa-chevron-down action-expand-icon"></i>
                             </div>
                             <div class="action-detail">
-                                <p>During the Mar 23 meeting, the team expressed interest in the Candidate Experience Portal and a demo was promised. It's now 2+ months later with no follow-up. Broken promises damage trust. Either deliver the demo as part of the <span style="filter:blur(4px);user-select:none;">Katy</span> regroup session, or proactively communicate a timeline. This could also become an additional expansion vector beyond Workflow.</p>
+                                <p>During the Mar 23 meeting, the team expressed interest in the Candidate Experience Portal and a demo was promised. It's now 2+ months later with no follow-up. Broken promises damage trust. Either deliver the demo as part of the Katy regroup session, or proactively communicate a timeline. This could also become an additional expansion vector beyond Workflow.</p>
                             </div>
                         </div>
                     </div>
@@ -899,10 +899,10 @@
                 <div class="signals-grid observe-in">
                     <div class="signal-card">
                         <div class="signal-card-title"><span class="dot green"></span> Expansion Signals</div>
-                        <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Active Workflow opportunity at $18.5K — <span style="filter:blur(4px);user-select:none;">Katy</span> verbally aligned on value prop (Apr 17)</span></div>
+                        <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Active Workflow opportunity at $XX.XK — Katy verbally aligned on value prop (Apr 17)</span></div>
                         <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Seat swap request signals ongoing platform investment — new users being onboarded</span></div>
                         <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Candidate Experience Portal interest — potential 3rd product line</span></div>
-                        <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Parent company (<span style="filter:blur(4px);user-select:none;">Crane Holdings</span>) = enterprise path with 2,700+ employees</span></div>
+                        <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Parent company (Apex Holdings) = enterprise path with 2,700+ employees</span></div>
                         <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Aggressive hiring across 4 departments = increased recruiting volume = more platform usage potential</span></div>
                         <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">New $3.3M Navy contract = business growth, potential headcount increase</span></div>
                         <div class="signal-item"><i class="fas fa-arrow-up signal-icon up"></i><span class="signal-text">Parent company revenue +25% YoY, new CEO, strong stock = no budget constraints</span></div>
@@ -911,7 +911,7 @@
                         <div class="signal-card-title"><span class="dot red"></span> Risk Signals</div>
                         <div class="signal-item"><i class="fas fa-arrow-down signal-icon down"></i><span class="signal-text">No scheduled call since Apr 22. Email responsive (last: May 23). Cadence needs re-establishing.</span></div>
                         <div class="signal-item"><i class="fas fa-arrow-down signal-icon down"></i><span class="signal-text">Technical bug (candidate import) — was open 37 days, now confirmed resolved (May 12 support ticket closed &lt;1hr)</span></div>
-                        <div class="signal-item"><i class="fas fa-arrow-down signal-icon down"></i><span class="signal-text">Key user (<span style="filter:blur(4px);user-select:none;">Hannah</span>) struggling with core functionality — adoption risk</span></div>
+                        <div class="signal-item"><i class="fas fa-arrow-down signal-icon down"></i><span class="signal-text">Key user (Hannah) struggling with core functionality — adoption risk</span></div>
                         <div class="signal-item"><i class="fas fa-arrow-down signal-icon down"></i><span class="signal-text">Unfulfilled demo promise (Candidate Experience Portal) — 2+ months overdue</span></div>
                     </div>
                 </div>
@@ -952,7 +952,7 @@
                                     <span><strong>Priority:</strong> Moderate</span>
                                     <span><strong>Created:</strong> May 12, 2026</span>
                                     <span><strong>Resolved:</strong> May 12, 2026 (&lt;1 hour)</span>
-                                    <span><strong>Owner:</strong> Raymond Romero</span>
+                                    <span><strong>Owner:</strong> Support Rep 2</span>
                                 </div>
                             </div>
                             <div style="padding:14px 18px;background:var(--bg-subtle);border-radius:var(--radius-md);border:1px solid var(--border-light);">
@@ -960,12 +960,12 @@
                                     <span style="font-size:13px;font-weight:600;color:var(--text-primary);">License Swap Request</span>
                                     <span style="font-size:11px;padding:2px 8px;border-radius:var(--radius-full);background:var(--green-light);color:var(--green);font-weight:600;border:1px solid var(--green-border);">Closed (Change Request)</span>
                                 </div>
-                                <div style="font-size:12px;color:var(--text-muted);line-height:1.6;">Swap <span style="filter:blur(4px);user-select:none;">Katy</span>/Sam seats to Chelsea/Olivia</div>
+                                <div style="font-size:12px;color:var(--text-muted);line-height:1.6;">Swap Katy/Sam seats to Chelsea/Olivia</div>
                                 <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:var(--text-faint);">
                                     <span><strong>Priority:</strong> Moderate</span>
                                     <span><strong>Created:</strong> May 11, 2026</span>
                                     <span><strong>Resolved:</strong> May 11, 2026 (~8.5 hrs)</span>
-                                    <span><strong>Owner:</strong> Edward Oropeza</span>
+                                    <span><strong>Owner:</strong> Support Rep</span>
                                 </div>
                             </div>
                         </div>
@@ -983,19 +983,19 @@
                     <div class="news-card-content">
                         <div class="news-item">
                             <i class="fas fa-building"></i>
-                            <span class="news-item-text"><strong>Parent:</strong> <span style="filter:blur(4px);user-select:none;">Crane Holdings</span> (NYSE: CR) · Stamford, CT · 2,700+ employees</span>
+                            <span class="news-item-text"><strong>Parent:</strong> Apex Holdings (NYSE: XXX) · Northeast, US · 2,700+ employees</span>
                         </div>
                         <div class="news-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span class="news-item-text"><strong>Subsidiary:</strong> <span style="filter:blur(4px);user-select:none;">Crane Pumps & Systems</span> · Piqua, OH · Founded 1946 · NAICS 333914</span>
+                            <span class="news-item-text"><strong>Subsidiary:</strong> Acme Manufacturing · Midwest, US · Founded 1946 · NAICS 333914</span>
                         </div>
                     </div>
                     <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--border-light);">
-                        <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:12px;display:flex;align-items:center;gap:8px;"><i class="fas fa-bolt" style="color:var(--amber);font-size:11px;"></i> ZoomInfo Scoops — <span style="filter:blur(4px);user-select:none;">Crane Pumps & Systems</span></div>
+                        <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:12px;display:flex;align-items:center;gap:8px;"><i class="fas fa-bolt" style="color:var(--amber);font-size:11px;"></i> ZoomInfo Scoops — Acme Manufacturing</div>
                         <div style="display:flex;flex-direction:column;gap:6px;">
-                            <div class="news-item"><i class="fas fa-file-contract" style="color:var(--green);"></i><span class="news-item-text"><strong>May 16, 2026:</strong> Awarded $3.3M contract by US Navy <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Project</span></span></div>
+                            <div class="news-item"><i class="fas fa-file-contract" style="color:var(--green);"></i><span class="news-item-text"><strong>May 16, 2026:</strong> Awarded $X.XM contract by Federal Agency <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Project</span></span></div>
                             <div class="news-item"><i class="fas fa-user-plus" style="color:var(--blue);"></i><span class="news-item-text"><strong>Apr 22, 2026:</strong> More open Sales roles than any time in past 12 months <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Hiring Plans</span></span></div>
-                            <div class="news-item"><i class="fas fa-calendar-check" style="color:var(--purple);"></i><span class="news-item-text"><strong>Apr 3, 2026:</strong> Steven Vantoorenburg speaking at AL-MS Water Joint Annual Conference <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Event</span></span></div>
+                            <div class="news-item"><i class="fas fa-calendar-check" style="color:var(--purple);"></i><span class="news-item-text"><strong>Apr 3, 2026:</strong> [Executive Name] speaking at AL-MS Water Joint Annual Conference <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Event</span></span></div>
                             <div class="news-item"><i class="fas fa-user-plus" style="color:var(--blue);"></i><span class="news-item-text"><strong>Mar 5, 2026:</strong> More open IT roles than any time in past 12 months <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Hiring Plans</span></span></div>
                             <div class="news-item"><i class="fas fa-briefcase" style="color:var(--amber);"></i><span class="news-item-text"><strong>Feb 12, 2026:</strong> Seeking VP Operations, Piqua OH <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Open Position</span></span></div>
                             <div class="news-item"><i class="fas fa-user-plus" style="color:var(--blue);"></i><span class="news-item-text"><strong>Feb 8, 2026:</strong> More open Engineering & Technical roles than any time in past 12 months <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Hiring Plans</span></span></div>
@@ -1004,21 +1004,21 @@
                             <div class="news-item"><i class="fas fa-briefcase" style="color:var(--amber);"></i><span class="news-item-text"><strong>Nov 10, 2025:</strong> Seeking Product Manager, Piqua OH <span style="font-size:11px;color:var(--text-faint);margin-left:6px;">Open Position</span></span></div>
                         </div>
                         <div style="margin-top:14px;padding:12px 16px;background:var(--green-light);border:1px solid var(--green-border);border-radius:var(--radius-md);font-size:12px;color:var(--text-secondary);line-height:1.6;">
-                            <strong style="color:var(--green);"><i class="fas fa-lightbulb"></i> Key Insight:</strong> Crane Pumps is in aggressive hiring mode across Sales, IT, Engineering, and Operations. Combined with a $3.3M Navy contract win, this signals growth and potential increased hiring volume = more platform usage = expansion signal.
+                            <strong style="color:var(--green);"><i class="fas fa-lightbulb"></i> Key Insight:</strong> Acme Mfg is in aggressive hiring mode across Sales, IT, Engineering, and Operations. Combined with a $3.3M Navy contract win, this signals growth and potential increased hiring volume = more platform usage = expansion signal.
                         </div>
                     </div>
                     <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--border-light);">
-                        <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:12px;display:flex;align-items:center;gap:8px;"><i class="fas fa-chart-line" style="color:var(--purple);font-size:11px;"></i> Parent Company — <span style="filter:blur(4px);user-select:none;">Crane Holdings</span> (NYSE: CR)</div>
+                        <div style="font-size:12px;font-weight:700;color:var(--text-primary);margin-bottom:12px;display:flex;align-items:center;gap:8px;"><i class="fas fa-chart-line" style="color:var(--purple);font-size:11px;"></i> Parent Company — Apex Holdings (NYSE: XXX)</div>
                         <div style="display:flex;flex-direction:column;gap:6px;">
                             <div class="news-item"><i class="fas fa-chart-bar" style="color:var(--text-muted);"></i><span class="news-item-text"><strong>May 22:</strong> Trading at $173.48, slight underperformance vs S&P 500</span></div>
-                            <div class="news-item"><i class="fas fa-money-bill-wave" style="color:var(--green);"></i><span class="news-item-text"><strong>Apr 28:</strong> Q1 2026 Earnings — Revenue $696.4M (+24.9% YoY), beat estimates. EPS $1.65 (14% above consensus)</span></div>
-                            <div class="news-item"><i class="fas fa-user-tie" style="color:var(--purple);"></i><span class="news-item-text"><strong>Apr 27:</strong> NEW CEO — <span style="filter:blur(4px);user-select:none;">Alex Alcala</span> named Chief Executive Officer (succession complete)</span></div>
+                            <div class="news-item"><i class="fas fa-money-bill-wave" style="color:var(--green);"></i><span class="news-item-text"><strong>Apr 28:</strong> Q1 2026 Earnings — Revenue $XXX.XM (+24.9% YoY), beat estimates. EPS $1.65 (14% above consensus)</span></div>
+                            <div class="news-item"><i class="fas fa-user-tie" style="color:var(--purple);"></i><span class="news-item-text"><strong>Apr 27:</strong> NEW CEO — Thomas Garcia named Chief Executive Officer (succession complete)</span></div>
                             <div class="news-item"><i class="fas fa-star" style="color:var(--amber);"></i><span class="news-item-text"><strong>Apr 25:</strong> Featured as "Market-Beating Stock with Competitive Advantages"</span></div>
                             <div class="news-item"><i class="fas fa-hand-holding-usd" style="color:var(--text-muted);"></i><span class="news-item-text"><strong>Apr 12:</strong> Mario Gabelli continues holding large position (1.35M shares)</span></div>
-                            <div class="news-item"><i class="fas fa-thumbs-up" style="color:var(--blue);"></i><span class="news-item-text"><strong>Feb 6:</strong> Deutsche Bank maintains Buy rating, raised price target to $235</span></div>
+                            <div class="news-item"><i class="fas fa-thumbs-up" style="color:var(--blue);"></i><span class="news-item-text"><strong>Feb 6:</strong> [Analyst Firm] maintains Buy rating, raised price target to $XXX</span></div>
                         </div>
                         <div style="margin-top:14px;padding:12px 16px;background:var(--blue-light);border:1px solid var(--blue-border);border-radius:var(--radius-md);font-size:12px;color:var(--text-secondary);line-height:1.6;">
-                            <strong style="color:var(--blue);"><i class="fas fa-lightbulb"></i> Key Insight:</strong> Parent company thriving — revenue up 25% YoY, beat earnings, new CEO appointed. Healthy parent org with growth trajectory = low risk of budget cuts, potential for enterprise expansion to other Crane divisions.
+                            <strong style="color:var(--blue);"><i class="fas fa-lightbulb"></i> Key Insight:</strong> Parent company thriving — revenue up 25% YoY, beat earnings, new CEO appointed. Healthy parent org with growth trajectory = low risk of budget cuts, potential for enterprise expansion to other Apex divisions.
                         </div>
                     </div>
                 </div>
@@ -1053,7 +1053,7 @@
                             <div class="profile-item"><div class="profile-item-label">Industry</div><div class="profile-item-value">Industrial Pumps & Systems Manufacturing</div></div>
                             <div class="profile-item"><div class="profile-item-label">Employees</div><div class="profile-item-value">500–700 (est.)</div></div>
                             <div class="profile-item"><div class="profile-item-label">Revenue</div><div class="profile-item-value">$200M–$500M</div></div>
-                            <div class="profile-item"><div class="profile-item-label">Parent Company</div><div class="profile-item-value"><span style="filter:blur(4px);user-select:none;">Crane Holdings</span> (NYSE: CR)</div></div>
+                            <div class="profile-item"><div class="profile-item-label">Parent Company</div><div class="profile-item-value">Apex Holdings (NYSE: XXX)</div></div>
                             <div class="profile-item"><div class="profile-item-label">HQ Location</div><div class="profile-item-value">Piqua, Ohio</div></div>
                             <div class="profile-item"><div class="profile-item-label">HR Tech Stack</div><div class="profile-item-value">Rival Recruit (Active) + ATS Unknown</div></div>
                             <div class="profile-item"><div class="profile-item-label">Hiring Volume</div><div class="profile-item-value">Active — Sales, Engineering, Early-Career</div></div>
@@ -1072,12 +1072,12 @@
                             <div class="roadmap-item shipped">
                                 <div class="roadmap-badge shipped">SHIPPED May 26</div>
                                 <div class="roadmap-title">Automated Import Email</div>
-                                <div class="roadmap-desc">Configurable email fires when candidate is imported to pipeline. Works with ROSI Import, Chrome Extension, Manual Upload. <span style="color:var(--green);font-weight:600;">Directly addresses Crane's import workflow pain.</span></div>
+                                <div class="roadmap-desc">Configurable email fires when candidate is imported to pipeline. Works with ROSI Import, Chrome Extension, Manual Upload. <span style="color:var(--green);font-weight:600;">Directly addresses Apex's import workflow pain.</span></div>
                             </div>
                             <div class="roadmap-item shipped">
                                 <div class="roadmap-badge shipped">SHIPPED May 26</div>
                                 <div class="roadmap-title">ROSI Skills Matching</div>
-                                <div class="roadmap-desc">Transparent match scores from job descriptions + resumes. Faster screening, entire talent pool scored. Replaces legacy Hot Match. <span style="color:var(--green);font-weight:600;">Could help <span style="filter:blur(4px);user-select:none;">Hannah</span> with early-career search struggles.</span></div>
+                                <div class="roadmap-desc">Transparent match scores from job descriptions + resumes. Faster screening, entire talent pool scored. Replaces legacy Hot Match. <span style="color:var(--green);font-weight:600;">Could help Hannah with early-career search struggles.</span></div>
                             </div>
                             <div class="roadmap-item shipped">
                                 <div class="roadmap-badge shipped">SHIPPED May 26</div>
@@ -1125,7 +1125,7 @@
                             <div class="roadmap-item launching">
                                 <div class="roadmap-badge launching">LAUNCHING Jun 1</div>
                                 <div class="roadmap-title">Employee Portal Redesign</div>
-                                <div class="roadmap-desc">Modernized checklist-driven portal. Active tasks with progress bar, upcoming task preview, clean document archive. <span style="color:var(--blue);font-weight:600;">Demo-ready. Strong selling point for <span style="filter:blur(4px);user-select:none;">Katy</span>.</span></div>
+                                <div class="roadmap-desc">Modernized checklist-driven portal. Active tasks with progress bar, upcoming task preview, clean document archive. <span style="color:var(--blue);font-weight:600;">Demo-ready. Strong selling point for Katy.</span></div>
                             </div>
                             <div class="roadmap-item shipped">
                                 <div class="roadmap-badge shipped">SHIPPED May 25</div>
@@ -1145,13 +1145,13 @@
                         </div>
                         <div style="margin-top:16px;padding:12px 16px;background:var(--blue-light);border-radius:8px;border-left:3px solid var(--blue);">
                             <div style="font-weight:600;font-size:13px;color:var(--blue);margin-bottom:4px;"><i class="fas fa-lightbulb"></i> Selling Insight</div>
-                            <div style="font-size:13px;color:var(--text-secondary);">Employee Portal Redesign launches Jun 1 to 6 named clients. This is demo-ready proof that Workflow is actively evolving. Pair with <span style="filter:blur(4px);user-select:none;">Katy</span>'s pain around multi-location hiring process friction to build urgency.</div>
+                            <div style="font-size:13px;color:var(--text-secondary);">Employee Portal Redesign launches Jun 1 to 6 named clients. This is demo-ready proof that Workflow is actively evolving. Pair with Katy's pain around multi-location hiring process friction to build urgency.</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- CS ALIGNMENT MODULE -->
-                <div class="section-header" style="margin-top:32px;"><div class="section-title"><i class="fas fa-handshake"></i> CS Alignment <span class="info-btn">?<span class="info-tooltip">Surfaces QBR readiness, signal taxonomy, and CSM/AE coordination needs. Framework based on CS team operating model (cadence, prep, signal detection, R&amp;R).</span></span></div><div class="section-meta">CSM: <span style="filter:blur(4px);user-select:none;">Neda Aleksievska</span></div></div>
+                <div class="section-header" style="margin-top:32px;"><div class="section-title"><i class="fas fa-handshake"></i> CS Alignment <span class="info-btn">?<span class="info-tooltip">Surfaces QBR readiness, signal taxonomy, and CSM/AE coordination needs. Framework based on CS team operating model (cadence, prep, signal detection, R&amp;R).</span></span></div><div class="section-meta">CSM: CSM Name</div></div>
 
                 <!-- Signal Detection -->
                 <div class="card" style="margin-bottom:16px;">
@@ -1173,21 +1173,21 @@
                                         <div class="signal-icon"><i class="fas fa-check-circle" style="color:var(--green)"></i></div>
                                         <div class="signal-content">
                                             <div class="signal-label">Manual Work Complaints</div>
-                                            <div class="signal-detail"><span style="filter:blur(4px);user-select:none;">Katy</span> articulated multi-location hiring friction, manual processes (Apr 17 call). Direct Workflow fit.</div>
+                                            <div class="signal-detail">Katy articulated multi-location hiring friction, manual processes (Apr 17 call). Direct Workflow fit.</div>
                                         </div>
                                     </div>
                                     <div class="signal-item expansion">
                                         <div class="signal-icon"><i class="fas fa-check-circle" style="color:var(--green)"></i></div>
                                         <div class="signal-content">
                                             <div class="signal-label">Executive-Level ROI Conversations</div>
-                                            <div class="signal-detail">Parent company +25% YoY revenue, new CEO (<span style="filter:blur(4px);user-select:none;">Alex Alcala</span>). Budget environment strong. No constraints.</div>
+                                            <div class="signal-detail">Parent company +25% YoY revenue, new CEO (Thomas Garcia). Budget environment strong. No constraints.</div>
                                         </div>
                                     </div>
                                     <div class="signal-item expansion">
                                         <div class="signal-icon"><i class="fas fa-check-circle" style="color:var(--green)"></i></div>
                                         <div class="signal-content">
                                             <div class="signal-label">New Stakeholders Joining Calls</div>
-                                            <div class="signal-detail"><span style="filter:blur(4px);user-select:none;">Amy Holgerson</span> (Dir TA, Parent Co) attended May 29, 2025 Workflow demo with <span style="filter:blur(4px);user-select:none;">Katy</span>. Asked about recruiting platform demo next. <span style="filter:blur(4px);user-select:none;">Tami Polmanteer</span> (CHRO) still unengaged.</div>
+                                            <div class="signal-detail">Jennifer Lee (Dir TA, Parent Co) attended May 29, 2025 Workflow demo with Katy. Asked about recruiting platform demo next. Patricia Wilson (CHRO) still unengaged.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -1200,7 +1200,7 @@
                                         <div class="signal-icon"><i class="fas fa-exclamation-circle" style="color:var(--red)"></i></div>
                                         <div class="signal-content">
                                             <div class="signal-label">Platform Consolidation</div>
-                                            <div class="signal-detail"><strong style="color:var(--red);">ACTIVE: Workday is primary HCM.</strong> Phase 1 live Aug 2025. Excludes hourly/production workers. ClickBoarding expired end 2025 (replacement unknown). Apr 22, 2026 call confirmed Workday = primary recruiting module; Rival-Workday integration labeled "Phase 2" (not scheduled). <span style="filter:blur(4px);user-select:none;">Katy</span> discussed Oct/Nov 2025 pilot that never materialized. <em>Key question: what replaced ClickBoarding for onboarding?</em></div>
+                                            <div class="signal-detail"><strong style="color:var(--red);">ACTIVE: Workday is primary HCM.</strong> Phase 1 live Aug 2025. Excludes hourly/production workers. [Prior Vendor] expired end 2025 (replacement unknown). Apr 22, 2026 call confirmed Workday = primary recruiting module; Rival-Workday integration labeled "Phase 2" (not scheduled). Katy discussed Oct/Nov 2025 pilot that never materialized. <em>Key question: what replaced [Prior Vendor] for onboarding?</em></div>
                                         </div>
                                     </div>
                                     <div class="signal-item churn-warning">
@@ -1214,7 +1214,7 @@
                                         <div class="signal-icon"><i class="fas fa-shield-alt" style="color:var(--green)"></i></div>
                                         <div class="signal-content">
                                             <div class="signal-label">Loss of Executive / Champion</div>
-                                            <div class="signal-detail"><span style="filter:blur(4px);user-select:none;">Katy</span> (VP HR) still engaged. User seat transition (<span style="filter:blur(4px);user-select:none;">Katy</span>/Sam to Chelsea/Olivia) is planned, not attrition.</div>
+                                            <div class="signal-detail">Katy (VP HR) still engaged. User seat transition (Katy/Sam to Chelsea/Olivia) is planned, not attrition.</div>
                                         </div>
                                     </div>
                                     <div class="signal-item churn-clear">
@@ -1228,7 +1228,7 @@
                                         <div class="signal-icon"><i class="fas fa-exclamation-triangle" style="color:var(--amber)"></i></div>
                                         <div class="signal-content">
                                             <div class="signal-label">Drop in Usage / Narrow Use Cases</div>
-                                            <div class="signal-detail"><span style="filter:blur(4px);user-select:none;">Hannah</span> struggling with early-career search (compares unfavorably to LinkedIn Recruiter). Risk of single-user-type dependency.</div>
+                                            <div class="signal-detail">Hannah struggling with early-career search (compares unfavorably to LinkedIn Recruiter). Risk of single-user-type dependency.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -1273,11 +1273,11 @@
                             <div class="qbr-item">
                                 <div class="qbr-status gap"><i class="fas fa-times"></i></div>
                                 <div class="qbr-label">Stakeholder Map</div>
-                                <div class="qbr-detail">Need: confirm Chelsea/Olivia onboarded, validate <span style="filter:blur(4px);user-select:none;">Katy</span> still decision-maker for expansion.</div>
+                                <div class="qbr-detail">Need: confirm Chelsea/Olivia onboarded, validate Katy still decision-maker for expansion.</div>
                             </div>
                         </div>
                         <div style="margin-top:14px;padding:10px 14px;background:#fef3c7;border-radius:8px;border-left:3px solid var(--amber);">
-                            <div style="font-size:12px;"><strong style="color:#92400e;">QBR Timing:</strong> <span style="color:var(--text-secondary);">No QBR scheduled. Last meaningful strategic conversation: Apr 17 (<span style="filter:blur(4px);user-select:none;">Katy</span> 1:1). Per CS playbook, prep call + 2 weeks lead time needed. Recommend scheduling for mid-June post Workflow regroup.</span></div>
+                            <div style="font-size:12px;"><strong style="color:#92400e;">QBR Timing:</strong> <span style="color:var(--text-secondary);">No QBR scheduled. Last meaningful strategic conversation: Apr 17 (Katy 1:1). Per CS playbook, prep call + 2 weeks lead time needed. Recommend scheduling for mid-June post Workflow regroup.</span></div>
                         </div>
                     </div>
                 </div>
@@ -1300,10 +1300,10 @@
                                 <div style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">You (AE) Need From Neda</div>
                                 <ul style="margin:0;padding-left:16px;font-size:13px;color:var(--text-secondary);line-height:1.8;">
                                     <li>Account health check: usage trends, adoption blockers</li>
-                                    <li><span style="filter:blur(4px);user-select:none;">Hannah</span>'s search struggles status (resolved or ongoing?)</li>
+                                    <li>Hannah's search struggles status (resolved or ongoing?)</li>
                                     <li>Confirmation cadence call is being rescheduled</li>
                                     <li>Any chatter about platform consolidation or competing evals</li>
-                                    <li>Intro path to <span style="filter:blur(4px);user-select:none;">Tami Polmanteer</span> (Parent CHRO) if relationship exists</li>
+                                    <li>Intro path to Patricia Wilson (Parent CHRO) if relationship exists</li>
                                 </ul>
                             </div>
                         </div>
@@ -1327,11 +1327,11 @@
                 <div class="buying-committee">
                     <div class="section-title" style="margin-bottom:0"><i class="fas fa-sitemap"></i> Buying Committee</div>
                     <div class="committee-grid">
-                        <div class="committee-role"><div class="committee-role-title">Economic Buyer</div><div class="committee-role-person"><span style="filter:blur(4px);user-select:none;"><span style="filter:blur(4px);user-select:none;">Katy</span> Zimpfer</span></div><div class="committee-role-status engaged">✓ Engaged</div></div>
-                        <div class="committee-role"><div class="committee-role-title">Champion</div><div class="committee-role-person"><span style="filter:blur(4px);user-select:none;">Hailey Mescher</span></div><div class="committee-role-status engaged">✓ Engaged</div></div>
-                        <div class="committee-role"><div class="committee-role-title">Technical Evaluator</div><div class="committee-role-person"><span style="filter:blur(4px);user-select:none;">Hailey Egbert</span></div><div class="committee-role-status warning">⚠ Bug reported</div></div>
-                        <div class="committee-role"><div class="committee-role-title">Financial Authority</div><div class="committee-role-person"><span style="filter:blur(4px);user-select:none;">Matt Livingston</span></div><div class="committee-role-status inactive">○ Not engaged</div></div>
-                        <div class="committee-role"><div class="committee-role-title">Enterprise Sponsor</div><div class="committee-role-person"><span style="filter:blur(4px);user-select:none;">Tami Polmanteer</span></div><div class="committee-role-status inactive">○ Not engaged</div></div>
+                        <div class="committee-role"><div class="committee-role-title">Economic Buyer</div><div class="committee-role-person">Sarah Johnson</div><div class="committee-role-status engaged">✓ Engaged</div></div>
+                        <div class="committee-role"><div class="committee-role-title">Champion</div><div class="committee-role-person">Rachel Adams</div><div class="committee-role-status engaged">✓ Engaged</div></div>
+                        <div class="committee-role"><div class="committee-role-title">Technical Evaluator</div><div class="committee-role-person">Emily Chen</div><div class="committee-role-status warning">⚠ Bug reported</div></div>
+                        <div class="committee-role"><div class="committee-role-title">Financial Authority</div><div class="committee-role-person">Robert Taylor</div><div class="committee-role-status inactive">○ Not engaged</div></div>
+                        <div class="committee-role"><div class="committee-role-title">Enterprise Sponsor</div><div class="committee-role-person">Patricia Wilson</div><div class="committee-role-status inactive">○ Not engaged</div></div>
                     </div>
                 </div>
 
@@ -1353,35 +1353,35 @@
                             <th>Last Contact</th>
                         </tr></thead>
                         <tbody id="people-tbody">
-                            <tr class="person-row" data-engagement="high" onclick="togglePersonDetail(this)"><td><span class="person-name"><span style="filter:blur(4px);user-select:none;"><span style="filter:blur(4px);user-select:none;">Katy</span> Zimpfer</span></span></td><td><span class="person-title-text">VP of Human Resources</span></td><td><span class="role-badge decision">Decision Maker</span></td><td><span class="engagement-indicator high">High</span></td><td>May 23</td></tr>
-                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Budget authority for HR Tech purchases. Verbally aligned on Workflow value prop. Requested training for Chelsea & Olivia (May 23). Next step: regroup on Workflow expansion.<br><strong>Last Interaction:</strong> Email requesting seat swap — Chelsea & Olivia to replace <span style="filter:blur(4px);user-select:none;">Katy</span> & Sam as active users.</div><div class="contact-info-row"><a href="mailto:<span style="filter:blur(4px);user-select:none;">kzimpfer@<span style="filter:blur(4px);user-select:none;">cranepumps.com</span></span>" class="contact-link"><i class="fas fa-envelope"></i> <span style="filter:blur(4px);user-select:none;">kzimpfer@<span style="filter:blur(4px);user-select:none;">cranepumps.com</span></span></a><a href="tel:+19372149889" class="contact-link"><i class="fas fa-phone"></i> (937) 214-9889</a><a href="https://<span style="filter:blur(4px);user-select:none;">silkroad.lightning.force.com</span>/lightning/r/Contact/003Vs00000Js2WYIAZ/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                            <tr class="person-row" data-engagement="high" onclick="togglePersonDetail(this)"><td><span class="person-name">Sarah Johnson</span></td><td><span class="person-title-text">VP of Human Resources</span></td><td><span class="role-badge decision">Decision Maker</span></td><td><span class="engagement-indicator high">High</span></td><td>May 23</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Budget authority for HR Tech purchases. Verbally aligned on Workflow value prop. Requested training for Chelsea & Olivia (May 23). Next step: regroup on Workflow expansion.<br><strong>Last Interaction:</strong> Email requesting seat swap — Chelsea & Olivia to replace Katy & Sam as active users.</div><div class="contact-info-row"><a href="mailto:sjohnson@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> sjohnson@acmemfg.com</a><a href="tel:+19372149889" class="contact-link"><i class="fas fa-phone"></i> (937) 214-9889</a><a href="https://[sfdc-instance].lightning.force.com/lightning/r/Contact/003Vs00000Js2WYIAZ/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
 
-                            <tr class="person-row" data-engagement="high" onclick="togglePersonDetail(this)"><td><span class="person-name"><span style="filter:blur(4px);user-select:none;">Hailey Mescher</span></span></td><td><span class="person-title-text">Manager, Human Resources</span></td><td><span class="role-badge champion">Champion</span></td><td><span class="engagement-indicator high">High</span></td><td>Apr 22</td></tr>
-                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Day-to-day platform manager and internal champion. Attends all meetings. Drives usage proactively.<br><strong>Last Interaction:</strong> Apr 22 meeting — escalated candidate import bug.</div><div class="contact-info-row"><a href="mailto:hmescher@<span style="filter:blur(4px);user-select:none;">cranepumps.com</span>" class="contact-link"><i class="fas fa-envelope"></i> hmescher@<span style="filter:blur(4px);user-select:none;">cranepumps.com</span></a><a href="tel:+14199535703" class="contact-link"><i class="fas fa-phone"></i> (419) 953-5703</a><a href="https://<span style="filter:blur(4px);user-select:none;">silkroad.lightning.force.com</span>/lightning/r/Contact/003Vs00000piFSjIAM/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                            <tr class="person-row" data-engagement="high" onclick="togglePersonDetail(this)"><td><span class="person-name">Rachel Adams</span></td><td><span class="person-title-text">Manager, Human Resources</span></td><td><span class="role-badge champion">Champion</span></td><td><span class="engagement-indicator high">High</span></td><td>Apr 22</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Day-to-day platform manager and internal champion. Attends all meetings. Drives usage proactively.<br><strong>Last Interaction:</strong> Apr 22 meeting — escalated candidate import bug.</div><div class="contact-info-row"><a href="mailto:hmescher@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> hmescher@acmemfg.com</a><a href="tel:+14199535703" class="contact-link"><i class="fas fa-phone"></i> (419) 953-5703</a><a href="https://[sfdc-instance].lightning.force.com/lightning/r/Contact/003Vs00000piFSjIAM/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
 
-                            <tr class="person-row" data-engagement="high" onclick="togglePersonDetail(this)"><td><span class="person-name"><span style="filter:blur(4px);user-select:none;">Samuel Callinan</span></span></td><td><span class="person-title-text">HR Generalist</span></td><td><span class="role-badge user">Power User</span></td><td><span class="engagement-indicator high">High</span></td><td>Apr 22</td></tr>
-                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Active sourcer focused on sales roles. Being replaced by Olivia per May 23 seat swap request. Transitioning off platform.<br><strong>Last Interaction:</strong> Apr 22 meeting — active participant in sourcing discussion.</div><div class="contact-info-row"><a href="mailto:scallinan@<span style="filter:blur(4px);user-select:none;">cranepumps.com</span>" class="contact-link"><i class="fas fa-envelope"></i> scallinan@<span style="filter:blur(4px);user-select:none;">cranepumps.com</span></a><a href="tel:+19185102815" class="contact-link"><i class="fas fa-phone"></i> (918) 510-2815</a><a href="https://<span style="filter:blur(4px);user-select:none;">silkroad.lightning.force.com</span>/lightning/r/Contact/003Vs00000rjjnLIAQ/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                            <tr class="person-row" data-engagement="high" onclick="togglePersonDetail(this)"><td><span class="person-name">James Williams</span></td><td><span class="person-title-text">HR Generalist</span></td><td><span class="role-badge user">Power User</span></td><td><span class="engagement-indicator high">High</span></td><td>Apr 22</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Active sourcer focused on sales roles. Being replaced by Olivia per May 23 seat swap request. Transitioning off platform.<br><strong>Last Interaction:</strong> Apr 22 meeting — active participant in sourcing discussion.</div><div class="contact-info-row"><a href="mailto:scallinan@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> scallinan@acmemfg.com</a><a href="tel:+19185102815" class="contact-link"><i class="fas fa-phone"></i> (918) 510-2815</a><a href="https://[sfdc-instance].lightning.force.com/lightning/r/Contact/003Vs00000rjjnLIAQ/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
 
-                            <tr class="person-row" data-engagement="medium" onclick="togglePersonDetail(this)"><td><span class="person-name"><span style="filter:blur(4px);user-select:none;"><span style="filter:blur(4px);user-select:none;">Hannah</span> McKee</span></span></td><td><span class="person-title-text">HR Generalist</span></td><td><span class="role-badge at-risk">At-Risk User</span></td><td><span class="engagement-indicator medium">Medium</span></td><td>Apr 22</td></tr>
-                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Struggling with search functionality for early-career roles. Had source button issues (Mar 10). Needs enablement session.<br><strong>Last Interaction:</strong> Apr 22 meeting — limited engagement with platform topics.</div><div class="contact-info-row"><a href="mailto:hmckee@<span style="filter:blur(4px);user-select:none;">cranepumps.com</span>" class="contact-link"><i class="fas fa-envelope"></i> hmckee@<span style="filter:blur(4px);user-select:none;">cranepumps.com</span></a><a href="https://<span style="filter:blur(4px);user-select:none;">silkroad.lightning.force.com</span>/lightning/r/Contact/003Vs00000piFSkIAM/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                            <tr class="person-row" data-engagement="medium" onclick="togglePersonDetail(this)"><td><span class="person-name">Laura Martinez</span></td><td><span class="person-title-text">HR Generalist</span></td><td><span class="role-badge at-risk">At-Risk User</span></td><td><span class="engagement-indicator medium">Medium</span></td><td>Apr 22</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Struggling with search functionality for early-career roles. Had source button issues (Mar 10). Needs enablement session.<br><strong>Last Interaction:</strong> Apr 22 meeting — limited engagement with platform topics.</div><div class="contact-info-row"><a href="mailto:hmckee@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> hmckee@acmemfg.com</a><a href="https://[sfdc-instance].lightning.force.com/lightning/r/Contact/003Vs00000piFSkIAM/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
 
-                            <tr class="person-row" data-engagement="medium" onclick="togglePersonDetail(this)"><td><span class="person-name"><span style="filter:blur(4px);user-select:none;">Hailey Egbert</span></span></td><td><span class="person-title-text">HR</span></td><td><span class="role-badge technical">Technical Contact</span></td><td><span class="engagement-indicator medium">Medium</span></td><td>May 23</td></tr>
-                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Reported critical candidate import bug (Apr 22). Technical user who surfaces platform issues. Key for technical validation.<br><strong>Last Interaction:</strong> May 23 — included on seat swap request email.</div><div class="contact-info-row"><a href="mailto:hegbert@<span style="filter:blur(4px);user-select:none;">cranepumps.com</span>" class="contact-link"><i class="fas fa-envelope"></i> hegbert@<span style="filter:blur(4px);user-select:none;">cranepumps.com</span></a><a href="tel:+19054576223" class="contact-link"><i class="fas fa-phone"></i> (905) 457-6223</a><a href="https://<span style="filter:blur(4px);user-select:none;">silkroad.lightning.force.com</span>/lightning/r/Contact/003Vs00000rzqGBIAY/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                            <tr class="person-row" data-engagement="medium" onclick="togglePersonDetail(this)"><td><span class="person-name">Emily Chen</span></td><td><span class="person-title-text">HR</span></td><td><span class="role-badge technical">Technical Contact</span></td><td><span class="engagement-indicator medium">Medium</span></td><td>May 23</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Reported critical candidate import bug (Apr 22). Technical user who surfaces platform issues. Key for technical validation.<br><strong>Last Interaction:</strong> May 23 — included on seat swap request email.</div><div class="contact-info-row"><a href="mailto:hegbert@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> hegbert@acmemfg.com</a><a href="tel:+19054576223" class="contact-link"><i class="fas fa-phone"></i> (905) 457-6223</a><a href="https://[sfdc-instance].lightning.force.com/lightning/r/Contact/003Vs00000rzqGBIAY/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
 
-                            <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name"><span style="filter:blur(4px);user-select:none;">Tami Polmanteer</span></span></td><td><span class="person-title-text">CHRO, <span style="filter:blur(4px);user-select:none;">Crane Holdings</span></span></td><td><span class="role-badge influencer">Enterprise Path</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
-                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> CHRO at parent company <span style="filter:blur(4px);user-select:none;">Crane Holdings</span>. Enterprise expansion path — could champion broader rollout across 2,700+ employees.<br><strong>Strategy:</strong> Don't engage directly until Crane Pumps is a clear success story with measurable ROI.</div><div class="contact-info-row"><a href="mailto:tpolmanteer@<span style="filter:blur(4px);user-select:none;">craneco.com</span>" class="contact-link"><i class="fas fa-envelope"></i> tpolmanteer@<span style="filter:blur(4px);user-select:none;">craneco.com</span></a><a href="tel:+12038327611" class="contact-link"><i class="fas fa-phone"></i> (203) 832-7611</a><a href="https://<span style="filter:blur(4px);user-select:none;">silkroad.lightning.force.com</span>/lightning/r/Contact/003Vs00000YYuk9IAD/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                            <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name">Patricia Wilson</span></td><td><span class="person-title-text">CHRO, Apex Holdings</span></td><td><span class="role-badge influencer">Enterprise Path</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> CHRO at parent company Apex Holdings. Enterprise expansion path — could champion broader rollout across 2,700+ employees.<br><strong>Strategy:</strong> Don't engage directly until Acme Mfg is a clear success story with measurable ROI.</div><div class="contact-info-row"><a href="mailto:tpolmanteer@apexco.com" class="contact-link"><i class="fas fa-envelope"></i> tpolmanteer@apexco.com</a><a href="tel:+12038327611" class="contact-link"><i class="fas fa-phone"></i> (203) 832-7611</a><a href="https://[sfdc-instance].lightning.force.com/lightning/r/Contact/003Vs00000YYuk9IAD/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
 
-                            <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name"><span style="filter:blur(4px);user-select:none;">Amy Holgerson</span></span></td><td><span class="person-title-text">Dir. Talent Acquisition, <span style="filter:blur(4px);user-select:none;">Crane Holdings</span></span></td><td><span class="role-badge influencer">Influencer</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
-                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Could drive broader adoption across <span style="filter:blur(4px);user-select:none;">Crane Holdings</span>. Potential future champion for enterprise deal.<br><strong>Strategy:</strong> Consider a "customer story" approach once Crane Pumps shows measurable wins.</div><div class="contact-info-row"><a href="mailto:<span style="filter:blur(4px);user-select:none;">aholgerson@<span style="filter:blur(4px);user-select:none;">craneco.com</span></span>" class="contact-link"><i class="fas fa-envelope"></i> <span style="filter:blur(4px);user-select:none;">aholgerson@<span style="filter:blur(4px);user-select:none;">craneco.com</span></span></a><a href="tel:+14753339892" class="contact-link"><i class="fas fa-phone"></i> (475) 333-9892</a><a href="https://<span style="filter:blur(4px);user-select:none;">silkroad.lightning.force.com</span>/lightning/r/Contact/003Vs00000YYTs6IAH/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                            <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name">Jennifer Lee</span></td><td><span class="person-title-text">Dir. Talent Acquisition, Apex Holdings</span></td><td><span class="role-badge influencer">Influencer</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Could drive broader adoption across Apex Holdings. Potential future champion for enterprise deal.<br><strong>Strategy:</strong> Consider a "customer story" approach once Acme Mfg shows measurable wins.</div><div class="contact-info-row"><a href="mailto:jlee@apexco.com" class="contact-link"><i class="fas fa-envelope"></i> jlee@apexco.com</a><a href="tel:+14753339892" class="contact-link"><i class="fas fa-phone"></i> (475) 333-9892</a><a href="https://[sfdc-instance].lightning.force.com/lightning/r/Contact/003Vs00000YYTs6IAH/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
 
-                            <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name"><span style="filter:blur(4px);user-select:none;">Matt Livingston</span></span></td><td><span class="person-title-text">CFO</span></td><td><span class="role-badge financial">Financial</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
-                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Local financial authority at <span style="filter:blur(4px);user-select:none;">Crane Pumps & Systems</span>. Not engaged in sales conversations. May be needed for larger deals.<br><strong>Strategy:</strong> Not needed for $18.5K Workflow deal. Monitor for larger enterprise conversations.</div><div class="contact-info-row"><a href="mailto:mlivingston@<span style="filter:blur(4px);user-select:none;">cranepumps.com</span>" class="contact-link"><i class="fas fa-envelope"></i> mlivingston@<span style="filter:blur(4px);user-select:none;">cranepumps.com</span></a><a href="tel:+19372143850" class="contact-link"><i class="fas fa-phone"></i> (937) 214-3850</a><a href="https://<span style="filter:blur(4px);user-select:none;">silkroad.lightning.force.com</span>/lightning/r/Contact/003Vs00000csPA4IAM/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                            <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name">Robert Taylor</span></td><td><span class="person-title-text">CFO</span></td><td><span class="role-badge financial">Financial</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Local financial authority at Acme Manufacturing. Not engaged in sales conversations. May be needed for larger deals.<br><strong>Strategy:</strong> Not needed for $XX.XK Workflow deal. Monitor for larger enterprise conversations.</div><div class="contact-info-row"><a href="mailto:mlivingston@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> mlivingston@acmemfg.com</a><a href="tel:+19372143850" class="contact-link"><i class="fas fa-phone"></i> (937) 214-3850</a><a href="https://[sfdc-instance].lightning.force.com/lightning/r/Contact/003Vs00000csPA4IAM/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
 
-                            <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name"><span style="filter:blur(4px);user-select:none;">Richard Maue</span></span></td><td><span class="person-title-text">CFO, <span style="filter:blur(4px);user-select:none;">Crane Co</span>.</span></td><td><span class="role-badge financial">Financial (Parent)</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
-                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Enterprise-scale financial authority. Only relevant for very large deals at <span style="filter:blur(4px);user-select:none;">Crane Holdings</span> level.<br><strong>Strategy:</strong> Enterprise-scale only. Not actionable at current revenue levels.</div><div class="contact-info-row"><a href="mailto:rmaue@<span style="filter:blur(4px);user-select:none;">craneco.com</span>" class="contact-link"><i class="fas fa-envelope"></i> rmaue@<span style="filter:blur(4px);user-select:none;">craneco.com</span></a><a href="tel:+16313754521" class="contact-link"><i class="fas fa-phone"></i> (631) 375-4521</a><a href="https://<span style="filter:blur(4px);user-select:none;">silkroad.lightning.force.com</span>/lightning/r/Contact/003Vs00000cTsLlIAK/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                            <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name">Michael Anderson</span></td><td><span class="person-title-text">CFO, Apex Co.</span></td><td><span class="role-badge financial">Financial (Parent)</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> Enterprise-scale financial authority. Only relevant for very large deals at Apex Holdings level.<br><strong>Strategy:</strong> Enterprise-scale only. Not actionable at current revenue levels.</div><div class="contact-info-row"><a href="mailto:rmaue@apexco.com" class="contact-link"><i class="fas fa-envelope"></i> rmaue@apexco.com</a><a href="tel:+16313754521" class="contact-link"><i class="fas fa-phone"></i> (631) 375-4521</a><a href="https://[sfdc-instance].lightning.force.com/lightning/r/Contact/003Vs00000cTsLlIAK/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
 
-                            <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name"><span style="filter:blur(4px);user-select:none;">Brian Sweeney</span></span></td><td><span class="person-title-text">Unknown</span></td><td><span class="role-badge unknown">Unknown</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
-                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> No context available. Appeared in contact records but no role or interaction history.<br><strong>Strategy:</strong> Low priority — research if name surfaces in future interactions.</div><div class="contact-info-row"><a href="mailto:bsweeney@<span style="filter:blur(4px);user-select:none;">cranepumps.com</span>" class="contact-link"><i class="fas fa-envelope"></i> bsweeney@<span style="filter:blur(4px);user-select:none;">cranepumps.com</span></a><a href="tel:+16173666294" class="contact-link"><i class="fas fa-phone"></i> (617) 366-6294</a><a href="https://<span style="filter:blur(4px);user-select:none;">silkroad.lightning.force.com</span>/lightning/r/Contact/003Vs00000OZ4njIAD/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
+                            <tr class="person-row" data-engagement="none" onclick="togglePersonDetail(this)"><td><span class="person-name">David Thompson</span></td><td><span class="person-title-text">Unknown</span></td><td><span class="role-badge unknown">Unknown</span></td><td><span class="engagement-indicator none">None</span></td><td>—</td></tr>
+                            <tr class="person-detail-row"><td colspan="5"><div class="person-notes"><strong>Key Intel:</strong> No context available. Appeared in contact records but no role or interaction history.<br><strong>Strategy:</strong> Low priority — research if name surfaces in future interactions.</div><div class="contact-info-row"><a href="mailto:bsweeney@acmemfg.com" class="contact-link"><i class="fas fa-envelope"></i> bsweeney@acmemfg.com</a><a href="tel:+16173666294" class="contact-link"><i class="fas fa-phone"></i> (617) 366-6294</a><a href="https://[sfdc-instance].lightning.force.com/lightning/r/Contact/003Vs00000OZ4njIAD/view" target="_blank" class="contact-link sfdc"><i class="fab fa-salesforce"></i> SFDC</a></div></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -1399,10 +1399,10 @@
                     <div class="timeline-event" onclick="toggleTimeline(this)">
                         <div class="timeline-event-header"><span class="timeline-date">May 23, 2026</span><span class="timeline-type email">Email</span></div>
                         <div class="timeline-title">Seat Swap Request — Chelsea & Olivia Onboarding</div>
-                        <div class="timeline-summary"><span style="filter:blur(4px);user-select:none;">Katy</span> requesting seat swap: Chelsea & Olivia replacing <span style="filter:blur(4px);user-select:none;">Katy</span> & Sam as active users. Training requested.</div>
+                        <div class="timeline-summary">Katy requesting seat swap: Chelsea & Olivia replacing Katy & Sam as active users. Training requested.</div>
                         <div class="timeline-detail"><div class="timeline-detail-content">
-                            <div class="detail-row"><span class="detail-label">From</span><span class="detail-value"><span style="filter:blur(4px);user-select:none;"><span style="filter:blur(4px);user-select:none;">Katy</span> Zimpfer</span></span></div>
-                            <div class="detail-row"><span class="detail-label">CC</span><span class="detail-value"><span style="filter:blur(4px);user-select:none;">Hailey Egbert</span>, <span style="filter:blur(4px);user-select:none;">Hailey Mescher</span></span></div>
+                            <div class="detail-row"><span class="detail-label">From</span><span class="detail-value">Sarah Johnson</span></div>
+                            <div class="detail-row"><span class="detail-label">CC</span><span class="detail-value">Emily Chen, Rachel Adams</span></div>
                             <div class="detail-row"><span class="detail-label">Sentiment</span><span class="sentiment-badge neutral"><i class="fas fa-minus-circle"></i> Neutral</span></div>
                             <div class="detail-row"><span class="detail-label">Action</span><span class="detail-value">Schedule training for Chelsea & Olivia; process seat swap</span></div>
                             <div class="detail-row"><span class="detail-label">Signal</span><span class="detail-value">Continued investment — adding new users indicates commitment</span></div>
@@ -1414,7 +1414,7 @@
                         <div class="timeline-title">Bi-Weekly Check-in — Bug Escalation & Office Hours</div>
                         <div class="timeline-summary">Candidate import bug escalated. Tech ticket created. Office hours offered.</div>
                         <div class="timeline-detail"><div class="timeline-detail-content">
-                            <div class="detail-row"><span class="detail-label">Attendees</span><span class="detail-value"><span style="filter:blur(4px);user-select:none;"><span style="filter:blur(4px);user-select:none;">Katy</span> Zimpfer</span>, <span style="filter:blur(4px);user-select:none;">Hailey Mescher</span>, <span style="filter:blur(4px);user-select:none;">Samuel Callinan</span>, <span style="filter:blur(4px);user-select:none;"><span style="filter:blur(4px);user-select:none;">Hannah</span> McKee</span>, <span style="filter:blur(4px);user-select:none;">Hailey Egbert</span></span></div>
+                            <div class="detail-row"><span class="detail-label">Attendees</span><span class="detail-value">Sarah Johnson, Rachel Adams, James Williams, Laura Martinez, Emily Chen</span></div>
                             <div class="detail-row"><span class="detail-label">Duration</span><span class="detail-value">30 minutes</span></div>
                             <div class="detail-row"><span class="detail-label">Sentiment</span><span class="sentiment-badge negative"><i class="fas fa-exclamation-circle"></i> Frustrated</span></div>
                             <div class="detail-row"><span class="detail-label">Topics</span><span class="detail-value">Candidate import failure, bulk upload issues, office hours scheduling</span></div>
@@ -1424,10 +1424,10 @@
 
                     <div class="timeline-event" onclick="toggleTimeline(this)">
                         <div class="timeline-event-header"><span class="timeline-date">Apr 17, 2026</span><div style="display:flex;align-items:center;gap:6px;"><span class="timeline-type meeting">Meeting</span><a href="#" onclick="event.stopPropagation()" style="font-size:10px;color:var(--blue);text-decoration:none;padding:2px 6px;background:var(--blue-light);border-radius:var(--radius-full);border:1px solid var(--blue-border);font-weight:600;"><i class="fas fa-video" style="margin-right:2px;"></i> Chorus</a></div></div>
-                        <div class="timeline-title">1:1 with <span style="filter:blur(4px);user-select:none;">Katy</span> — Workflow Expansion Discussion</div>
-                        <div class="timeline-summary">Positive conversation about Workflow value. <span style="filter:blur(4px);user-select:none;">Katy</span> aligned on use case. Expansion solidified.</div>
+                        <div class="timeline-title">1:1 with Katy — Workflow Expansion Discussion</div>
+                        <div class="timeline-summary">Positive conversation about Workflow value. Katy aligned on use case. Expansion solidified.</div>
                         <div class="timeline-detail"><div class="timeline-detail-content">
-                            <div class="detail-row"><span class="detail-label">Attendees</span><span class="detail-value"><span style="filter:blur(4px);user-select:none;"><span style="filter:blur(4px);user-select:none;">Katy</span> Zimpfer</span> (1:1)</span></div>
+                            <div class="detail-row"><span class="detail-label">Attendees</span><span class="detail-value">Sarah Johnson (1:1)</span></div>
                             <div class="detail-row"><span class="detail-label">Duration</span><span class="detail-value">25 minutes</span></div>
                             <div class="detail-row"><span class="detail-label">Sentiment</span><span class="sentiment-badge positive"><i class="fas fa-check-circle"></i> Positive</span></div>
                             <div class="detail-row"><span class="detail-label">Topics</span><span class="detail-value">Workflow product fit, hiring process mapping, budget timing</span></div>
@@ -1440,7 +1440,7 @@
                         <div class="timeline-title">Candidate Experience Portal Interest</div>
                         <div class="timeline-summary">Team expressed interest in Candidate Experience Portal. Demo promised.</div>
                         <div class="timeline-detail"><div class="timeline-detail-content">
-                            <div class="detail-row"><span class="detail-label">Attendees</span><span class="detail-value"><span style="filter:blur(4px);user-select:none;"><span style="filter:blur(4px);user-select:none;">Katy</span> Zimpfer</span>, <span style="filter:blur(4px);user-select:none;">Hailey Mescher</span>, <span style="filter:blur(4px);user-select:none;">Samuel Callinan</span>, <span style="filter:blur(4px);user-select:none;"><span style="filter:blur(4px);user-select:none;">Hannah</span> McKee</span></span></div>
+                            <div class="detail-row"><span class="detail-label">Attendees</span><span class="detail-value">Sarah Johnson, Rachel Adams, James Williams, Laura Martinez</span></div>
                             <div class="detail-row"><span class="detail-label">Sentiment</span><span class="sentiment-badge positive"><i class="fas fa-check-circle"></i> Positive</span></div>
                             <div class="detail-row"><span class="detail-label">Action</span><span class="detail-value">Schedule Candidate Experience Portal demo — UNFULFILLED (2+ months)</span></div>
                         </div></div>
@@ -1449,11 +1449,11 @@
                     <div class="timeline-event" onclick="toggleTimeline(this)">
                         <div class="timeline-event-header"><span class="timeline-date">Mar 10, 2026</span><div style="display:flex;align-items:center;gap:6px;"><span class="timeline-type meeting">Meeting</span><a href="#" onclick="event.stopPropagation()" style="font-size:10px;color:var(--blue);text-decoration:none;padding:2px 6px;background:var(--blue-light);border-radius:var(--radius-full);border:1px solid var(--blue-border);font-weight:600;"><i class="fas fa-video" style="margin-right:2px;"></i> Chorus</a></div></div>
                         <div class="timeline-title">Platform Enablement — Source Button & Job Posting</div>
-                        <div class="timeline-summary"><span style="filter:blur(4px);user-select:none;">Hannah</span> having source button errors. Portal setup discussed.</div>
+                        <div class="timeline-summary">Hannah having source button errors. Portal setup discussed.</div>
                         <div class="timeline-detail"><div class="timeline-detail-content">
-                            <div class="detail-row"><span class="detail-label">Attendees</span><span class="detail-value"><span style="filter:blur(4px);user-select:none;">Hailey Mescher</span>, <span style="filter:blur(4px);user-select:none;"><span style="filter:blur(4px);user-select:none;">Hannah</span> McKee</span>, <span style="filter:blur(4px);user-select:none;">Samuel Callinan</span></span></div>
+                            <div class="detail-row"><span class="detail-label">Attendees</span><span class="detail-value">Rachel Adams, Laura Martinez, James Williams</span></div>
                             <div class="detail-row"><span class="detail-label">Sentiment</span><span class="sentiment-badge neutral"><i class="fas fa-minus-circle"></i> Mixed</span></div>
-                            <div class="detail-row"><span class="detail-label">Action</span><span class="detail-value">Troubleshoot <span style="filter:blur(4px);user-select:none;">Hannah</span>'s source button; set up portal</span></div>
+                            <div class="detail-row"><span class="detail-label">Action</span><span class="detail-value">Troubleshoot Hannah's source button; set up portal</span></div>
                         </div></div>
                     </div>
 
@@ -1462,7 +1462,7 @@
                         <div class="timeline-title">Platform Enablement — General Training</div>
                         <div class="timeline-summary">Standard bi-weekly check-in. General enablement. Neutral sentiment.</div>
                         <div class="timeline-detail"><div class="timeline-detail-content">
-                            <div class="detail-row"><span class="detail-label">Attendees</span><span class="detail-value"><span style="filter:blur(4px);user-select:none;">Hailey Mescher</span>, <span style="filter:blur(4px);user-select:none;">Samuel Callinan</span>, <span style="filter:blur(4px);user-select:none;"><span style="filter:blur(4px);user-select:none;">Hannah</span> McKee</span></span></div>
+                            <div class="detail-row"><span class="detail-label">Attendees</span><span class="detail-value">Rachel Adams, James Williams, Laura Martinez</span></div>
                             <div class="detail-row"><span class="detail-label">Sentiment</span><span class="sentiment-badge neutral"><i class="fas fa-minus-circle"></i> Neutral</span></div>
                             <div class="detail-row"><span class="detail-label">Action</span><span class="detail-value">Continue bi-weekly cadence; monitor usage metrics</span></div>
                         </div></div>
@@ -1479,11 +1479,11 @@
             <div class="tab-panel" id="tab-pipeline" role="tabpanel">
                 <!-- ARR Summary -->
                 <div class="pipeline-summary">
-                    <div class="pipeline-summary-item"><div class="value" style="color:var(--text-primary)">$18,500</div><div class="label">Current ARR</div></div>
+                    <div class="pipeline-summary-item"><div class="value" style="color:var(--text-primary)">$XX,XXX</div><div class="label">Current ARR</div></div>
                     <div class="pipeline-plus">+</div>
-                    <div class="pipeline-summary-item"><div class="value" style="color:var(--blue)">$18,500</div><div class="label">Expansion Pipeline</div></div>
+                    <div class="pipeline-summary-item"><div class="value" style="color:var(--blue)">$XX,XXX</div><div class="label">Expansion Pipeline</div></div>
                     <div class="pipeline-equals">=</div>
-                    <div class="pipeline-summary-item"><div class="value" style="color:var(--green)">$37,000</div><div class="label">If Won</div></div>
+                    <div class="pipeline-summary-item"><div class="value" style="color:var(--green)">$XX,XXX</div><div class="label">If Won</div></div>
                 </div>
 
                 <!-- WORKFLOW EXPANSION - CENTERPIECE -->
@@ -1492,18 +1492,18 @@
                     <div class="pipeline-card-status"><span class="status-indicator active"></span><span class="status-text active">Stage 3 — Align</span></div>
                     <div class="pipeline-card-name" style="font-size:18px;font-weight:700;">Workflow Expansion</div>
                     <div class="stage-bar"><div class="stage-segment filled"></div><div class="stage-segment filled"></div><div class="stage-segment filled"></div><div class="stage-segment"></div><div class="stage-segment"></div><div class="stage-segment"></div></div>
-                    <div class="pipeline-card-amount" style="color:var(--blue);font-size:24px;">$18,500</div>
+                    <div class="pipeline-card-amount" style="color:var(--blue);font-size:24px;">$XX,XXX</div>
                     <div class="pipeline-card-meta"><span><i class="fas fa-bullseye"></i> Close: Sep 30, 2026 (124 days)</span><span><i class="fas fa-percentage"></i> 40% probability</span><span style="color:var(--red);font-weight:600;"><i class="fas fa-exclamation-triangle"></i> Needs immediate action</span></div>
                     <div class="pipeline-card-detail" style="display:block;margin-top:16px;">
                         <div class="pipeline-card-detail-inner" style="display:block;">
                             <div class="detail-row"><span class="detail-label">Product</span><span class="detail-value">Workflow — hiring process automation</span></div>
-                            <div class="detail-row"><span class="detail-label">Pain / Use Case</span><span class="detail-value">Small HR team managing hiring across multiple locations. Manual processes creating friction as hiring volume increases. <span style="filter:blur(4px);user-select:none;">Katy</span> articulated need for automation in Apr 17 1:1.</span></div>
-                            <div class="detail-row"><span class="detail-label">Competitive Context</span><span class="detail-value" style="color:var(--red);"><strong>Workday = primary HCM (Phase 1 live Aug 2025).</strong> ClickBoarding expired end 2025 (replacement unclear). Rival Workflow positioned as bolt-on for hourly/production + Canadian workers Workday doesn't cover. Oct/Nov 2025 pilot discussed but never materialized. Apr 2026: team says they have "a lot going on" and limited bandwidth. Rival-Workday integration = "Phase 2" (no timeline). <em>Open question: Did <span style="filter:blur(4px);user-select:none;">Katy</span> solve onboarding another way? Is Workflow still a live priority?</em></span></div>
-                            <div class="detail-row"><span class="detail-label">Current State</span><span class="detail-value" style="color:var(--red);">No call since Apr 22. Email active (last: May 23). "Regroup w/ <span style="filter:blur(4px);user-select:none;">Katy</span>" not yet scheduled.</span></div>
+                            <div class="detail-row"><span class="detail-label">Pain / Use Case</span><span class="detail-value">Small HR team managing hiring across multiple locations. Manual processes creating friction as hiring volume increases. Katy articulated need for automation in Apr 17 1:1.</span></div>
+                            <div class="detail-row"><span class="detail-label">Competitive Context</span><span class="detail-value" style="color:var(--red);"><strong>Workday = primary HCM (Phase 1 live Aug 2025).</strong> [Prior Vendor] expired end 2025 (replacement unclear). Rival Workflow positioned as bolt-on for hourly/production + Canadian workers Workday doesn't cover. Oct/Nov 2025 pilot discussed but never materialized. Apr 2026: team says they have "a lot going on" and limited bandwidth. Rival-Workday integration = "Phase 2" (no timeline). <em>Open question: Did Katy solve onboarding another way? Is Workflow still a live priority?</em></span></div>
+                            <div class="detail-row"><span class="detail-label">Current State</span><span class="detail-value" style="color:var(--red);">No call since Apr 22. Email active (last: May 23). "Regroup w/ Katy" not yet scheduled.</span></div>
                             <div class="detail-row"><span class="detail-label">Expansion Signal</span><span class="detail-value" style="color:var(--green);">4 departments at 12-month hiring highs (Sales, IT, Engineering, Ops). $3.3M Navy contract = headcount growth. More hiring = more process pain = stronger Workflow case.</span></div>
                             <div class="detail-row"><span class="detail-label">Risk</span><span class="detail-value" style="color:var(--red);">Close pushed to Sep 30 (was Jun 30). Still no meeting scheduled. Risk of indefinite stall without forcing function.</span></div>
-                            <div class="detail-row"><span class="detail-label">Next Step</span><span class="detail-value" style="font-weight:600;">Schedule regroup with <span style="filter:blur(4px);user-select:none;">Katy</span>. Frame around hiring surge: "Your team is hiring at record pace — let's talk about what Workflow does for you at this volume."</span></div>
-                            <a href="https://<span style="filter:blur(4px);user-select:none;">silkroad.lightning.force.com</span>/lightning/r/Opportunity/006Vs00000DV6EXIA1/view" target="_blank" class="opp-sfdc-link" onclick="event.stopPropagation()"><i class="fab fa-salesforce"></i> Open in SFDC</a>
+                            <div class="detail-row"><span class="detail-label">Next Step</span><span class="detail-value" style="font-weight:600;">Schedule regroup with Katy. Frame around hiring surge: "Your team is hiring at record pace — let's talk about what Workflow does for you at this volume."</span></div>
+                            <a href="https://[sfdc-instance].lightning.force.com/lightning/r/Opportunity/XXXXXXXXXXXXX/view" target="_blank" class="opp-sfdc-link" onclick="event.stopPropagation()"><i class="fab fa-salesforce"></i> Open in SFDC</a>
                         </div>
                     </div>
                 </div>
@@ -1515,8 +1515,8 @@
                         <div class="health-grid">
                             <div class="health-item"><div class="health-item-label">Deal Velocity</div><div class="health-item-value" style="color:var(--red)">Stalling</div><div class="health-item-note">42 days in Stage 3 (avg: 21d). No progression since Apr 17.</div></div>
                             <div class="health-item"><div class="health-item-label">Engagement Cadence</div><div class="health-item-value" style="color:var(--amber)">Lapsed</div><div class="health-item-note">Last call: Apr 22. Last email: May 23. Responsive via email; call needs scheduling.</div></div>
-                            <div class="health-item"><div class="health-item-label">Champion Access</div><div class="health-item-value" style="color:var(--green)">Strong</div><div class="health-item-note">Direct relationship with <span style="filter:blur(4px);user-select:none;">Katy</span> (VP HR, budget authority).</div></div>
-                            <div class="health-item"><div class="health-item-label">Multi-Threading</div><div class="health-item-value" style="color:var(--amber)">Moderate</div><div class="health-item-note"><span style="filter:blur(4px);user-select:none;">Katy</span> single-threaded on Workflow eval. No other stakeholders engaged.</div></div>
+                            <div class="health-item"><div class="health-item-label">Champion Access</div><div class="health-item-value" style="color:var(--green)">Strong</div><div class="health-item-note">Direct relationship with Katy (VP HR, budget authority).</div></div>
+                            <div class="health-item"><div class="health-item-label">Multi-Threading</div><div class="health-item-value" style="color:var(--amber)">Moderate</div><div class="health-item-note">Katy single-threaded on Workflow eval. No other stakeholders engaged.</div></div>
                             <div class="health-item"><div class="health-item-label">Technical Validation</div><div class="health-item-value" style="color:var(--green)">Resolved</div><div class="health-item-note">Import bug fixed May 12 (&lt;1hr). No open technical blockers.</div></div>
                             <div class="health-item"><div class="health-item-label">Competition</div><div class="health-item-value" style="color:var(--red)">Workday (Primary HCM)</div><div class="health-item-note">Phase 1 live Aug 2025. Rival positioned as complement (sourcing layer). Workflow opp stalled since pilot discussion. 9/30 close date (pushed from 6/30). Needs executive re-engagement.</div></div>
                             <div class="health-item"><div class="health-item-label">Business Case</div><div class="health-item-value" style="color:var(--green)">Strong</div><div class="health-item-note">Hiring surge (4 depts) + $3.3M Navy contract = volume growth.</div></div>
@@ -1531,25 +1531,25 @@
                     <div class="pipeline-card" style="opacity:0.85;" onclick="togglePipeline(this)">
                         <div class="pipeline-card-status"><span class="status-indicator won"></span><span class="status-text won">Closed Won</span></div>
                         <div class="pipeline-card-name">Recruit Add-On (Search)</div>
-                        <div class="pipeline-card-amount" style="color:var(--green)">$18,500 ARR</div>
+                        <div class="pipeline-card-amount" style="color:var(--green)">$XX,XXX ARR</div>
                         <div class="pipeline-card-meta"><span><i class="fas fa-calendar"></i> Won Dec 2025</span><span><i class="fas fa-box"></i> Search / Entelo</span></div>
                         <div class="pipeline-card-detail"><div class="pipeline-card-detail-inner">
                             <div class="detail-row"><span class="detail-label">Product</span><span class="detail-value">Recruit — AI sourcing (Entelo/ROSI)</span></div>
-                            <div class="detail-row"><span class="detail-label">Users</span><span class="detail-value">Transitioning to Chelsea & Olivia (from <span style="filter:blur(4px);user-select:none;">Katy</span> & Sam)</span></div>
-                            <div class="detail-row"><span class="detail-label">Usage</span><span class="detail-value">Active sourcing for sales roles. <span style="filter:blur(4px);user-select:none;">Hannah</span> struggling with early-career search.</span></div>
-                            <a href="https://<span style="filter:blur(4px);user-select:none;">silkroad.lightning.force.com</span>/lightning/r/Opportunity/006Vs00000PrNbBIAV/view" target="_blank" class="opp-sfdc-link" onclick="event.stopPropagation()"><i class="fab fa-salesforce"></i> Open in SFDC</a>
+                            <div class="detail-row"><span class="detail-label">Users</span><span class="detail-value">Transitioning to Chelsea & Olivia (from Katy & Sam)</span></div>
+                            <div class="detail-row"><span class="detail-label">Usage</span><span class="detail-value">Active sourcing for sales roles. Hannah struggling with early-career search.</span></div>
+                            <a href="https://[sfdc-instance].lightning.force.com/lightning/r/Opportunity/XXXXXXXXXXXXX/view" target="_blank" class="opp-sfdc-link" onclick="event.stopPropagation()"><i class="fab fa-salesforce"></i> Open in SFDC</a>
                         </div></div>
                     </div>
                     <div class="pipeline-card" style="opacity:0.7;" onclick="togglePipeline(this)">
                         <div class="pipeline-card-status"><span class="status-indicator future"></span><span class="status-text future">Renewal</span></div>
                         <div class="pipeline-card-name">Annual Renewal</div>
-                        <div class="pipeline-card-amount" style="color:var(--text-muted)">$18,500 ARR</div>
+                        <div class="pipeline-card-amount" style="color:var(--text-muted)">$XX,XXX ARR</div>
                         <div class="pipeline-card-meta"><span><i class="fas fa-calendar"></i> Next decision: Jan 2027</span><span><i class="fas fa-shield-alt"></i> Low risk</span></div>
                         <div class="pipeline-card-detail"><div class="pipeline-card-detail-inner">
                             <div class="detail-row"><span class="detail-label">Contract</span><span class="detail-value">Multi-year (SFDC close: 2033). First renewal decision point: Jan 2027.</span></div>
                             <div class="detail-row"><span class="detail-label">Strategy</span><span class="detail-value">Focus on expansion now. Renewal health follows from adoption & value delivery.</span></div>
-                            <div class="detail-row"><span class="detail-label">Parent Health</span><span class="detail-value" style="color:var(--green)"><span style="filter:blur(4px);user-select:none;">Crane Holdings</span> revenue +25% YoY, new CEO, no budget risk signals.</span></div>
-                            <a href="https://<span style="filter:blur(4px);user-select:none;">silkroad.lightning.force.com</span>/lightning/r/Opportunity/006Vs00000RwXQgIAN/view" target="_blank" class="opp-sfdc-link" onclick="event.stopPropagation()"><i class="fab fa-salesforce"></i> Open in SFDC</a>
+                            <div class="detail-row"><span class="detail-label">Parent Health</span><span class="detail-value" style="color:var(--green)">Apex Holdings revenue +25% YoY, new CEO, no budget risk signals.</span></div>
+                            <a href="https://[sfdc-instance].lightning.force.com/lightning/r/Opportunity/XXXXXXXXXXXXX/view" target="_blank" class="opp-sfdc-link" onclick="event.stopPropagation()"><i class="fab fa-salesforce"></i> Open in SFDC</a>
                         </div></div>
                     </div>
                 </div>
